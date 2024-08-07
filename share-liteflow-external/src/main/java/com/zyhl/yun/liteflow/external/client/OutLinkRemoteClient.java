@@ -2,9 +2,11 @@ package com.zyhl.yun.liteflow.external.client;
 
 import com.zyhl.hcy.commons.result.BaseResult;
 import com.zyhl.yun.liteflow.external.client.req.FileInfoReq;
+import com.zyhl.yun.liteflow.external.client.req.GetOutLinkInfoReq;
 import com.zyhl.yun.liteflow.external.client.req.GetOutLinkReq;
 import com.zyhl.yun.liteflow.external.client.req.GetOutLinkSnapshotReq;
 import com.zyhl.yun.liteflow.external.client.resp.FileInfoRsp;
+import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkInfoRes;
 import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkRes;
 import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkSnapshotRes;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,7 +21,7 @@ public interface OutLinkRemoteClient {
      * @return
      */
     @RequestMapping(value = "/outlink", method = RequestMethod.POST)
-    BaseResult<GetOutLinkRes> outLinkInfo(@RequestBody GetOutLinkReq req);
+    BaseResult<GetOutLinkRes> outLink(@RequestBody GetOutLinkReq req);
 
     /**
      * 获取外链概要
@@ -27,4 +29,10 @@ public interface OutLinkRemoteClient {
      */
     @RequestMapping(value = "/outlink/snapshot", method = RequestMethod.POST)
     BaseResult<GetOutLinkSnapshotRes> outLinkInfoSnapshot(@RequestBody GetOutLinkSnapshotReq req);
+
+    /**
+     * 获取外链详情
+     */
+    @RequestMapping(value = "/outlink/info", method = RequestMethod.POST)
+    BaseResult<GetOutLinkInfoRes> outLinkInfo(@RequestBody GetOutLinkInfoReq req);
 }

@@ -10,6 +10,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetOutLinkSnapshotReq {
+    // 好像不对呢 这个接口来自另一个文档，撞车了
     private String account;
     private Long userDomainId;
     private String linkID;

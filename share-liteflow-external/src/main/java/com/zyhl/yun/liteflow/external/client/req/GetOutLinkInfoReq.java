@@ -10,4 +10,15 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetOutLinkInfoReq {
+    private String account;
+    private Long userDomainId;
+    private String linkID;
+    private String passwd;
+    private String pCaID;
+    private Integer caSrt;
+    private Integer coSrt;
+    private Integer srtDr;
+    private Integer bNum;
+    private Integer eNum;
+    private String linkCode;
 }

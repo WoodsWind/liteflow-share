@@ -28,7 +28,7 @@ public class GetOutLinkServiceImpl implements GetOutLinkService {
         GetOutLinkReq getOutLinkReq = GetOutLinkReq.builder().userDomainId(account).build();
         BaseResult<GetOutLinkRes> outLinkResult = null;
         try {
-            outLinkResult = linkRemoteClient.outLinkInfo(getOutLinkReq);
+            outLinkResult = linkRemoteClient.outLink(getOutLinkReq);
         }catch (Exception e){
             log.error(e.getMessage());
         }
