@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${mapper-package}.${mapper-subPackage}.persistence.mapper.DemoItemMapper">
+
+
+    <select id="selectList" resultType="${mapper-package}.${mapper-subPackage}.datahelper.vo.DemoItemVO">
+        select * from item where info_id=#{queryCommand.infoId}
+    </select>
+
+    <insert id="insertItem" parameterType="${mapper-package}.${mapper-subPackage}.persistence.po.DemoItemPO">
+        insert into item (id, info_id, content) values (#{itemPo.id}, #{itemPo.infoId}, #{itemPo.content})
+    </insert>
+</mapper>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="${mapper-package}.${mapper-subPackage}.persistence.mapper.DemoMapper">
+
+    <select id="selectListWithPageHelper" resultType="${mapper-package}.${mapper-subPackage}.datahelper.vo.DemoQueryVO">
+        select * from info
+    </select>
+
+
+    <insert id="insertInfo" parameterType="${mapper-package}.${mapper-subPackage}.persistence.po.DemoInfoPO">
+        insert into info (id, account, type, create_time) values (#{infoPo.id}, #{infoPo.account}, #{infoPo.type}, #{infoPo.createTime})
+    </insert>
+</mapper>

@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+ <!--     -->
+
+
+  <parent>
+    <groupId>com.zyhl.hcy.platfrom</groupId>
+    <artifactId>hcy-platform-parent</artifactId>
+    <version>2.2.1-M</version>
+  </parent>
+
+  <modelVersion>4.0.0</modelVersion>
+
+  <groupId>com.zyhl.hcy</groupId>
+  <artifactId>share-liteflow</artifactId>
+  <packaging>pom</packaging>
+  <version>1.0-SNAPSHOT</version>
+
+  <name>share-liteflow</name>
+
+  <modules>
+    <module>share-liteflow-web</module>
+    <module>share-liteflow-application</module>
+    <module>share-liteflow-domain</module>
+    <module>share-liteflow-external</module>
+    <module>share-liteflow-infrastructure</module>
+  </modules>
+
+  <properties>
+    <mapper-package>com.zyhl.yun</mapper-package>
+    <mapper-subPackage>liteflow</mapper-subPackage>
+    <project.pversion>1.0-SNAPSHOT</project.pversion>
+    <hcy-platform-commons.version>2.0.4</hcy-platform-commons.version>
+    <hcy-plugins-starter-uidgenerator.version>2.0.0-M</hcy-plugins-starter-uidgenerator.version>
+    <hcy-plugins-starter-logger.version>2.3.0</hcy-plugins-starter-logger.version>
+    <hcy-plugins-starter-redis.version>2.2.0-M</hcy-plugins-starter-redis.version>
+  </properties>
+
+  <dependencyManagement>
+    <dependencies>
+
+      <dependency>
+        <groupId>com.zyhl.hcy.share-liteflow</groupId>
+        <artifactId>share-liteflow-web</artifactId>
+        <version>${project.pversion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.zyhl.hcy.share-liteflow</groupId>
+        <artifactId>share-liteflow-application</artifactId>
+        <version>${project.pversion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.zyhl.hcy.share-liteflow</groupId>
+        <artifactId>share-liteflow-domain</artifactId>
+        <version>${project.pversion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.zyhl.hcy.share-liteflow</groupId>
+        <artifactId>share-liteflow-external</artifactId>
+        <version>${project.pversion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.zyhl.hcy.share-liteflow</groupId>
+        <artifactId>share-liteflow-infrastructure</artifactId>
+        <version>${project.pversion}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.zyhl.hcy</groupId>
+        <artifactId>hcy-platform-commons</artifactId>
+        <version>${hcy-platform-commons.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.zyhl.hcy</groupId>
+        <artifactId>hcy-plugins-starter-uidgenerator</artifactId>
+        <version>${hcy-plugins-starter-uidgenerator.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.zyhl.hcy</groupId>
+        <artifactId>hcy-plugins-starter-logger</artifactId>
+        <version>${hcy-plugins-starter-logger.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.zyhl.hcy</groupId>
+        <artifactId>hcy-plugins-starter-redis</artifactId>
+        <version>${hcy-plugins-starter-redis.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>io.github.openfeign</groupId>
+        <artifactId>feign-okhttp</artifactId>
+        <version>${feign.version}</version>
+      </dependency>
+
+      <dependency>
+        <groupId>com.yomahub</groupId>
+        <artifactId>liteflow-spring-boot-starter</artifactId>
+        <version>2.12.1</version>
+      </dependency>
+
+    </dependencies>
+  </dependencyManagement>
+</project>

@@ -1,0 +1,75 @@
+# ===================================================================
+# Spring Cloud Config bootstrap configuration for the "prod" profile
+# ===================================================================
+
+spring:
+  redis:
+    database: 0
+    host: 127.0.0.1
+    port: 6379
+    #password: 123456
+    jedis:
+      connectTimeout: 1000 #连接超时时间，单位毫秒
+      readTimeout: 2000 #数据获取超时时间，单位毫秒
+      pool:
+        # 最大连接，单位：个。当前tomcat配置线程数为200，考虑每秒内有一半线程在操作redis，且每个线程操作不超过100ms，故线程数设置为50
+        maxTotal: 50
+        #最大空闲连接，单位：个F
+        maxIdle: 20
+        # 最小空闲连接，单位：个
+        minIdle: 8
+        # 最大获取连接等待时间，单位：毫秒
+        maxWaitMillis: 3000
+        #空闲连接逐出时间，大于该值的空闲连接一直未被使用则会被释放，单位：毫秒
+        minEvictableIdleTimeMillis: 60000
+        #空闲连接探测时间间隔，单位：毫秒。 例如系统的空闲连接探测时间配置为30s，则代表每隔30s会对连接进行探测，如果30s内发生异常的连接，经过探测后会进行连接排除。根据连接数的多少进行配置，如果连接数太大，配置时间太短，会造成请求资源浪费。
+        timeBetweenEvictionRunsMillis: 5000
+        #向资源池借用连接时是否做连接有效性检测（ping），检测到的无效连接将会被移除。对于业务连接极端敏感的，并且性能可以接受的情况下，可以配置为True，一般来说建议配置为False，启用连接空闲检测。
+        testOnBorrow: false
+        # 是否在空闲资源监测时通过ping命令监测连接有效性，无效连接将被销毁。
+        testWhileIdle: true
+        # 向资源池归还连接时是否做连接有效性检测（ping），检测到无效连接将会被移除。耗费性能
+        testOnReturn: false
+    redisson:
+      config: |
+        # 客户端名称
+        # clientName: mcloud-orchestration-manager
+        # 线程池数量
+        threads: 1
+        # netty线程池数量
+        nettyThreads: 1
+        # 编码
+        #codec: org.redisson.codec.StringCodec
+        # 传输模式
+        # transportMode: "NIO"
+        #监控锁的看门狗超时，单位：毫秒
+        lockWatchdogTimeout: 5000
+        # 单节点配置
+        singleServerConfig:
+          # 连接空闲超时，单位：毫秒
+          idleConnectionTimeout: 10000
+          # 连接超时，单位：毫秒
+          connectTimeout: 3000
+          # 命令等待超时，单位：毫秒
+          timeout: 3000
+          # 命令失败重试次数,如果尝试达到 retryAttempts（命令失败重试次数） 仍然不能将命令发送至某个指定的节点时，将抛出错误。
+          # 如果尝试在此限制之内发送成功，则开始启用 timeout（命令等待超时） 计时。
+          retryAttempts: 2
+          # 命令重试发送时间间隔，单位：毫秒
+          retryInterval: 1500
+          # 节点地址
+          address: "redis://127.0.0.1:6379"
+          # 密码，没有设置密码时，需要注释掉，否则会报错
+          password: "123456"
+          # 单个连接最大订阅数量
+          subscriptionsPerConnection: 5
+          # 发布和订阅连接的最小空闲连接数
+          subscriptionConnectionMinimumIdleSize: 2
+          # 发布和订阅连接池大小
+          subscriptionConnectionPoolSize: 50
+          # 最小空闲连接数
+          connectionMinimumIdleSize: 2
+          # 连接池大小
+          connectionPoolSize: 32
+
+

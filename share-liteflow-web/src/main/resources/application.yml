@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: yun-demo-service
+    system: yun
+  profiles:
+    # The commented value for `active` can be replaced with valid Spring profiles to load.
+    # Otherwise, it will be filled in by maven when building the WAR file
+    # Either way, it can be overridden by `--spring.profiles.active` value passed in the commandline or `-Dspring.profiles.active` set in `JAVA_OPTS`
+    active: ${ACTIVE_PROFILE:local}
+  main:
+    allow-circular-references: true
+    allow-bean-definition-overriding: true
+  mvc:
+    throw-exception-if-no-handler-found: true
+  web:
+    resources:
+      add-mappings: false
+  lifecycle:
+    timeout-per-shutdown-phase: 30S
+
+server:
+  shutdown: graceful
+
+management: #安全管理，关闭心跳监听
+  endpoints:
+    enabled-by-default: false
+  server:
+    port: -1

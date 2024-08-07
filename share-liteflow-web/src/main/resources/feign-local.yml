@@ -1,0 +1,30 @@
+feign:
+  httpclient:
+    enabled: false
+    max-connections: 3000 #连接池的最大连接数，默认200
+    max-connections-per-route: 300 #每个路由(服务器)分配的组最大连接数，默认50
+    connection-timeout: 10000 #连接超时时间，单位：毫秒
+    time-to-live: 60 #连接最大存活时间，默认900秒
+    time-to-live-unit: seconds
+    disableSslValidation: true
+  okhttp:
+    enabled: true
+  client:
+    config:
+      default:
+        connectTimeout: 10000
+        readTimeout: 10000
+  hystrix:
+    enabled: false
+  sentinel:
+    enabled: true
+
+
+yun:
+  external:
+    yun-demo-service:
+      service-name: yun-demo-service
+      context-path: http://127.0.0.1:8081/yun
+
+
+
