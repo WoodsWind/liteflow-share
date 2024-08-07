@@ -15,5 +15,5 @@ public interface TextCheckService {
     * @param account
     * @param content
     */
-   void sensitiveTextCheck(String account, String content);
+   void sensitiveTextCheck(Long account, String content);
 }

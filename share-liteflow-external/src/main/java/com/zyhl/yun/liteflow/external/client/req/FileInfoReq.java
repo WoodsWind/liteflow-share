@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 import org.checkerframework.checker.index.qual.Positive;
 import org.springframework.beans.factory.annotation.Value;
 
-import javax.validation.Valid;
 import javax.validation.constraints.Max;
 
 @Data

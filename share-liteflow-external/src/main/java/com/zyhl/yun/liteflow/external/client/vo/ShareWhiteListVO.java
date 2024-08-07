@@ -1,4 +1,4 @@
-package com.zyhl.yun.liteflow.application.vo;
+package com.zyhl.yun.liteflow.external.client.vo;
 
 public class ShareWhiteListVO {
     private Long id;

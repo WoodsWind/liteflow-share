@@ -36,7 +36,7 @@ public class TextCheckServiceImpl implements TextCheckService {
     * @param text
     */
    @Override
-   public void sensitiveTextCheck(String account, String text) {
+   public void sensitiveTextCheck(Long account, String text) {
       DemoSensitiveWordReq textReq = DemoSensitiveWordReq.builder().text(text).build();
       BaseResult<DemoSensitiveWordRsp> textResult = null;
       try {

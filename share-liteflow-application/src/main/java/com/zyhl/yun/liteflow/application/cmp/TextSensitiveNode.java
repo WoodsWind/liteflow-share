@@ -16,8 +16,12 @@ public class TextSensitiveNode extends NodeBooleanComponent {
         System.out.println("TextSensitiveNode");
         UserContext userContext = this.getContextBean(UserContext.class);
         TextContext textContext = this.getContextBean(TextContext.class);
-        UserDomainEntity userDomainEntity;
-        TextCheckService textCheckService;
+        UserDomainEntity userDomainEntity = userContext.getUserDomain();
+        String checkConent = "Link Title: " + textContext.getOutLinkTitle()+"\n"
+                + "Link Description: " + textContext.getOutLinkDescription()+"\n"
+                + "File Name: " + textContext.getFileName()+"\n";
+        TextCheckService textCheckService = null;
+        textCheckService.sensitiveTextCheck(userDomainEntity.getUserDomainId(),checkConent);
         //textCheckService.sensitiveTextCheck();
         return true;
     }

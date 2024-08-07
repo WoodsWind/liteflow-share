@@ -1,4 +1,4 @@
 package com.zyhl.yun.liteflow.application.dto;
 
-public class LinkDTO {
+public class OutLinkDTO {
 }

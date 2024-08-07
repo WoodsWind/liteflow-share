@@ -398,4 +398,243 @@ o.s.b.f.BeanCreationException: Error creating bean with name 'demoController': I
 	at o.s.b.f.s.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
 	at o.s.c.s.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
 	... 6 frames truncated
+Caused by: o.s.b.f.BeanCreationException: Error creating bean with name 'demoPublishServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'infoPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoRepositoryImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMapper' defined in file [C:\Users\25538\source\java\share-liteflow\share-liteflow-infrastructure\target\classes\com\zyhl\yun\liteflow\persistence\mapper\DemoMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/d...2024-08-07 11:45:00.422|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-07 11:45:02.562|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.printIfErrorEnabled:99|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-07 11:45:04.795|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.printIfErrorEnabled:99|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-07 11:45:07.155|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.printIfErrorEnabled:99|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-07 11:45:07.188|main|ERROR|c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||init datasource error, url: jdbc:p6spy:mysql://127.0.0.1:3306/mysql?autoReconnect=true&useSSL=false&useUnicode=true&characterEncoding=UTF-8&allowMultiQueries=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=Asia/Shanghai
+j.s.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at c.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:898)
+	at c.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
+	at c.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at c.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at c.m.c.j.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	... 110 frames truncated
+Caused by: c.m.cj.exceptions.CJException: Public Key Retrieval is not allowed
+	at s.r.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java)
+	at s.r.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at s.r.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:124)
+	at c.m.c.p.a.a.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:153)
+	at c.m.c.p.a.a.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	... 5 frames truncated
+	... 114 common frames omitted
+Caused by: c.m.c.e.UnableToConnectException: Public Key Retrieval is not allowed
+	at s.r.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java)
+	at s.r.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at s.r.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at c.m.c.p.a.a.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	... 120 common frames omitted
+2024-08-07 11:45:07.193|main|ERROR|c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} init error
+j.s.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:110)
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:97)
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:89)
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:63)
+	at c.m.c.jdbc.exceptions.SQLError.createSQLException(SQLError.java:73)
+	at c.mysql.cj.jdbc.ConnectionImpl.connectWithRetries(ConnectionImpl.java:898)
+	at c.mysql.cj.jdbc.ConnectionImpl.createNewIO(ConnectionImpl.java:823)
+	at c.mysql.cj.jdbc.ConnectionImpl.<init>(ConnectionImpl.java:448)
+	at c.mysql.cj.jdbc.ConnectionImpl.getInstance(ConnectionImpl.java:241)
+	at c.m.c.j.NonRegisteringDriver.connect(NonRegisteringDriver.java:198)
+	... 110 frames truncated
+Caused by: c.m.cj.exceptions.CJException: Public Key Retrieval is not allowed
+	at s.r.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java)
+	at s.r.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at s.r.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:105)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:151)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:124)
+	at c.m.c.p.a.a.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:153)
+	at c.m.c.p.a.a.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:49)
+	... 5 frames truncated
+	... 114 common frames omitted
+Caused by: c.m.c.e.UnableToConnectException: Public Key Retrieval is not allowed
+	at s.r.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java)
+	at s.r.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at s.r.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:61)
+	at c.m.c.e.ExceptionFactory.createException(ExceptionFactory.java:85)
+	at c.m.c.p.a.a.CachingSha2PasswordPlugin.nextAuthenticationStep(CachingSha2PasswordPlugin.java:130)
+	... 120 common frames omitted
+2024-08-07 11:45:07.228|main|ERROR|o.s.boot.SpringApplication.?:?|IGNORE|||||||||||||||||||||||||||||Application run failed
+o.s.b.f.BeanCreationException: Error creating bean with name 'demoController': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoPublishServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'infoPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoRepositoryImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMapper' defined in file [C:\Users\25538\source\java\share-liteflow\share-liteflow-infrastructure\target\classes\com\zyhl\yun\liteflow\persistence\mapper\DemoMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/druid/spring/boot/autoconfigure/DruidDataSourceAutoConfigure.class]: Invocation of init method failed; nested exception is java.sql.SQLNonTransientConnectionException: Could not create connection to database server. Attempted reconnect 3 times. Giving up.
+	at o.s.c.a.CommonAnnotationBeanPostProcessor.postProcessProperties(CommonAnnotationBeanPostProcessor.java:332)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1431)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:619)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at o.s.b.f.s.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at o.s.b.f.s.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at o.s.b.f.s.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at o.s.b.f.s.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at o.s.b.f.s.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at o.s.c.s.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	... 6 frames truncated
 Caused by: o.s.b.f.BeanCreationException: Error creating bean with name 'demoPublishServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'infoPublisher': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'demoRepositoryImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'demoMapper' defined in file [C:\Users\25538\source\java\share-liteflow\share-liteflow-infrastructure\target\classes\com\zyhl\yun\liteflow\persistence\mapper\DemoMapper.class]: Unsatisfied dependency expressed through bean property 'sqlSessionFactory'; nested exception is org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'sqlSessionFactory' defined in class path resource [com/baomidou/mybatisplus/autoconfigure/MybatisPlusAutoConfiguration.class]: Unsatisfied dependency expressed through method 'sqlSessionFactory' parameter 0; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'dataSource' defined in class path resource [com/alibaba/d...

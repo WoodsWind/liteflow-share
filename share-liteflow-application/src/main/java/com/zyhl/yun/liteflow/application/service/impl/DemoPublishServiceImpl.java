@@ -41,7 +41,7 @@ public class DemoPublishServiceImpl implements DemoPublishService {
 
     @Override
     public DemoPublishVO publish(DemoPublishDTO publishDTO) {
-        textCheckService.sensitiveTextCheck(publishDTO.getAccount(), publishDTO.getContent());
+        textCheckService.sensitiveTextCheck(Long.valueOf(publishDTO.getAccount()), publishDTO.getContent());
         DemoEntity demoEntity = dtoConvertor.toDemoEntity(publishDTO);
         DemoItemEntity demoItemEntity = dtoConvertor.toDemoItemEntity(publishDTO);
         infoPublisher.publish(demoEntity, demoItemEntity);

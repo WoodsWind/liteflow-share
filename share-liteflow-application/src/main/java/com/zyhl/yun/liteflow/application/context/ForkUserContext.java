@@ -11,7 +11,6 @@ import lombok.NoArgsConstructor;
 public class ForkUserContext {
     private UserDomainEntity userDomain;
 
-
     public void updateDomain(UserDomainEntity user) {
         this.userDomain = user;
     }
