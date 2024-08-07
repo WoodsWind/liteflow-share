@@ -9,7 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class LinkEntity {
+public class OutLinkEntity {
     private String linkID;
     private Integer encrypt;
     private String passwd;

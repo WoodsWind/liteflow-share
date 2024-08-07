@@ -8,7 +8,7 @@ import com.zyhl.yun.liteflow.domain.entity.DemoEntity;
 import com.zyhl.yun.liteflow.domain.entity.DemoItemEntity;
 import com.zyhl.yun.liteflow.domainservice.InfoPublisher;
 import com.zyhl.yun.liteflow.external.service.DemoMessageService;
-import com.zyhl.yun.liteflow.external.service.DemoTextCheckService;
+import com.zyhl.yun.liteflow.external.service.TextCheckService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -31,7 +31,7 @@ public class DemoPublishServiceImpl implements DemoPublishService {
 
 
     @Resource
-    DemoTextCheckService textCheckService;
+    TextCheckService textCheckService;
 
     @Resource
     InfoPublisher infoPublisher;

@@ -10,5 +10,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserInfoReq {
-    private String userDomainId;
+    private Long userDomainId;
+    private String phoneNumber;
 }

@@ -9,7 +9,7 @@ import com.zyhl.yun.liteflow.external.client.DemoFileRemoteClient;
 import com.zyhl.yun.liteflow.external.client.req.DemoSensitiveWordReq;
 import com.zyhl.yun.liteflow.external.client.resp.DemoSensitiveWordRsp;
 import com.zyhl.yun.liteflow.external.client.resultcode.ResultCode;
-import com.zyhl.yun.liteflow.external.service.DemoTextCheckService;
+import com.zyhl.yun.liteflow.external.service.TextCheckService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
@@ -25,7 +25,7 @@ import javax.annotation.Resource;
  */
 @Service
 @Slf4j
-public class DemoTextCheckServiceImpl implements DemoTextCheckService {
+public class TextCheckServiceImpl implements TextCheckService {
    @Resource
    DemoFileRemoteClient fileRemoteClient;
 

@@ -1,6 +1,6 @@
 package com.zyhl.yun.liteflow.application.context;
 
-import com.zyhl.yun.liteflow.domain.entity.LinkEntity;
+import com.zyhl.yun.liteflow.domain.entity.OutLinkEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,5 +9,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class LinkContext {
-    private LinkEntity linkEntity;
+    private OutLinkEntity outLinkEntity;
 }

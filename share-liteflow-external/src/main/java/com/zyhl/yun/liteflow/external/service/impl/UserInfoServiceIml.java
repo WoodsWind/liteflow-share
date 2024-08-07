@@ -17,9 +17,8 @@ public class UserInfoServiceIml implements UserInfoService {
     @Resource
     UserRemoteClient userRemoteClient;
 
-
     @Override
-    public UserDomainEntity queryInfo(String account) {
+    public UserDomainEntity queryInfo(Long account) {
         UserInfoReq userInfoReq = UserInfoReq.builder().userDomainId(account).build();
         BaseResult<UserInfoRsp> userResult = null;
         try {

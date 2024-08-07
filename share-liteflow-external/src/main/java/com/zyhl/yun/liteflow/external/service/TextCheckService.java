@@ -8,7 +8,7 @@ package com.zyhl.yun.liteflow.external.service;
  * @author <a href="19802021461@139.com">ZhiFeng.Wu</a>
  * @date 2022/7/25 10:13
  */
-public interface DemoTextCheckService {
+public interface TextCheckService {
 
    /***
     * 敏感词校验

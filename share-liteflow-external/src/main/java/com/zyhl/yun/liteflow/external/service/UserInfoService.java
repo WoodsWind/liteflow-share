@@ -17,5 +17,5 @@ public interface UserInfoService {
     * @param account
     * @param content
     */
-   UserDomainEntity queryInfo(String account);
+   UserDomainEntity queryInfo(Long account);
 }

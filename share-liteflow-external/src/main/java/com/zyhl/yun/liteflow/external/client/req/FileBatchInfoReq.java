@@ -7,20 +7,20 @@ import lombok.NoArgsConstructor;
 import org.checkerframework.checker.index.qual.Positive;
 import org.springframework.beans.factory.annotation.Value;
 
-import javax.validation.Valid;
 import javax.validation.constraints.Max;
 
 @Data
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class FileInfoReq {
+public class FileBatchInfoReq {
     private String userId;
-    private String fileId;
+    private String[] fileIds;
     //private String[] imageThumbnailStyleList;
 
     @Positive
     @Max(86400)
     @Value("${app.expireSec:900}")
     private Integer expireSec;
+
 }
