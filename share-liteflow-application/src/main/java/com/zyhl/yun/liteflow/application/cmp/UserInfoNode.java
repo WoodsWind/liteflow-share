@@ -7,7 +7,7 @@ import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
 
-@Component("user")
+@Component("userInfo")
 public class UserInfoNode extends NodeComponent {
 
     @Resource

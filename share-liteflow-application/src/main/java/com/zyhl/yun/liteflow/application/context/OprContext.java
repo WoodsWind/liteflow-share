@@ -5,5 +5,5 @@ package com.zyhl.yun.liteflow.application.context;
  * 基于权益项查询会员中心，获取相关权益
  */
 public class OprContext {
-
+    // Enum?
 }
