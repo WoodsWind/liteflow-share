@@ -6,14 +6,19 @@ import com.zyhl.yun.liteflow.application.context.TextContext;
 import com.zyhl.yun.liteflow.application.context.UserContext;
 import com.zyhl.yun.liteflow.domain.entity.UserDomainEntity;
 import com.zyhl.yun.liteflow.external.service.TextCheckService;
+import lombok.extern.slf4j.Slf4j;
 import org.omg.CORBA.UserException;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author 25538
+ */
+@Slf4j
 @Component("textSensitive")
 public class TextSensitiveNode extends NodeBooleanComponent {
     @Override
     public boolean processBoolean() throws Exception {
-        System.out.println("TextSensitiveNode");
+        log.info("textSensitive processBoolean");
         UserContext userContext = this.getContextBean(UserContext.class);
         TextContext textContext = this.getContextBean(TextContext.class);
         UserDomainEntity userDomainEntity = userContext.getUserDomain();

@@ -29,7 +29,7 @@ public class OceanbaseDialect extends AbstractHelperDialect {
 		PageAutoDialect.registerDialectAlias("mysql",OceanbaseDialect.class);
 	}
 
-
+	@Override
 	public Object processPageParameter(MappedStatement ms, Map<String, Object> paramMap, Page page, BoundSql boundSql, CacheKey pageKey) {
 		paramMap.put("First_PageHelper", page.getEndRow());
 		paramMap.put("Second_PageHelper", page.getStartRow());
@@ -39,6 +39,7 @@ public class OceanbaseDialect extends AbstractHelperDialect {
 		return paramMap;
 	}
 
+	@Override
 	public String getPageSql(String sql, Page page, CacheKey pageKey) {
 		StringBuilder sqlBuilder = new StringBuilder(sql.length() + 120);
 		sqlBuilder.append("SELECT * FROM ( ");

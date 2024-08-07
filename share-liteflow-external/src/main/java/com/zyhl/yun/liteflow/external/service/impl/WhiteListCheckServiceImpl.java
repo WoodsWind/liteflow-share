@@ -13,6 +13,9 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import javax.annotation.Resource;
 
+/**
+ * @author 25538
+ */
 @Service
 @Slf4j
 public class WhiteListCheckServiceImpl implements WhiteListCheckService {

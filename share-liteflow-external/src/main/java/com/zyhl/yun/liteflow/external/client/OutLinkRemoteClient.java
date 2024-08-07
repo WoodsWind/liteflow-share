@@ -25,6 +25,7 @@ public interface OutLinkRemoteClient {
 
     /**
      * 获取外链概要
+     * @param req
      * @return
      */
     @RequestMapping(value = "/outlink/snapshot", method = RequestMethod.POST)
@@ -32,6 +33,8 @@ public interface OutLinkRemoteClient {
 
     /**
      * 获取外链详情
+     * @param req
+     * @return
      */
     @RequestMapping(value = "/outlink/info", method = RequestMethod.POST)
     BaseResult<GetOutLinkInfoRes> outLinkInfo(@RequestBody GetOutLinkInfoReq req);

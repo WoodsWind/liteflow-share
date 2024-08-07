@@ -1,5 +1,8 @@
 package com.zyhl.yun.liteflow.external.client.vo;
 
+/**
+ * @author 25538
+ */
 public class ShareWhiteListVO {
     private Long id;
     private Integer type;

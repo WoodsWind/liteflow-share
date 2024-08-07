@@ -36,7 +36,7 @@ public class InfoPublisher {
 
     @Transactional(rollbackFor = Exception.class)
     public DemoItemEntity publish(DemoEntity entity, DemoItemEntity itemEntity) {
-        DemoItemEntity result = null;
+        DemoItemEntity result;
         try {
             saveEntity(entity);
             result = saveItemEntity(itemEntity);

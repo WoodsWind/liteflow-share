@@ -8,8 +8,15 @@ package com.zyhl.yun.liteflow.enums;
  * @date  2022/2/16 16:03
  */
 public interface AbstractResultCode {
-
+	/**
+	 * 获得错误码
+	 * @return
+	 */
 	String getResultCode();
 
+	/**
+	 * 获得错误信息
+	 * @return
+	 */
 	String getResultMsg();
 }

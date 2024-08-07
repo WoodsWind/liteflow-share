@@ -14,6 +14,10 @@ import java.util.Date;
  */
 public interface DemoRepository {
 
-
+    /**
+     * 持久化
+     * @param demoEntity
+     * @return
+     */
     DemoEntity insertInfo(DemoEntity demoEntity);
 }

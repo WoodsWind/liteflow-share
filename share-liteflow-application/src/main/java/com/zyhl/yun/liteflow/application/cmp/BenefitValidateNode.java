@@ -4,6 +4,9 @@ import com.yomahub.liteflow.core.NodeSwitchComponent;
 import com.zyhl.yun.liteflow.application.context.OprContext;
 import org.springframework.stereotype.Component;
 
+/**
+ * @author 25538
+ */
 @Component("benefitValidate")
 public class BenefitValidateNode extends NodeSwitchComponent {
     OprContext opr = this.getContextBean(OprContext.class);

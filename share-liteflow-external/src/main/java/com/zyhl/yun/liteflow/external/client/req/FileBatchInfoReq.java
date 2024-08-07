@@ -9,6 +9,9 @@ import org.springframework.beans.factory.annotation.Value;
 
 import javax.validation.constraints.Max;
 
+/**
+ * @author 25538
+ */
 @Data
 @Builder
 @AllArgsConstructor

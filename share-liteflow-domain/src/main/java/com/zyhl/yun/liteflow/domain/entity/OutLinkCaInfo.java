@@ -6,6 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * 外链详细信息中的目录信息
+ * @author 25538
  */
 @Data
 @AllArgsConstructor

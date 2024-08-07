@@ -9,6 +9,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * @author 25538
+ */
 public interface FileRemoteClient {
     /**
      * 获得文件信息
@@ -18,6 +21,11 @@ public interface FileRemoteClient {
     @RequestMapping(value = "/file/get", method = RequestMethod.POST)
     BaseResult<FileInfoRsp> fileInfo(@RequestBody FileInfoReq req);
 
+    /**
+     * 批量获得文件信息
+     * @param req
+     * @return
+     */
     @RequestMapping(value = "/file/batchGet", method = RequestMethod.POST)
     BaseResult<FileBatchInfoRsp> batchGet(@RequestBody FileBatchInfoReq req);
 }

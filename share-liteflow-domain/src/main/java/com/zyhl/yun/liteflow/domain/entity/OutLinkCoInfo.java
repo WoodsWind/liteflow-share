@@ -8,6 +8,7 @@ import java.util.Map;
 
 /**
  * 外链详细信息中的内容信息
+ * @author 25538
  */
 @Data
 @AllArgsConstructor

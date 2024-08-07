@@ -11,6 +11,9 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * @author 25538
+ */
 public interface FilePreviewRemoteClient {
     /**
      * 批量获取媒体播放信息

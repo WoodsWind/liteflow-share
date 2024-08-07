@@ -15,7 +15,7 @@ public interface UserInfoService {
    /***
     * 敏感词校验
     * @param account
-    * @param content
+    * @return
     */
    UserDomainEntity queryInfo(Long account);
 }

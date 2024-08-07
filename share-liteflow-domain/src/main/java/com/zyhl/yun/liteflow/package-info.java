@@ -6,7 +6,7 @@
  * @author: <a href="19802021461@139.com">ZhiFeng.Wu</a>
  * @date: 2021/11/9 10:50
  */
-package com.zyhl.yun.liteflow.domain;
+package com.zyhl.yun.liteflow;
 
 /***
  /***

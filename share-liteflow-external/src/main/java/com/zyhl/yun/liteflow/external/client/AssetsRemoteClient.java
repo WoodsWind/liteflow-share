@@ -6,6 +6,9 @@ import com.zyhl.yun.liteflow.external.client.resp.FileInfoRsp;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
+/**
+ * @author 25538
+ */
 public interface AssetsRemoteClient {
 
     /**

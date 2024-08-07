@@ -17,6 +17,9 @@ import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
 
+/**
+ * @author 25538
+ */
 @Service
 @Slf4j
 public class GetOutLinkServiceImpl implements GetOutLinkService {

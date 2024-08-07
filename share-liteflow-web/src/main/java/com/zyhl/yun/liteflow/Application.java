@@ -18,7 +18,9 @@ import java.net.InetAddress;
 import java.util.Arrays;
 import java.util.Collection;
 
-@ComponentScan
+/**
+ * @author 25538
+ */
 @SpringBootApplication
 @EnableFeignClients
 @EnableConfigurationProperties

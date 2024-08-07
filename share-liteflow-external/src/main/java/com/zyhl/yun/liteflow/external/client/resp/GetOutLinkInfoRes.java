@@ -2,6 +2,9 @@ package com.zyhl.yun.liteflow.external.client.resp;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCaInfo;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCoInfo;
 
+/**
+ * @author 25538
+ */
 public class GetOutLinkInfoRes {
     private String pCaID;
     private Integer nodNum;
