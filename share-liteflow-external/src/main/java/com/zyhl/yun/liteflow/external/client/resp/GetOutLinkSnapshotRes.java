@@ -7,7 +7,6 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetOutLinkRes {
-    private GetOutLinkResOne[] getOutLinkResSet;
-
+public class GetOutLinkSnapshotRes {
+    private String flowId;
 }

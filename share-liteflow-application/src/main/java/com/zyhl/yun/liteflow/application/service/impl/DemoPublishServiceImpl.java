@@ -29,7 +29,6 @@ public class DemoPublishServiceImpl implements DemoPublishService {
     @Resource
     DemoDTOConvertor dtoConvertor;
 
-
     @Resource
     TextCheckService textCheckService;
 

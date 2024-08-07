@@ -1,4 +1,4 @@
-package com.zyhl.yun.liteflow.external.client.resp;
+package com.zyhl.yun.liteflow.external.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -7,7 +7,7 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class GetOutLinkRes {
-    private GetOutLinkResOne[] getOutLinkResSet;
-
+public class MediaPreviewInfo {
+    private String status;
+    private String url;
 }

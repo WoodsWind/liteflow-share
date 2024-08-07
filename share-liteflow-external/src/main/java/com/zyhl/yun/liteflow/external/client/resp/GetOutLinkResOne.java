@@ -1,10 +1,13 @@
-package com.zyhl.yun.liteflow.domain.entity;
+package com.zyhl.yun.liteflow.external.client.resp;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+/**
+ * 创建外链响应
+ */
 @Data
 @Builder
 @AllArgsConstructor
