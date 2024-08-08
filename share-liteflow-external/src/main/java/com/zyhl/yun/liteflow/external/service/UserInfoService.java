@@ -13,9 +13,16 @@ import com.zyhl.yun.liteflow.domain.entity.UserDomainEntity;
 public interface UserInfoService {
 
    /***
-    * 敏感词校验
+    * 通过账号获得用户信息
     * @param account
     * @return
     */
-   UserDomainEntity queryInfo(Long account);
+   UserDomainEntity queryUserInfo(Long account);
+
+   /**
+    * 通过手机号获得用户信息
+    * @param phoneNumber
+    * @return
+    */
+   UserDomainEntity queryUserInfo(String phoneNumber);
 }

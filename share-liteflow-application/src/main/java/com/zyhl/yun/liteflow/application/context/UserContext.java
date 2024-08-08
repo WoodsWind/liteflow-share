@@ -12,14 +12,14 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class UserContext {
-    private UserDomainEntity userDomain;
-    public UserDomainEntity getUserDomain() {
-        return userDomain;
-    }
+    private UserDomainEntity userInfo;
 
-    public UserDomainEntity change(String userPhone) {
-        userDomain.setPhoneNumber(userPhone);
-        return userDomain;
+    public UserDomainEntity setAccount(Long account) {
+        userInfo.setUserDomainId(account);
+        return userInfo;
     }
-
+    public UserDomainEntity setPhoneNumber(String phone) {
+        userInfo.setPhoneNumber(phone);
+        return userInfo;
+    }
 }

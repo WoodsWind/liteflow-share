@@ -7,6 +7,7 @@ import com.zyhl.yun.liteflow.external.client.req.UserInfoReq;
 import com.zyhl.yun.liteflow.external.client.resp.UserInfoRsp;
 import com.zyhl.yun.liteflow.external.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
+import org.jetbrains.annotations.Nullable;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Resource;
@@ -21,16 +22,33 @@ public class UserInfoServiceImpl implements UserInfoService {
     UserRemoteClient userRemoteClient;
 
     @Override
-    public UserDomainEntity queryInfo(Long account) {
+    public UserDomainEntity queryUserInfo(Long account) {
         UserInfoReq userInfoReq = UserInfoReq.builder().userDomainId(account).build();
-        BaseResult<UserInfoRsp> userResult = null;
+        return getUserDomainEntity(userInfoReq);
+    }
+
+    @Override
+    public UserDomainEntity queryUserInfo(String phoneNumber) {
+        UserInfoReq userInfoReq = UserInfoReq.builder().phoneNumber(phoneNumber).build();
+        return getUserDomainEntity(userInfoReq);
+    }
+
+    /**
+     * 通用的请求获得userInfo
+     * @param userInfoReq
+     * @return
+     */
+    @Nullable
+    private UserDomainEntity getUserDomainEntity(UserInfoReq userInfoReq) {
+        BaseResult<UserInfoRsp> userResult;
+        UserDomainEntity userDomainEntity = null;
         try {
             userResult = userRemoteClient.userInfo(userInfoReq);
+            userDomainEntity = userResult.getData().getData();
         } catch (Exception e) {
             log.error(e.getMessage());
             // throw new Exception;
         }
-        UserDomainEntity userDomainEntity = null;
         return userDomainEntity;
     }
 }

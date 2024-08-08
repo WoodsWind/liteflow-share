@@ -18,15 +18,15 @@ public class UserDomainEntity {
     private String phoneNumber;
     private Integer cutoverStatus;
     private Integer belongsPlatform;
-    private String nationCode;
-    private Integer userAssetFlag;
     private String bmpUserId;
     private String siteCode;
-    /**
-     *  userProfileInfo;
-     *  userExtendInfo;
-     */
     private Integer serviceStatus;
     private String  createTime;
     private String updateTime;
+    /**
+     *  private String nationCode;
+     *  private Integer userAssetFlag;
+     *  userProfileInfo;
+     *  userExtendInfo;
+     */
 }
