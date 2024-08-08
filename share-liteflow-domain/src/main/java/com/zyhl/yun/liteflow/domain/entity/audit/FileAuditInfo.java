@@ -11,5 +11,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FileAuditInfo {
-    private String fileId;
+    /**
+     * Status 0代表未审核，1代表已审核
+     */
+    private Integer auditStatus;
+    private Integer auditLevel;
+    private Integer auditResult;
 }

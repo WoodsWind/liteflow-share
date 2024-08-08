@@ -9,6 +9,7 @@ import com.zyhl.yun.liteflow.external.client.resp.FileInfoRsp;
 import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkInfoRes;
 import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkRes;
 import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkSnapshotRes;
+import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,6 +17,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 /**
  * @author 25538
  */
+@FeignClient(name = "link-server")
 public interface OutLinkRemoteClient {
     /**
      * 创建外链

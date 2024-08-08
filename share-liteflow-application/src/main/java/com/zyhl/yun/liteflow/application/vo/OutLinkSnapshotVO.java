@@ -4,10 +4,9 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.annotation.security.DenyAll;
-
 /**
  * @author 25538
+ * 【注意】 这个类是管理端来的，估计还是得删
  */
 @Data
 @AllArgsConstructor
@@ -15,11 +14,11 @@ import javax.annotation.security.DenyAll;
 public class OutLinkSnapshotVO {
     private String shareCode;
     private String shareAccount;
-    private String UserId;
+    private String shareUserId;
     private Integer auditState;
-    private String ShareChannelID;
-    private Integer ShareChannel;
-    private String ShareChannelName;
+    private String shareChannelID;
+    private Integer shareChannel;
+    private String shareChannelName;
     private Integer encryptType;
     private Integer pubType;
     private Integer linkType;
@@ -41,6 +40,4 @@ public class OutLinkSnapshotVO {
     private String count;
     private String virtualObjectId;
     private Integer auditStatus;
-
-
 }
