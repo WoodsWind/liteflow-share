@@ -26,7 +26,7 @@ public class FileInfoServiceImpl implements FileInfoService {
     FileRemoteClient fileRemoteClient;
 
     @Override
-    public FileEntity queryAssetsInfo(String fileId) {
+    public FileEntity queryFileInfo(String fileId) {
         FileInfoReq fileInfoReq = FileInfoReq.builder().fileId(fileId).build();
         BaseResult<FileInfoRsp> fileResult = null;
         try{

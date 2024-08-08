@@ -1,10 +1,16 @@
 package com.zyhl.yun.liteflow.external.client.resp;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCaInfo;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCoInfo;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * @author 25538
  */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class GetOutLinkInfoRes {
     private String pCaID;
     private Integer nodNum;

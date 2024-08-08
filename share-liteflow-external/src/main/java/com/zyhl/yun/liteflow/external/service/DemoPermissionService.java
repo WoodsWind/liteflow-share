@@ -9,6 +9,9 @@ package com.zyhl.yun.liteflow.external.service;
  * @date 2022/7/25 10:13
  */
 public interface DemoPermissionService {
-
+    /**
+     * 判定
+     * @param text
+     */
     void validatePermission(String text);
 }
