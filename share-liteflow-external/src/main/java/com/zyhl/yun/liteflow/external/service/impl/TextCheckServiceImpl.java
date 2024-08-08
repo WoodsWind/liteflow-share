@@ -29,7 +29,6 @@ public class TextCheckServiceImpl implements TextCheckService {
    @Resource
    DemoFileRemoteClient fileRemoteClient;
 
-
    /***
     * 敏感词校验
     * @param account

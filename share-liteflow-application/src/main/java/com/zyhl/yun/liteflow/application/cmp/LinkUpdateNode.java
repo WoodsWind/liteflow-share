@@ -11,6 +11,6 @@ import org.springframework.stereotype.Component;
 public class LinkUpdateNode extends NodeComponent {
     @Override
     public void process() throws Exception {
-        log.info("LinkUpdateNode");
+        log.info("Link Update Node");
     }
 }

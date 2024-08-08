@@ -2984,3 +2984,443 @@ Caused by: java.net.ConnectException: Connection refused: no further information
 2024-08-07 15:51:55.827|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.?:?|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
 2024-08-07 15:51:55.828|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.?:?|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Destruction of the end
 2024-08-07 15:51:55.828|Thread-3|WARN |c.a.n.c.h.HttpClientBeanHolder.shutdown:114|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Destruction of the end
+2024-08-08 14:34:02.014|background-preinit|INFO |o.h.v.internal.util.Version.?:?|IGNORE|||||||||||||||||||||||||||||HV000001: Hibernate Validator 6.2.5.Final
+2024-08-08 14:34:02.042|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Starting Application using Java 1.8.0_421 on DESKTOP-0D3FQF2 with PID 7876 (C:\Users\25538\source\java\share-liteflow\share-liteflow-web\target\classes started by 25538 in C:\Users\25538\source\java\share-liteflow)
+2024-08-08 14:34:02.043|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||The following 1 profile is active: "local"
+2024-08-08 14:34:02.089|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=redis-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:34:02.090|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=feign-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:34:02.090|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=mysql-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:34:02.709|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-08 14:34:03.595|main|INFO |o.s.c.a.ConfigurationClassPostProcessor.?:?|IGNORE|||||||||||||||||||||||||||||Cannot enhance @Configuration bean definition 'com.yomahub.liteflow.springboot.config.LiteflowMainAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2024-08-08 14:34:03.686|main|INFO |o.s.c.c.scope.GenericScope.?:?|IGNORE|||||||||||||||||||||||||||||BeanFactory id=d2dc6a20-b8e5-314e-9016-867dfe2deddd
+2024-08-08 14:34:04.066|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration' of type [com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration$$EnhancerBySpringCGLIB$$36acd32c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.085|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.090|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.093|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$490/0x00000007c0694c28] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.099|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.112|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow-com.yomahub.liteflow.springboot.LiteflowProperty' of type [com.yomahub.liteflow.springboot.LiteflowProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.120|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow.monitor-com.yomahub.liteflow.springboot.LiteflowMonitorProperty' of type [com.yomahub.liteflow.springboot.LiteflowMonitorProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.130|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflowConfig' of type [com.yomahub.liteflow.property.LiteflowConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.137|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.spi.spring.SpringAware' of type [com.yomahub.liteflow.spi.spring.SpringAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:34:04.144|main|INFO |c.y.liteflow.util.LOGOPrinter.?:?|IGNORE|||||||||||||||||||||||||||||
+================================================================================================
+		 _     ___ _____ _____      _____ _     _____        __
+		| |   |_ _|_   _| ____|    |  ___| |   / _ \ \      / /
+		| |    | |  | | |  _| _____| |_  | |  | | | \ \ /\ / / 
+		| |___ | |  | | | |__|_____|  _| | |__| |_| |\ V  V /  
+		|_____|___| |_| |_____|    |_|   |_____\___/  \_/\_/   
+
+		Version: 2.12.2
+		Make your code amazing.
+		website：https://liteflow.cc
+		wechat：bryan_31
+================================================================================================
+
+2024-08-08 14:34:04.460|main|INFO |o.s.b.w.e.t.TomcatWebServer.?:?|IGNORE|||||||||||||||||||||||||||||Tomcat initialized with port(s): 8081 (http)
+2024-08-08 14:34:04.469|main|INFO |o.a.c.http11.Http11NioProtocol.?:?|IGNORE|||||||||||||||||||||||||||||Initializing ProtocolHandler ["http-nio-8081"]
+2024-08-08 14:34:04.471|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Starting service [Tomcat]
+2024-08-08 14:34:04.471|main|INFO |o.a.c.core.StandardEngine.?:?|IGNORE|||||||||||||||||||||||||||||Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-08-08 14:34:04.646|main|INFO |o.a.c.c.C.[.[localhost].[/yun].?:?|IGNORE|||||||||||||||||||||||||||||Initializing Spring embedded WebApplicationContext
+2024-08-08 14:34:04.646|main|INFO |o.s.b.w.s.c.ServletWebServerApplicationContext.?:?|IGNORE|||||||||||||||||||||||||||||Root WebApplicationContext: initialization completed in 2555 ms
+2024-08-08 14:34:04.759|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Running with Spring profile(s) :[local] 
+2024-08-08 14:34:04.845|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-08 14:34:04.846|com.alibaba.nacos.client.remote.worker|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[5b289625-a41b-48bf-904c-2e98373e9aca_config-0] Fail to connect server, after trying 1 times, last try server is {serverIp = '127.0.0.1', server main port = 8848}, error = unknown
+2024-08-08 14:34:06.018|main|INFO |c.a.d.s.b.a.DruidDataSourceAutoConfigure.?:?|IGNORE|||||||||||||||||||||||||||||Init DruidDataSource
+2024-08-08 14:34:06.536|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} inited
+2024-08-08 14:34:06.749|main|WARN |c.b.m.c.i.AbstractMethod.?:?|IGNORE|||||||||||||||||||||||||||||[com.zyhl.yun.liteflow.persistence.mapper.DemoItemMapper.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2024-08-08 14:34:06.762|main|WARN |c.b.m.c.m.TableInfoHelper.?:?|IGNORE|||||||||||||||||||||||||||||Can not find table primary key in Class: "com.zyhl.yun.liteflow.persistence.mapper.DemoMapper".
+2024-08-08 14:34:07.091|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-08 14:34:07.091|com.alibaba.nacos.client.remote.worker|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[5b289625-a41b-48bf-904c-2e98373e9aca_config-0] Fail to connect server, after trying 2 times, last try server is {serverIp = '127.0.0.1', server main port = 8848}, error = unknown
+2024-08-08 14:34:07.692|main|WARN |o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.?:?|IGNORE|||||||||||||||||||||||||||||Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'assetsInfo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileInfoServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2024-08-08 14:34:07.692|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closing ...
+2024-08-08 14:34:07.699|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closed
+2024-08-08 14:34:07.703|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Stopping service [Tomcat]
+2024-08-08 14:34:07.721|main|INFO |o.s.b.a.l.ConditionEvaluationReportLoggingListener.?:?|IGNORE|||||||||||||||||||||||||||||
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-08-08 14:34:07.753|main|ERROR|o.s.b.d.LoggingFailureAnalysisReporter.report:40|IGNORE|||||||||||||||||||||||||||||
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' in your configuration.
+
+2024-08-08 14:34:09.444|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.printIfErrorEnabled:99|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-08 14:34:09.445|com.alibaba.nacos.client.remote.worker|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[5b289625-a41b-48bf-904c-2e98373e9aca_config-0] Fail to connect server, after trying 3 times, last try server is {serverIp = '127.0.0.1', server main port = 8848}, error = unknown
+2024-08-08 14:34:11.874|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.printIfErrorEnabled:99|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-08 14:34:11.874|com.alibaba.nacos.client.remote.worker|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[5b289625-a41b-48bf-904c-2e98373e9aca_config-0] Fail to connect server, after trying 4 times, last try server is {serverIp = '127.0.0.1', server main port = 8848}, error = unknown
+2024-08-08 14:34:14.420|com.alibaba.nacos.client.remote.worker|ERROR|c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Server check fail, please check server 127.0.0.1 ,port 9848 is available , error ={}
+j.u.c.ExecutionException: com.alibaba.nacos.shaded.io.grpc.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.getDoneValue(AbstractFuture.java:566)
+	at c.a.n.s.c.g.c.u.c.AbstractFuture.get(AbstractFuture.java:445)
+	at c.a.n.c.r.c.grpc.GrpcClient.serverCheck(GrpcClient.java:148)
+	at c.a.n.c.r.c.grpc.GrpcClient.connectToServer(GrpcClient.java:264)
+	at c.a.n.c.r.client.RpcClient.reconnect(RpcClient.java:522)
+	at c.a.n.c.r.client.RpcClient.lambda$start$2(RpcClient.java:370)
+	at j.u.c.Executors$RunnableAdapter.call(Executors.java:511)
+	at j.util.concurrent.FutureTask.run(FutureTask.java:266)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.access$201(ScheduledThreadPoolExecutor.java:180)
+	at j.u.c.ScheduledThreadPoolExecutor$ScheduledFutureTask.run(ScheduledThreadPoolExecutor.java:293)
+	... 3 frames truncated
+Caused by: c.a.n.s.i.g.StatusRuntimeException: UNAVAILABLE: io exception
+	at c.a.n.shaded.io.grpc.Status.asRuntimeException(Status.java:533)
+	at c.a.n.s.i.g.s.ClientCalls$UnaryStreamToFuture.onClose(ClientCalls.java:490)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusStatsModule$StatsClientInterceptor$1$1.onClose(CensusStatsModule.java:700)
+	at c.a.n.s.i.g.PartialForwardingClientCallListener.onClose(PartialForwardingClientCallListener.java:39)
+	at c.a.n.s.i.g.ForwardingClientCallListener.onClose(ForwardingClientCallListener.java:23)
+	at c.a.n.s.i.g.ForwardingClientCallListener$SimpleForwardingClientCallListener.onClose(ForwardingClientCallListener.java:40)
+	at c.a.n.s.i.g.i.CensusTracingModule$TracingClientInterceptor$1$1.onClose(CensusTracingModule.java:399)
+	... 8 frames truncated
+	... 3 common frames omitted
+Caused by: c.a.n.s.i.g.n.s.i.n.c.AbstractChannel$AnnotatedConnectException: Connection refused: no further information: /127.0.0.1:9848
+Caused by: java.net.ConnectException: Connection refused: no further information
+	at sun.nio.ch.SocketChannelImpl.checkConnect(SocketChannelImpl.java)
+	at sun.nio.ch.SocketChannelImpl.finishConnect(SocketChannelImpl.java:715)
+	at c.a.n.s.i.g.n.s.i.n.c.s.n.NioSocketChannel.doFinishConnect(NioSocketChannel.java:327)
+	at c.a.n.s.i.g.n.s.i.n.c.n.AbstractNioChannel$AbstractNioUnsafe.finishConnect(AbstractNioChannel.java:336)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKey(NioEventLoop.java:685)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:632)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.processSelectedKeys(NioEventLoop.java:549)
+	at c.a.n.s.i.g.n.s.i.n.c.n.NioEventLoop.run(NioEventLoop.java:511)
+	at c.a.n.s.i.g.n.s.i.n.u.c.SingleThreadEventExecutor$5.run(SingleThreadEventExecutor.java:918)
+	at c.a.n.s.i.g.n.s.i.n.u.i.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	... 2 frames truncated
+2024-08-08 14:34:14.421|com.alibaba.nacos.client.remote.worker|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[5b289625-a41b-48bf-904c-2e98373e9aca_config-0] Fail to connect server, after trying 5 times, last try server is {serverIp = '127.0.0.1', server main port = 8848}, error = unknown
+2024-08-08 14:34:16.552|Thread-9|WARN |c.a.n.c.notify.NotifyCenter.?:?|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
+2024-08-08 14:34:16.553|Thread-5|WARN |c.a.n.c.h.HttpClientBeanHolder.shutdown:108|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Start destroying common HttpClient
+2024-08-08 14:38:37.665|background-preinit|INFO |o.h.v.internal.util.Version.?:21|IGNORE|||||||||||||||||||||||||||||HV000001: Hibernate Validator 6.2.5.Final
+2024-08-08 14:38:37.698|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Starting Application using Java 1.8.0_421 on DESKTOP-0D3FQF2 with PID 24292 (C:\Users\25538\source\java\share-liteflow\share-liteflow-web\target\classes started by 25538 in C:\Users\25538\source\java\share-liteflow)
+2024-08-08 14:38:37.700|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||The following 1 profile is active: "local"
+2024-08-08 14:38:37.801|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=redis-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:38:37.802|main|WARN |c.a.c.n.c.NacosConfigDataLoader.logTo:258|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=feign-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:38:37.802|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=mysql-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:38:39.283|main|INFO |o.s.c.a.ConfigurationClassPostProcessor.?:?|IGNORE|||||||||||||||||||||||||||||Cannot enhance @Configuration bean definition 'com.yomahub.liteflow.springboot.config.LiteflowMainAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2024-08-08 14:38:39.366|main|INFO |o.s.c.c.scope.GenericScope.?:?|IGNORE|||||||||||||||||||||||||||||BeanFactory id=d2dc6a20-b8e5-314e-9016-867dfe2deddd
+2024-08-08 14:38:39.678|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration' of type [com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration$$EnhancerBySpringCGLIB$$edb37405] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.693|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.699|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.701|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$490/0x00000007c06ba428] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.705|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.717|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow-com.yomahub.liteflow.springboot.LiteflowProperty' of type [com.yomahub.liteflow.springboot.LiteflowProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.725|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow.monitor-com.yomahub.liteflow.springboot.LiteflowMonitorProperty' of type [com.yomahub.liteflow.springboot.LiteflowMonitorProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.735|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:376|IGNORE|||||||||||||||||||||||||||||Bean 'liteflowConfig' of type [com.yomahub.liteflow.property.LiteflowConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.742|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.spi.spring.SpringAware' of type [com.yomahub.liteflow.spi.spring.SpringAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:38:39.749|main|INFO |c.y.liteflow.util.LOGOPrinter.?:?|IGNORE|||||||||||||||||||||||||||||
+================================================================================================
+		 _     ___ _____ _____      _____ _     _____        __
+		| |   |_ _|_   _| ____|    |  ___| |   / _ \ \      / /
+		| |    | |  | | |  _| _____| |_  | |  | | | \ \ /\ / / 
+		| |___ | |  | | | |__|_____|  _| | |__| |_| |\ V  V /  
+		|_____|___| |_| |_____|    |_|   |_____\___/  \_/\_/   
+
+		Version: 2.12.2
+		Make your code amazing.
+		website：https://liteflow.cc
+		wechat：bryan_31
+================================================================================================
+
+2024-08-08 14:38:40.026|main|INFO |o.s.b.w.e.t.TomcatWebServer.?:?|IGNORE|||||||||||||||||||||||||||||Tomcat initialized with port(s): 8081 (http)
+2024-08-08 14:38:40.034|main|INFO |o.a.c.http11.Http11NioProtocol.?:?|IGNORE|||||||||||||||||||||||||||||Initializing ProtocolHandler ["http-nio-8081"]
+2024-08-08 14:38:40.034|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Starting service [Tomcat]
+2024-08-08 14:38:40.035|main|INFO |o.a.c.core.StandardEngine.?:?|IGNORE|||||||||||||||||||||||||||||Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-08-08 14:38:40.210|main|INFO |o.a.c.c.C.[.[localhost].[/yun].?:?|IGNORE|||||||||||||||||||||||||||||Initializing Spring embedded WebApplicationContext
+2024-08-08 14:38:40.210|main|INFO |o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:292|IGNORE|||||||||||||||||||||||||||||Root WebApplicationContext: initialization completed in 2404 ms
+2024-08-08 14:38:40.297|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Running with Spring profile(s) :[local] 
+2024-08-08 14:38:41.267|main|INFO |c.a.d.s.b.a.DruidDataSourceAutoConfigure.?:?|IGNORE|||||||||||||||||||||||||||||Init DruidDataSource
+2024-08-08 14:38:41.692|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} inited
+2024-08-08 14:38:41.886|main|WARN |c.b.m.c.i.AbstractMethod.?:?|IGNORE|||||||||||||||||||||||||||||[com.zyhl.yun.liteflow.persistence.mapper.DemoItemMapper.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2024-08-08 14:38:41.898|main|WARN |c.b.m.c.m.TableInfoHelper.?:?|IGNORE|||||||||||||||||||||||||||||Can not find table primary key in Class: "com.zyhl.yun.liteflow.persistence.mapper.DemoMapper".
+2024-08-08 14:38:42.760|main|WARN |o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh:591|IGNORE|||||||||||||||||||||||||||||Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'assetsInfo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileInfoServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2024-08-08 14:38:42.761|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closing ...
+2024-08-08 14:38:42.765|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closed
+2024-08-08 14:38:42.768|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Stopping service [Tomcat]
+2024-08-08 14:38:42.780|main|INFO |o.s.b.a.l.ConditionEvaluationReportLoggingListener.?:?|IGNORE|||||||||||||||||||||||||||||
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-08-08 14:38:42.802|main|ERROR|o.s.b.d.LoggingFailureAnalysisReporter.?:?|IGNORE|||||||||||||||||||||||||||||
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' in your configuration.
+
+2024-08-08 14:40:44.646|Thread-9|WARN |c.a.n.c.notify.NotifyCenter.shutdown:136|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
+2024-08-08 14:40:44.647|Thread-9|WARN |c.a.n.c.notify.NotifyCenter.?:?|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Destruction of the end
+2024-08-08 14:40:44.646|Thread-5|WARN |c.a.n.c.h.HttpClientBeanHolder.shutdown:108|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Start destroying common HttpClient
+2024-08-08 14:40:55.809|background-preinit|INFO |o.h.v.internal.util.Version.?:?|IGNORE|||||||||||||||||||||||||||||HV000001: Hibernate Validator 6.2.5.Final
+2024-08-08 14:40:55.840|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Starting Application using Java 1.8.0_421 on DESKTOP-0D3FQF2 with PID 23568 (C:\Users\25538\source\java\share-liteflow\share-liteflow-web\target\classes started by 25538 in C:\Users\25538\source\java\share-liteflow)
+2024-08-08 14:40:55.841|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||The following 1 profile is active: "local"
+2024-08-08 14:40:55.932|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=redis-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:40:55.932|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=feign-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:40:55.934|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=mysql-local.yml, group=yun-demo-service] is empty
+2024-08-08 14:40:57.184|main|INFO |o.s.c.a.ConfigurationClassPostProcessor.enhanceConfigurationClasses:426|IGNORE|||||||||||||||||||||||||||||Cannot enhance @Configuration bean definition 'com.yomahub.liteflow.springboot.config.LiteflowMainAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2024-08-08 14:40:57.264|main|INFO |o.s.c.c.scope.GenericScope.?:?|IGNORE|||||||||||||||||||||||||||||BeanFactory id=d2dc6a20-b8e5-314e-9016-867dfe2deddd
+2024-08-08 14:40:57.701|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration' of type [com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration$$EnhancerBySpringCGLIB$$edb37405] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.716|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.722|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.724|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$490/0x00000007c06ba428] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.729|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.741|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow-com.yomahub.liteflow.springboot.LiteflowProperty' of type [com.yomahub.liteflow.springboot.LiteflowProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.750|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow.monitor-com.yomahub.liteflow.springboot.LiteflowMonitorProperty' of type [com.yomahub.liteflow.springboot.LiteflowMonitorProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.760|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflowConfig' of type [com.yomahub.liteflow.property.LiteflowConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.766|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.spi.spring.SpringAware' of type [com.yomahub.liteflow.spi.spring.SpringAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-08 14:40:57.772|main|INFO |c.y.liteflow.util.LOGOPrinter.?:?|IGNORE|||||||||||||||||||||||||||||
+================================================================================================
+		 _     ___ _____ _____      _____ _     _____        __
+		| |   |_ _|_   _| ____|    |  ___| |   / _ \ \      / /
+		| |    | |  | | |  _| _____| |_  | |  | | | \ \ /\ / / 
+		| |___ | |  | | | |__|_____|  _| | |__| |_| |\ V  V /  
+		|_____|___| |_| |_____|    |_|   |_____\___/  \_/\_/   
+
+		Version: 2.12.2
+		Make your code amazing.
+		website：https://liteflow.cc
+		wechat：bryan_31
+================================================================================================
+
+2024-08-08 14:40:58.049|main|INFO |o.s.b.w.e.t.TomcatWebServer.?:?|IGNORE|||||||||||||||||||||||||||||Tomcat initialized with port(s): 8081 (http)
+2024-08-08 14:40:58.059|main|INFO |o.a.c.http11.Http11NioProtocol.?:?|IGNORE|||||||||||||||||||||||||||||Initializing ProtocolHandler ["http-nio-8081"]
+2024-08-08 14:40:58.059|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Starting service [Tomcat]
+2024-08-08 14:40:58.060|main|INFO |o.a.c.core.StandardEngine.?:?|IGNORE|||||||||||||||||||||||||||||Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-08-08 14:40:58.230|main|INFO |o.a.c.c.C.[.[localhost].[/yun].?:?|IGNORE|||||||||||||||||||||||||||||Initializing Spring embedded WebApplicationContext
+2024-08-08 14:40:58.231|main|INFO |o.s.b.w.s.c.ServletWebServerApplicationContext.prepareWebApplicationContext:292|IGNORE|||||||||||||||||||||||||||||Root WebApplicationContext: initialization completed in 2295 ms
+2024-08-08 14:40:58.308|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Running with Spring profile(s) :[local] 
+2024-08-08 14:40:59.378|main|INFO |c.a.d.s.b.a.DruidDataSourceAutoConfigure.?:?|IGNORE|||||||||||||||||||||||||||||Init DruidDataSource
+2024-08-08 14:40:59.815|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} inited
+2024-08-08 14:41:00.075|main|WARN |c.b.m.c.i.AbstractMethod.?:?|IGNORE|||||||||||||||||||||||||||||[com.zyhl.yun.liteflow.persistence.mapper.DemoItemMapper.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2024-08-08 14:41:00.097|main|WARN |c.b.m.c.m.TableInfoHelper.?:?|IGNORE|||||||||||||||||||||||||||||Can not find table primary key in Class: "com.zyhl.yun.liteflow.persistence.mapper.DemoMapper".
+2024-08-08 14:41:01.111|main|WARN |o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext.refresh:591|IGNORE|||||||||||||||||||||||||||||Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'assetsInfo': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'fileInfoServiceImpl': Injection of resource dependencies failed; nested exception is org.springframework.beans.factory.NoSuchBeanDefinitionException: No qualifying bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@javax.annotation.Resource(shareable=true, lookup=, name=, description=, authenticationType=CONTAINER, type=class java.lang.Object, mappedName=)}
+2024-08-08 14:41:01.112|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closing ...
+2024-08-08 14:41:01.117|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closed
+2024-08-08 14:41:01.119|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Stopping service [Tomcat]
+2024-08-08 14:41:01.133|main|INFO |o.s.b.a.l.ConditionEvaluationReportLoggingListener.?:?|IGNORE|||||||||||||||||||||||||||||
+
+Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
+2024-08-08 14:41:01.155|main|ERROR|o.s.b.d.LoggingFailureAnalysisReporter.?:?|IGNORE|||||||||||||||||||||||||||||
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+A component required a bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' that could not be found.
+
+
+Action:
+
+Consider defining a bean of type 'com.zyhl.yun.liteflow.external.client.FileRemoteClient' in your configuration.
+
+2024-08-08 14:42:56.824|Thread-4|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Start destroying common HttpClient
+2024-08-08 14:42:56.825|Thread-8|WARN |c.a.n.c.notify.NotifyCenter.shutdown:136|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
+2024-08-08 14:42:56.825|Thread-8|WARN |c.a.n.c.notify.NotifyCenter.?:?|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Destruction of the end
+2024-08-08 14:42:56.825|Thread-4|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Destruction of the end

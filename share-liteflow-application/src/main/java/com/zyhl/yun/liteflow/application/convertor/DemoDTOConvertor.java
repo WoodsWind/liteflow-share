@@ -18,7 +18,6 @@ import org.mapstruct.Mapper;
 @Mapper(componentModel = "spring")
 public interface DemoDTOConvertor {
 
-
 	DemoQueryCommand toDemoQueryCommand(DemoQueryDTO dto);
 
     DemoEntity toDemoEntity(DemoPublishDTO publishDTO);

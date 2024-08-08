@@ -23,7 +23,7 @@ public class UserInfoNode extends NodeComponent {
 
     @Override
     public void process() throws Exception {
-        log.info("===UserInfoNode===");
+        log.info("===User Info Node===");
         // ForkUserContext context = null;
         UserContext userContext = getContextBean(UserContext.class);
         try(Scanner scanner = new Scanner(System.in)) {

@@ -14,7 +14,7 @@ public class AssetsValidateNode extends NodeBooleanComponent {
 
     @Override
     public boolean processBoolean() throws Exception {
-        log.info("AssetsValidateNode");
+        log.info("===Assets Validate Node===");
         // 检查文件的状态
         return true;
     }

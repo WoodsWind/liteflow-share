@@ -1,6 +1,5 @@
 package com.zyhl.yun.liteflow.external.client.resp;
 
-import com.zyhl.yun.liteflow.domain.entity.FileEntity;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -11,9 +10,8 @@ import lombok.NoArgsConstructor;
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
-public class FileBatchInfoRsp {
-    private FileEntity[] data;
-    public FileEntity[] getBatchFileResults() {
-        return data;
-    }
+public class FileDirRsp {
+    private Long totalSize;
+    private Long subDirCount;
+    private Long subFileCount;
 }

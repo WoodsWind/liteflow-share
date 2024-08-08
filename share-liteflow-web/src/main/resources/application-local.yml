@@ -11,15 +11,20 @@ spring:
       - optional:nacos:feign-local.yml?group=${spring.application.name}
       - classpath:redis-local.yml
       - optional:nacos:redis-local.yml?group=${spring.application.name}
+      - classpath:user-server-local.yml
+      - optional:nacos:user-server-local.yml?group=${spring.application.name}
+      - classpath:file-server-local.yml
+      - optional:nacos:file-server-local.yml?group=${spring.application.name}
   cloud:
     nacos:
       discovery:
-        server-addr: ${NACOS_SERVER:127.0.0.1:8848} # 你的nacos地址
+        server-addr: ${NACOS_SERVER:192.168.71.1:8848} # 你的nacos地址
       config:
-        server-addr: ${NACOS_SERVER:127.0.0.1:8848}
+        server-addr: ${NACOS_SERVER:192.168.71.1:8848}
         shared-configs[0]:
           data-id: error-code.yaml
         refreshable-dataids: error-code.yaml
+        file-extension: yml
 
 server:
   port: 8081

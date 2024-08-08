@@ -16,7 +16,7 @@ import org.springframework.stereotype.Component;
 public class TextSensitiveNode extends NodeBooleanComponent {
     @Override
     public boolean processBoolean() throws Exception {
-        log.info("textSensitive processBoolean");
+        log.info("=== Text Sensitive Node");
         UserContext userContext = this.getContextBean(UserContext.class);
         TextContext textContext = this.getContextBean(TextContext.class);
         UserDomainEntity userDomainEntity = userContext.getUserInfo();

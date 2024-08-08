@@ -1,0 +1,110 @@
+2024-08-08 16:09:50.273|main|ERROR|o.s.boot.SpringApplication.?:?|IGNORE|||||||||||||||||||||||||||||Application run failed
+j.lang.IllegalStateException: Service id not legal hostname (${file-server})
+	at o.springframework.util.Assert.state(Assert.java:76)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:111)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:282)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:270)
+	at o.s.c.o.FeignClientsRegistrar.getContextId(FeignClientsRegistrar.java:288)
+	at o.s.c.o.FeignClientsRegistrar.registerFeignClient(FeignClientsRegistrar.java:213)
+	at o.s.c.o.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:202)
+	at o.s.c.o.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:151)
+	at o.s.c.a.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at o.s.c.a.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:396)
+	... 15 frames truncated
+2024-08-08 16:22:19.534|main|ERROR|o.s.boot.SpringApplication.reportFailure:821|IGNORE|||||||||||||||||||||||||||||Application run failed
+j.lang.IllegalStateException: Service id not legal hostname (${file-server})
+	at o.springframework.util.Assert.state(Assert.java:76)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:111)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:282)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:270)
+	at o.s.c.o.FeignClientsRegistrar.getContextId(FeignClientsRegistrar.java:288)
+	at o.s.c.o.FeignClientsRegistrar.registerFeignClient(FeignClientsRegistrar.java:213)
+	at o.s.c.o.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:202)
+	at o.s.c.o.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:151)
+	at o.s.c.a.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at o.s.c.a.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:396)
+	... 15 frames truncated
+2024-08-08 16:54:37.353|main|ERROR|o.s.boot.SpringApplication.?:?|IGNORE|||||||||||||||||||||||||||||Application run failed
+j.lang.IllegalStateException: Service id not legal hostname (${file-server})
+	at o.springframework.util.Assert.state(Assert.java:76)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:111)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:282)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:270)
+	at o.s.c.o.FeignClientsRegistrar.getContextId(FeignClientsRegistrar.java:288)
+	at o.s.c.o.FeignClientsRegistrar.registerFeignClient(FeignClientsRegistrar.java:213)
+	at o.s.c.o.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:202)
+	at o.s.c.o.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:151)
+	at o.s.c.a.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at o.s.c.a.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:396)
+	... 15 frames truncated
+2024-08-08 16:56:53.291|main|ERROR|o.s.boot.SpringApplication.?:?|IGNORE|||||||||||||||||||||||||||||Application run failed
+j.lang.IllegalStateException: Service id not legal hostname (${user-server})
+	at o.springframework.util.Assert.state(Assert.java:76)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:111)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:282)
+	at o.s.c.o.FeignClientsRegistrar.getName(FeignClientsRegistrar.java:270)
+	at o.s.c.o.FeignClientsRegistrar.getContextId(FeignClientsRegistrar.java:288)
+	at o.s.c.o.FeignClientsRegistrar.registerFeignClient(FeignClientsRegistrar.java:213)
+	at o.s.c.o.FeignClientsRegistrar.registerFeignClients(FeignClientsRegistrar.java:202)
+	at o.s.c.o.FeignClientsRegistrar.registerBeanDefinitions(FeignClientsRegistrar.java:151)
+	at o.s.c.a.ImportBeanDefinitionRegistrar.registerBeanDefinitions(ImportBeanDefinitionRegistrar.java:86)
+	at o.s.c.a.ConfigurationClassBeanDefinitionReader.lambda$loadBeanDefinitionsFromRegistrars$1(ConfigurationClassBeanDefinitionReader.java:396)
+	... 15 frames truncated
+2024-08-08 16:57:23.341|main|ERROR|o.s.boot.SpringApplication.?:?|IGNORE|||||||||||||||||||||||||||||Application run failed
+o.s.b.f.BeanCreationException: Error creating bean with name 'benefitValidate' defined in file [C:\Users\25538\source\java\share-liteflow\share-liteflow-application\target\classes\com\zyhl\yun\liteflow\application\cmp\BenefitValidateNode.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zyhl.yun.liteflow.application.cmp.BenefitValidateNode]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at o.s.b.f.s.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at o.s.b.f.s.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at o.s.b.f.s.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at o.s.b.f.s.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at o.s.b.f.s.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at o.s.c.s.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	... 6 frames truncated
+Caused by: o.s.b.BeanInstantiationException: Failed to instantiate [com.zyhl.yun.liteflow.application.cmp.BenefitValidateNode]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at o.s.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at o.s.b.f.s.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 15 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at c.y.l.core.NodeComponent.getSlotIndex(NodeComponent.java:246)
+	at c.y.l.core.NodeComponent.getSlot(NodeComponent.java:250)
+	at c.y.l.core.NodeComponent.getContextBean(NodeComponent.java:258)
+	at c.z.y.l.a.c.BenefitValidateNode.<init>(BenefitValidateNode.java:12)
+	at s.r.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java)
+	at s.r.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at s.r.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at o.s.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 17 common frames omitted
+2024-08-08 17:03:51.625|main|ERROR|o.s.boot.SpringApplication.?:?|IGNORE|||||||||||||||||||||||||||||Application run failed
+o.s.b.f.BeanCreationException: Error creating bean with name 'benefitValidate' defined in file [C:\Users\25538\source\java\share-liteflow\share-liteflow-application\target\classes\com\zyhl\yun\liteflow\application\cmp\BenefitValidateNode.class]: Instantiation of bean failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.zyhl.yun.liteflow.application.cmp.BenefitValidateNode]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1334)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:582)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:542)
+	at o.s.b.f.s.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:335)
+	at o.s.b.f.s.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:234)
+	at o.s.b.f.s.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:333)
+	at o.s.b.f.s.AbstractBeanFactory.getBean(AbstractBeanFactory.java:208)
+	at o.s.b.f.s.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:955)
+	at o.s.c.s.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:920)
+	... 6 frames truncated
+Caused by: o.s.b.BeanInstantiationException: Failed to instantiate [com.zyhl.yun.liteflow.application.cmp.BenefitValidateNode]: Constructor threw exception; nested exception is java.lang.NullPointerException
+	at o.s.beans.BeanUtils.instantiateClass(BeanUtils.java:224)
+	at o.s.b.f.s.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:87)
+	at o.s.b.f.s.AbstractAutowireCapableBeanFactory.instantiateBean(AbstractAutowireCapableBeanFactory.java:1326)
+	... 15 common frames omitted
+Caused by: java.lang.NullPointerException: null
+	at c.y.l.core.NodeComponent.getSlotIndex(NodeComponent.java:246)
+	at c.y.l.core.NodeComponent.getSlot(NodeComponent.java:250)
+	at c.y.l.core.NodeComponent.getContextBean(NodeComponent.java:258)
+	at c.z.y.l.a.c.BenefitValidateNode.<init>(BenefitValidateNode.java:14)
+	at s.r.NativeConstructorAccessorImpl.newInstance0(NativeConstructorAccessorImpl.java)
+	at s.r.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
+	at s.r.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
+	at java.lang.reflect.Constructor.newInstance(Constructor.java:423)
+	at o.s.beans.BeanUtils.instantiateClass(BeanUtils.java:211)
+	... 17 common frames omitted

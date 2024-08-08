@@ -1,5 +1,17 @@
 package com.zyhl.yun.liteflow.application.vo;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+import javax.annotation.security.DenyAll;
+
+/**
+ * @author 25538
+ */
+@Data
+@AllArgsConstructor
+@NoArgsConstructor
 public class OutLinkSnapshotVO {
     private String shareCode;
     private String shareAccount;

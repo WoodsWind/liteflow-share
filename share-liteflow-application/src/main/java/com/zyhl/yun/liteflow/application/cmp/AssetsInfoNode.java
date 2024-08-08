@@ -20,9 +20,9 @@ public class AssetsInfoNode extends NodeComponent {
 
     @Override
     public void process() throws Exception {
+        log.info("===Assets Info Node===");
         AssetsContext assetsContext = null;
         FileEntity assetsEntity = fileInfoService.queryFileInfo(assetsContext.getAssetsEntity().getAssetsId());
 
-        log.info("AssetsInfoNode");
     }
 }

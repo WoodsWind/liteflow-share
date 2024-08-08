@@ -11,6 +11,6 @@ import org.springframework.stereotype.Component;
 public class LinkPermitCheckNode extends NodeComponent {
     @Override
     public void process() throws Exception {
-        log.info("LinkPermitCheckNode");
+        log.info("Link Permit Check Node");
     }
 }

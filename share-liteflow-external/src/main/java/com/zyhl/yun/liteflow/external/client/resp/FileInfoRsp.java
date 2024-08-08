@@ -12,5 +12,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FileInfoRsp {
-    private FileEntity fileEntity;
+    private FileEntity data;
 }

@@ -12,6 +12,10 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FileContext {
-    private FileEntity fileEntity;
+    private FileEntity fileInfo;
 
+    public FileEntity changeUpdateAt(String updatedAt){
+        fileInfo.setUpdatedAt(updatedAt);
+        return fileInfo;
+    }
 }
