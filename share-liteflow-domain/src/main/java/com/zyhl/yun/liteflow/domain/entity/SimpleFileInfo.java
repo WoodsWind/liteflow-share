@@ -1,7 +1,7 @@
-package com.zyhl.yun.liteflow.external.dto;
+package com.zyhl.yun.liteflow.domain.entity;
 
-import com.zyhl.yun.liteflow.domain.entity.audit.FileAuditInfo;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,9 +9,17 @@ import lombok.NoArgsConstructor;
  * @author 25538
  */
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class SimpleFileInfo {
+
+    private String fileId;
+    private String parentFileId;
+    private String name;
+    private String type;
+
+    /** simple不了一点。和file一样啊，故重写了一种
     private String fileId;
     private String parentFileId;
     private String name;
@@ -27,7 +35,6 @@ public class SimpleFileInfo {
     private FileAuditInfo metadataAuditInfo;
     //private Tag[] userTags;
 
-    /**普通文件专有信息*/
     private String localCreatedAt;
     private String localUpdatedAt;
     private String fileExtension;

@@ -1,7 +1,7 @@
 package com.zyhl.yun.liteflow.external.service;
 
 import com.zyhl.yun.liteflow.domain.entity.FileEntity;
-import com.zyhl.yun.liteflow.external.dto.SimpleFileInfo;
+import com.zyhl.yun.liteflow.domain.entity.SimpleFileInfo;
 import com.zyhl.yun.liteflow.domain.entity.FileDirEntity;
 
 /**

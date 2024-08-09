@@ -13,6 +13,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class TextEntity {
+
     private String outLinkTitle;
     private String outLinkDescription;
     private String fileName;

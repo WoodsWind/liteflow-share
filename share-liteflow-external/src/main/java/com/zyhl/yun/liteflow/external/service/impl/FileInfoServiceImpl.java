@@ -11,7 +11,7 @@ import com.zyhl.yun.liteflow.external.client.resp.FileBatchInfoRsp;
 import com.zyhl.yun.liteflow.external.client.resp.FileDirRsp;
 import com.zyhl.yun.liteflow.external.client.resp.FileInfoRsp;
 import com.zyhl.yun.liteflow.external.client.resp.FileListRsp;
-import com.zyhl.yun.liteflow.external.dto.SimpleFileInfo;
+import com.zyhl.yun.liteflow.domain.entity.SimpleFileInfo;
 import com.zyhl.yun.liteflow.domain.entity.FileDirEntity;
 import com.zyhl.yun.liteflow.external.service.FileInfoService;
 import lombok.extern.slf4j.Slf4j;

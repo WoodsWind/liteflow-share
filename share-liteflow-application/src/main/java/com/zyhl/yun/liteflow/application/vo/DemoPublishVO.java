@@ -21,5 +21,6 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @AllArgsConstructor
 public class DemoPublishVO {
+
 	private Long id;
 }

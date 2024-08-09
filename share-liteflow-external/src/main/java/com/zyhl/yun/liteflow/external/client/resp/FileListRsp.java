@@ -1,6 +1,6 @@
 package com.zyhl.yun.liteflow.external.client.resp;
 
-import com.zyhl.yun.liteflow.external.dto.SimpleFileInfo;
+import com.zyhl.yun.liteflow.domain.entity.SimpleFileInfo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

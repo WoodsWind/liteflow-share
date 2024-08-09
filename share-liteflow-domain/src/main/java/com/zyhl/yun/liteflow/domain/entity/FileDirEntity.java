@@ -12,6 +12,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FileDirEntity {
+    SimpleFileInfo[] simpleFileInfos;
     private Long totalSize;
     private Long subDirCount;
     private Long subFileCount;

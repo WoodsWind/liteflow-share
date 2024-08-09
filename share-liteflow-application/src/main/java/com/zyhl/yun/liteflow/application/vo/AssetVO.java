@@ -1,18 +1,19 @@
-package com.zyhl.yun.liteflow.application.dto;
+package com.zyhl.yun.liteflow.application.vo;
 
 import com.zyhl.yun.liteflow.domain.entity.FileEntity;
 import com.zyhl.yun.liteflow.domain.entity.audit.FileAuditInfo;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-
 /**
  * @author 25538
- * 一个文件的详细信息
+ * 展示文件详情
  */
 @Data
-@AllArgsConstructor
+@Builder
 @NoArgsConstructor
-public class AssetDTO {
+@AllArgsConstructor
+public class AssetVO {
     private FileEntity fileEntity;
 }
