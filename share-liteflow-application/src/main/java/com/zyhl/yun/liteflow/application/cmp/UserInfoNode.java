@@ -23,18 +23,20 @@ public class UserInfoNode extends NodeComponent {
 
     @Override
     public void process() throws Exception {
-        log.info("===User Info Node===");
+        log.info("\n===User Info Node===");
         // ForkUserContext context = null;
         UserContext userContext = getContextBean(UserContext.class);
-        try(Scanner scanner = new Scanner(System.in)) {
+        log.info("userContext: {}", userContext);
+        log.info("userId: {}", userContext.getUserInfo().getUserDomainId());
+        try (Scanner scanner = new Scanner(System.in)) {
             Integer choice = null;
             Long userId = null;
             String userPhoneNumber = null;
-            log.info("0 输入账号\n1 输入手机号");
+            log.info("\n0 输入账号\n1 输入手机号");
             try {
                 choice = scanner.nextInt();
             } catch (InputMismatchException e) {
-                log.error("输入0或1", e);
+                log.error("需要输入0或1", e);
                 scanner.nextLine(); // 清除错误输入
             }
             if (choice != null) {
@@ -43,7 +45,7 @@ public class UserInfoNode extends NodeComponent {
                     try {
                         userId = scanner.nextLong();
                     } catch (InputMismatchException e) {
-                        log.error("输入一个Long值", e);
+                        log.error("需要输入一个Long值", e);
                     }
                     userContext.setAccount(userId);
                     log.info("account: {}", userContext.getUserInfo().getUserDomainId());
@@ -56,7 +58,7 @@ public class UserInfoNode extends NodeComponent {
                         userPhoneNumber = scanner.next();
                     } catch (InputMismatchException e) {
                         /* 格式判断待补充 */
-                        log.error("输入电话格式错误", e);
+                        log.error("输入电话的格式错误", e);
                     }
                     userContext.setPhoneNumber(userPhoneNumber);
                     log.info("phone: {}", userContext.getUserInfo().getPhoneNumber());

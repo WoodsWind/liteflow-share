@@ -18,6 +18,6 @@ public interface UserRemoteClient {
      * @param req
      * @return
      */
-    @RequestMapping(value = "/user/getUser", method = RequestMethod.POST)
+    @RequestMapping(value = "/yun/user/getUser", method = RequestMethod.POST)
     BaseResult<UserInfoRsp> userInfo(@RequestBody UserInfoReq req);
 }

@@ -26,6 +26,3 @@ management: #安全管理，关闭心跳监听
     enabled-by-default: false
   server:
     port: -1
-
-liteflow:
-  rule-source=flow.xml

@@ -2,12 +2,15 @@ package com.zyhl.yun.liteflow.application.cmp;
 
 import com.yomahub.liteflow.core.NodeComponent;
 import com.zyhl.yun.liteflow.application.context.AssetsContext;
+import com.zyhl.yun.liteflow.application.context.FileContext;
 import com.zyhl.yun.liteflow.domain.entity.FileEntity;
 import com.zyhl.yun.liteflow.external.service.FileInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 
 import javax.annotation.Resource;
+import java.io.File;
+
 /**
  * @author 25538
  */
@@ -20,9 +23,9 @@ public class AssetsInfoNode extends NodeComponent {
 
     @Override
     public void process() throws Exception {
-        log.info("===Assets Info Node===");
-        AssetsContext assetsContext = null;
-        FileEntity assetsEntity = fileInfoService.queryFileInfo(assetsContext.getAssetsEntity().getAssetsId());
-
+        log.info("\n===Assets Info Node===");
+        FileContext fileContext = getContextBean(FileContext.class);
+        FileEntity fileEntity = fileInfoService.queryFileInfo(fileContext.getFileInfo().getFileId());
+        fileContext.setFileInfo(fileEntity);
     }
 }

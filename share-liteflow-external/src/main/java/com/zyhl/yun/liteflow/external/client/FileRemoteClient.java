@@ -25,7 +25,7 @@ public interface FileRemoteClient {
      * @param req
      * @return
      */
-    @RequestMapping(value = "/file/get", method = RequestMethod.POST)
+    @RequestMapping(value = "/yun/file/get", method = RequestMethod.POST)
     BaseResult<FileInfoRsp> fileInfo(@RequestBody FileInfoReq req);
 
     /**
@@ -33,7 +33,7 @@ public interface FileRemoteClient {
      * @param req
      * @return
      */
-    @RequestMapping(value = "/file/batchGet", method = RequestMethod.POST)
+    @RequestMapping(value = "/yun/file/batchGet", method = RequestMethod.POST)
     BaseResult<FileBatchInfoRsp> batchGet(@RequestBody FileBatchInfoReq req);
 
     /**
@@ -41,7 +41,7 @@ public interface FileRemoteClient {
      * @param req
      * @return
      */
-    @RequestMapping(value = "/file/list", method = RequestMethod.POST)
+    @RequestMapping(value = "/yun/file/list", method = RequestMethod.POST)
     BaseResult<FileListRsp> fileList(@RequestBody FileListReq req);
 
     /**
@@ -49,7 +49,7 @@ public interface FileRemoteClient {
      * @param req
      * @return
      */
-    @RequestMapping(value = "/file/statsDir", method = RequestMethod.POST)
+    @RequestMapping(value = "/yun/file/statsDir", method = RequestMethod.POST)
     BaseResult<FileDirRsp> fileStatsDir(@RequestBody FileDirReq req);
 }
 

@@ -64,15 +64,15 @@ public class FileInfoServiceImpl implements FileInfoService {
     public SimpleFileInfo[] querySimpleFileInfo(String parentFileId) {
         FileListReq fileListReq = FileListReq.builder().parentFileId(parentFileId).build();
         BaseResult<FileListRsp> fileListResult;
-        SimpleFileInfo[] files = null;
+        SimpleFileInfo[] simpleFiles = null;
         try{
             fileListResult = fileRemoteClient.fileList(fileListReq);
             FileListRsp fileListRsp = fileListResult.getData();
-            files = fileListRsp.getItems();
+            simpleFiles = fileListRsp.getItems();
         } catch (Exception e) {
             log.error(e.getMessage());
         }
-        return files;
+        return simpleFiles;
     }
 
     @Override

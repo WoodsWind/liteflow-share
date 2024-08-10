@@ -18,6 +18,7 @@ import javax.annotation.Resource;
 @Service
 @Slf4j
 public class UserInfoServiceImpl implements UserInfoService {
+
     @Resource
     UserRemoteClient userRemoteClient;
 
@@ -41,14 +42,14 @@ public class UserInfoServiceImpl implements UserInfoService {
     @Nullable
     private UserDomainEntity getUserDomainEntity(UserInfoReq userInfoReq) {
         BaseResult<UserInfoRsp> userResult;
-        UserDomainEntity userDomainEntity = null;
+        UserDomainEntity user = null;
         try {
             userResult = userRemoteClient.userInfo(userInfoReq);
-            userDomainEntity = userResult.getData().getData();
+            user = userResult.getData().getData();
         } catch (Exception e) {
             log.error(e.getMessage());
             // throw new Exception;
         }
-        return userDomainEntity;
+        return user;
     }
 }

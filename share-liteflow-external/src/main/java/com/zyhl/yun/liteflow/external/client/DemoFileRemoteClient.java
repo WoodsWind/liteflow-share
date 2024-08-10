@@ -27,5 +27,4 @@ public interface DemoFileRemoteClient {
 	 */
 	@RequestMapping(value = "/demo/sensitiveText", method = RequestMethod.POST)
 	BaseResult<DemoSensitiveWordRsp> sensitiveText(@RequestBody DemoSensitiveWordReq req);
-
 }

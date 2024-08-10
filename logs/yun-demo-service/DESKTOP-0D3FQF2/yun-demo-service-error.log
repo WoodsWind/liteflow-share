@@ -1,0 +1,2 @@
+2024-08-10 16:40:23.418|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:40:26.137|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||file-server executing POST http://file-server/yun/file/get

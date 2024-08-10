@@ -23,6 +23,12 @@ public class UserDomainEntity {
     private Integer serviceStatus;
     private String  createTime;
     private String updateTime;
+
+    public UserDomainEntity(Long userId, String phone){
+        this.userDomainId = userId;
+        this.phoneNumber = phone;
+    }
+
     /**
      *  private String nationCode;
      *  private Integer userAssetFlag;

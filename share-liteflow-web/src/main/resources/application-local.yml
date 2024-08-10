@@ -9,10 +9,9 @@ spring:
       - optional:nacos:mysql-local.yml?group=${spring.application.name}
       - classpath:feign-local.yml
       - optional:nacos:feign-local.yml?group=${spring.application.name}
-      - classpath:user-server-local.yml
-      - optional:nacos:user-server-local.yml?group=${spring.application.name}
-      - classpath:file-server-local.yml
-      - optional:nacos:file-server-local.yml?group=${spring.application.name}
+      - classpath:redis-local.yml
+      - optional:nacos:redis-local.yml?group=${spring.application.name}
+
   cloud:
     nacos:
       discovery:
@@ -21,8 +20,13 @@ spring:
         server-addr: ${NACOS_SERVER:192.168.71.1:8848}
         shared-configs[0]:
           data-id: error-code.yaml
+        shared-configs[1]:
+          data-id: user-server.yaml
+        shared-configs[2]:
+          data-id: file-server.yaml
         refreshable-dataids: error-code.yaml
-        file-extension: yml
+        file-extension: yaml
+        group: share
 
 server:
   port: 8081
@@ -35,3 +39,6 @@ hcy: #自研日志插件配置，详细请查阅日志插件说明文档
       stack:
         maxDepthPerThrowable: 10
         maxLength: 4096
+
+liteflow:
+  rule-source: flow.xml

@@ -1,10 +1,11 @@
-
-
 package com.zyhl.yun.liteflow;
 
 import com.yomahub.liteflow.builder.el.LiteFlowChainELBuilder;
 import com.yomahub.liteflow.core.FlowExecutor;
+import com.zyhl.yun.liteflow.application.context.FileContext;
 import com.zyhl.yun.liteflow.application.context.UserContext;
+import com.zyhl.yun.liteflow.domain.entity.FileEntity;
+import com.zyhl.yun.liteflow.domain.entity.UserDomainEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,6 +21,7 @@ import org.springframework.core.env.Environment;
 
 import javax.annotation.PostConstruct;
 import java.net.InetAddress;
+import java.nio.channels.FileChannel;
 import java.util.Arrays;
 import java.util.Collection;
 
@@ -33,7 +35,6 @@ import java.util.Collection;
 public class Application {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
-
 
 	@Autowired
 	private Environment env;
@@ -77,7 +78,12 @@ public class Application {
 				InetAddress.getLocalHost().getHostAddress(),
 				env.getProperty("server.port"));
 
+		//LiteFlowChainELBuilder.createChain().setEL("THEN(userInfo)").setChainId("chain1").build();
+		UserDomainEntity userDomainEntity = new UserDomainEntity(12345L,"phone");
+		UserContext userContext = UserContext.builder().userInfo(userDomainEntity).build();
 
-		flowExecutor.execute2Future("chain1","", UserContext.class);
+		FileEntity fileEntity = new FileEntity("21235");
+		FileContext fileContext = new FileContext(fileEntity);
+		flowExecutor.execute2Future("chain1","", userContext, fileContext);
 	}
 }

@@ -36,6 +36,10 @@ public class FileEntity {
     private String contentHashAlgorithm;
     private String revisionId;
     private FileAuditInfo contentAuditInfo;
+
+    public FileEntity(String fileId){
+        this.fileId = fileId;
+    }
     /**
      * private Tag[] userTags;
      * private MediaMetaInfo mediaMetaInfo;
