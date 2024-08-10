@@ -2,6 +2,9 @@
 
 package com.zyhl.yun.liteflow;
 
+import com.yomahub.liteflow.builder.el.LiteFlowChainELBuilder;
+import com.yomahub.liteflow.core.FlowExecutor;
+import com.zyhl.yun.liteflow.application.context.UserContext;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -11,6 +14,7 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.openfeign.EnableFeignClients;
 import org.springframework.context.ApplicationContext;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
@@ -62,6 +66,8 @@ public class Application {
 
 		Environment env = appContext.getEnvironment();
 
+		FlowExecutor flowExecutor = appContext.getBean(FlowExecutor.class);
+
 		log.info("\n----------------------------------------------------------\n\t" +
 						"Application '{}' is running! Access URLs:\n\t" +
 						"Local: \t\thttp://localhost:{}\n\t" +
@@ -72,5 +78,6 @@ public class Application {
 				env.getProperty("server.port"));
 
 
+		flowExecutor.execute2Future("chain1","", UserContext.class);
 	}
 }

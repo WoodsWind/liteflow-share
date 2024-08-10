@@ -55,7 +55,7 @@ public class UserInfoNode extends NodeComponent {
                     try {
                         userPhoneNumber = scanner.next();
                     } catch (InputMismatchException e) {
-                        /** 格式判断待补充 */
+                        /* 格式判断待补充 */
                         log.error("输入电话格式错误", e);
                     }
                     userContext.setPhoneNumber(userPhoneNumber);
@@ -68,17 +68,5 @@ public class UserInfoNode extends NodeComponent {
                 }
             }
         }
-    }
-
-    public Long getUserId(){
-        UserContext userContext = getContextBean(UserContext.class);
-        Long userId = userContext.getUserInfo().getUserDomainId();
-        return userId;
-    }
-
-    public String getUserPhoneNumber(){
-        UserContext userContext = getContextBean(UserContext.class);
-        String phoneNumber = userContext.getUserInfo().getPhoneNumber();
-        return phoneNumber;
     }
 }

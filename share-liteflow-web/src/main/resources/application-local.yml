@@ -9,8 +9,6 @@ spring:
       - optional:nacos:mysql-local.yml?group=${spring.application.name}
       - classpath:feign-local.yml
       - optional:nacos:feign-local.yml?group=${spring.application.name}
-      - classpath:redis-local.yml
-      - optional:nacos:redis-local.yml?group=${spring.application.name}
       - classpath:user-server-local.yml
       - optional:nacos:user-server-local.yml?group=${spring.application.name}
       - classpath:file-server-local.yml

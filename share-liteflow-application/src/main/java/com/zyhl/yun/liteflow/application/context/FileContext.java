@@ -14,6 +14,10 @@ import lombok.NoArgsConstructor;
 public class FileContext {
     private FileEntity fileInfo;
 
+    public FileEntity updataFileInfo(FileEntity fileEntity){
+        fileInfo = fileEntity;
+        return fileInfo;
+    }
     public FileEntity changeUpdateAt(String updatedAt){
         fileInfo.setUpdatedAt(updatedAt);
         return fileInfo;
