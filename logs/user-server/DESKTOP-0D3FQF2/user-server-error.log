@@ -1570,3 +1570,300 @@ o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
 	... 34 frames truncated
 2024-08-10 16:25:43.999|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.?:?|IGNORE|||||||||||||||||||||||||||||null
 2024-08-10 16:25:51.267|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||file-server executing POST http://file-server/yun/file/get
+2024-08-10 16:55:15.672|http-nio-8085-exec-9|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da2172328011555310017444||70aad2b49b0b4c3f8f3caecefd16cc56|||||||||||||||||||||No handler found for POST /yun/user/getUser
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:57:36.040|redisson-netty-2-1|ERROR|o.r.c.h.ErrorsLoggingHandler.?:?|IGNORE|||||||||||||||||||||||||||||Exception occured. Channel: [id: 0xba9c6107, L:/127.0.0.1:59963 - R:127.0.0.1/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(SocketDispatcher.java)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at i.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at i.n.c.s.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at i.n.c.n.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at i.n.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	... 7 frames truncated
+2024-08-10 16:57:36.051|redisson-netty-2-1|ERROR|o.r.c.h.ErrorsLoggingHandler.exceptionCaught:47|IGNORE|||||||||||||||||||||||||||||Exception occured. Channel: [id: 0xc1ffc8ca, L:/127.0.0.1:59964 - R:127.0.0.1/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(SocketDispatcher.java)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at i.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at i.n.c.s.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at i.n.c.n.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at i.n.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	... 7 frames truncated
+2024-08-10 16:57:36.051|redisson-netty-2-1|ERROR|o.r.c.h.ErrorsLoggingHandler.exceptionCaught:47|IGNORE|||||||||||||||||||||||||||||Exception occured. Channel: [id: 0xdf3aafaf, L:/127.0.0.1:59965 - R:127.0.0.1/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(SocketDispatcher.java)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at i.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at i.n.c.s.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at i.n.c.n.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at i.n.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	... 7 frames truncated
+2024-08-10 16:58:23.829|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||[404 ] during [POST] to [http://user-server/user/getUser] [UserRemoteClient#userInfo(UserInfoReq)]: [<!doctype html><html lang="en"><head><title>HTTP Status 404 – Not Found</title><style type="text/css">body {font-family:Tahoma,Arial,sans-serif;} h1, h2, h3, b {color:white;background-color:#525D76;} ... (431 bytes)]
+2024-08-10 16:58:31.131|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||file-server executing POST http://file-server/yun/file/get
+2024-08-10 16:58:40.957|http-nio-8085-exec-5|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da21723280320917100117284||7f1f5c6fb2a14108ae24a8e5dff9952e|||||||||||||||||||||Content type 'multipart/form-data;boundary=--------------------------769469299621350731536929;charset=UTF-8' not supported
+o.s.w.HttpMediaTypeNotSupportedException: Content type 'multipart/form-data;boundary=--------------------------769469299621350731536929;charset=UTF-8' not supported
+	at o.s.w.s.m.m.a.AbstractMessageConverterMethodArgumentResolver.readWithMessageConverters(AbstractMessageConverterMethodArgumentResolver.java:211)
+	at o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.readWithMessageConverters(RequestResponseBodyMethodProcessor.java:160)
+	at o.s.w.s.m.m.a.RequestResponseBodyMethodProcessor.resolveArgument(RequestResponseBodyMethodProcessor.java:133)
+	at o.s.w.m.s.HandlerMethodArgumentResolverComposite.resolveArgument(HandlerMethodArgumentResolverComposite.java:122)
+	at o.s.w.m.s.InvocableHandlerMethod.getMethodArgumentValues(InvocableHandlerMethod.java:179)
+	at o.s.w.m.s.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:146)
+	at o.s.w.s.m.m.a.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:117)
+	at o.s.w.s.m.m.a.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at o.s.w.s.m.m.a.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at o.s.w.s.m.m.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	... 43 frames truncated
+2024-08-10 16:58:56.428|http-nio-8085-exec-8|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/|c0a82da21723280336426100217284||55f282bfc4ba4c11a241f210dd339c84|||||||||||||||||||||No handler found for GET /yun/
+o.s.w.s.NoHandlerFoundException: No handler found for GET /yun/
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:59:47.028|http-nio-8085-exec-1|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da21723280387007100116028||c2ae1b4c9f1c4aa3af135943a8d222ef|||||||||||||||||||||No handler found for POST /yun/user/getUser
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:59:47.063|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||null
+2024-08-10 16:59:54.348|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||file-server executing POST http://file-server/yun/file/get
+2024-08-10 17:00:37.514|http-nio-8085-exec-3|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/|c0a82da21723280437512100216028||53a0920ad0914b74bd89be035ded1162|||||||||||||||||||||No handler found for GET /yun/
+o.s.w.s.NoHandlerFoundException: No handler found for GET /yun/
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:00:41.549|http-nio-8085-exec-5|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user|c0a82da21723280441532100316028||de7ce1c9fb834b8b81dc08d966c365bd|||||||||||||||||||||No handler found for POST /yun/user
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:00:46.361|http-nio-8085-exec-6|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da21723280446357100416028||42e08e2fb83641eca4a1b69a5fe33424|||||||||||||||||||||No handler found for POST /yun/user/getUser
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:17:10.064|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||yun.user executing POST http://yun.user/getUser
+2024-08-10 17:17:17.339|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||file-server executing POST http://file-server/yun/file/get
+2024-08-10 17:18:58.434|redisson-netty-2-1|ERROR|o.r.c.h.ErrorsLoggingHandler.exceptionCaught:47|IGNORE|||||||||||||||||||||||||||||Exception occured. Channel: [id: 0xb04971a1, L:/127.0.0.1:62332 - R:127.0.0.1/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(SocketDispatcher.java)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at i.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at i.n.c.s.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at i.n.c.n.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at i.n.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	... 7 frames truncated
+2024-08-10 17:18:58.444|redisson-netty-2-1|ERROR|o.r.c.h.ErrorsLoggingHandler.?:?|IGNORE|||||||||||||||||||||||||||||Exception occured. Channel: [id: 0x0bf2cded, L:/127.0.0.1:62333 - R:127.0.0.1/127.0.0.1:6379]
+java.io.IOException: 远程主机强迫关闭了一个现有的连接。
+	at sun.nio.ch.SocketDispatcher.read0(SocketDispatcher.java)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:43)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:378)
+	at io.netty.buffer.PooledByteBuf.setBytes(PooledByteBuf.java:256)
+	at i.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:1132)
+	at i.n.c.s.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:357)
+	at i.n.c.n.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:151)
+	at i.n.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:788)
+	... 7 frames truncated
+2024-08-10 17:21:05.385|http-nio-8085-exec-2|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da21723281665344100112676||456e97f6eb654387b933e32b5ee96997|||||||||||||||||||||No handler found for POST /yun/user/getUser
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:21:40.428|http-nio-8085-exec-6|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/|c0a82da21723281700427100212676||f695a3e5304c46e593f0b668fecfc0d0|||||||||||||||||||||No handler found for GET /yun/
+o.s.w.s.NoHandlerFoundException: No handler found for GET /yun/
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:529)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:21:56.439|http-nio-8085-exec-7|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da21723281716434100312676||5408395f046f490984fd68cf7b910e74|||||||||||||||||||||No handler found for POST /yun/user/getUser
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:22:07.012|http-nio-8085-exec-8|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser/"aaa"|c0a82da21723281727008100412676||c7cda9c4130d4a5093f2d8cdc2499bf3|||||||||||||||||||||No handler found for POST /yun/user/getUser/%22aaa%22
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser/%22aaa%22
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:22:36.712|http-nio-8085-exec-2|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser/"aaa"|c0a82da2172328175666610015136||7f3295c8e6c44e90805a23631933d167|||||||||||||||||||||No handler found for POST /yun/user/getUser/%22aaa%22
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser/%22aaa%22
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:23:27.191|http-nio-8085-exec-1|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser/"aaa"|c0a82da2172328180715210016676||40256b133de9432684ccc1093fc11df1|||||||||||||||||||||No handler found for POST /yun/user/getUser/%22aaa%22
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser/%22aaa%22
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:23:36.162|http-nio-8085-exec-9|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser/"aaa"|c0a82da2172328181616110026676||4f48024e2d52471ea7acb878ec695067|||||||||||||||||||||No handler found for POST /yun/user/getUser/%22aaa%22
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser/%22aaa%22
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:23:47.307|http-nio-8085-exec-6|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da2172328182730310036676||eab1bbb4c6a8482cafd31f86124c3b96|||||||||||||||||||||No handler found for POST /yun/user/getUser
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:29:58.802|http-nio-8085-exec-1|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da21723282198775100116948||6568c8d420e84f12be023fe74f08ce43|||||||||||||||||||||No handler found for POST /yun/user/getUser
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:29:58.840|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.?:?|IGNORE|||||||||||||||||||||||||||||null
+2024-08-10 17:30:06.137|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.?:?|IGNORE|||||||||||||||||||||||||||||file-server executing POST http://file-server/yun/file/get
+2024-08-10 17:31:53.723|http-nio-8081-exec-2|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.handleNoHandlerFoundException:97|BUSINESS|169.254.125.142||yun|user-server|/user/getUser|c0a82da21723282313704100119332||be3db76cdee74794b6e011bf9f347ae4|||||||||||||||||||||No handler found for POST /yun/user/getUser
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/user/getUser
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 17:31:53.760|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.?:?|IGNORE|||||||||||||||||||||||||||||null
+2024-08-10 17:32:01.058|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||file-server executing POST http://file-server/yun/file/get
+2024-08-10 17:34:56.856|com.alibaba.nacos.client.naming.updater.0|ERROR|c.a.nacos.common.remote.client.printIfErrorEnabled:99|IGNORE|||||||||||||||||||||||||||||Send request fail, request = ServiceQueryRequest{headers={}, requestId='null'}, retryTimes = 0, errorMessage = java.lang.InterruptedException

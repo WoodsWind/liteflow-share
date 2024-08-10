@@ -2,9 +2,6 @@ spring:
   application:
     name: user-server
 
-server:
-  port: 8085
-
 feign:
   hystrix:
     enabled: true
