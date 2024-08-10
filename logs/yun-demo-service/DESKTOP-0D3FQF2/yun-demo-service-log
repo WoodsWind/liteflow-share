@@ -234,3 +234,18 @@ userInfo<42761>==>assetsInfo<2718>
 2024-08-10 16:41:25.744|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||
 0 输入账号
 1 输入手机号
+2024-08-10 16:47:16.604|Thread-3|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Start destroying common HttpClient
+2024-08-10 16:47:16.604|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.shutdown:136|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
+2024-08-10 16:47:16.604|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.shutdown:153|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Destruction of the end
+2024-08-10 16:47:16.605|Thread-3|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Destruction of the end
+2024-08-10 16:47:16.608|SpringApplicationShutdownHook|INFO |o.s.b.w.e.t.GracefulShutdown.?:?|IGNORE|||||||||||||||||||||||||||||Commencing graceful shutdown. Waiting for active requests to complete
+2024-08-10 16:47:16.876|tomcat-shutdown|INFO |o.s.b.w.e.t.GracefulShutdown.?:?|IGNORE|||||||||||||||||||||||||||||Graceful shutdown complete
+2024-08-10 16:47:16.907|SpringApplicationShutdownHook|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||De-registering from Nacos Server now...
+2024-08-10 16:47:16.911|SpringApplicationShutdownHook|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||De-registration finished.
+2024-08-10 16:47:17.240|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown rpc client, set status to shutdown
+2024-08-10 16:47:17.240|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@ba9e199[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2024-08-10 16:47:17.240|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.closeConnection:591|IGNORE|||||||||||||||||||||||||||||Close current connection 1723279285054_192.168.71.1_58802
+2024-08-10 16:47:17.241|nacos-grpc-client-executor-83|INFO |c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||[1723279285054_192.168.71.1_58802]Ignore complete event,isRunning:false,isAbandon=false
+2024-08-10 16:47:17.243|SpringApplicationShutdownHook|INFO |c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@d7ce718[Running, pool size = 6, active threads = 0, queued tasks = 0, completed tasks = 84]
+2024-08-10 16:47:17.245|SpringApplicationShutdownHook|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closing ...
+2024-08-10 16:47:17.252|SpringApplicationShutdownHook|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closed

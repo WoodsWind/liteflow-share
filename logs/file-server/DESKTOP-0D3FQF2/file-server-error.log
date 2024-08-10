@@ -661,3 +661,48 @@ Caused by: c.a.n.a.e.NacosException: errCode: 400, errMsg: Current service DEFAU
 	at c.a.n.c.r.client.RpcClient.request(RpcClient.java:630)
 	at c.a.n.c.n.r.g.NamingGrpcClientProxy.requestToServer(NamingGrpcClientProxy.java:280)
 	... 30 common frames omitted
+2024-08-10 16:47:40.748|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:47:41.209|http-nio-8083-exec-2|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da21723279661188100121428||16fb034e31ae406eaeba6e40e4519209|||||||||||||||||||||No handler found for POST /yun/file/get
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/file/get
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:47:41.240|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||null
+2024-08-10 16:48:24.480|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:48:24.859|http-nio-8083-exec-1|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da2172327970483810019184||4d6c6fca956f497dae5b173ddafc7d68|||||||||||||||||||||No handler found for POST /yun/file/get
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/file/get
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:48:24.891|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.?:?|IGNORE|||||||||||||||||||||||||||||null
+2024-08-10 16:53:17.348|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:53:17.729|http-nio-8083-exec-2|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da21723279997707100123580||314e0070ecd241aaa734bc015a7a5d86|||||||||||||||||||||No handler found for POST /yun/file/get
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/file/get
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:53:17.759|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||null

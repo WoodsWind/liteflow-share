@@ -2478,3 +2478,471 @@ Caused by: c.a.n.a.e.NacosException: errCode: 400, errMsg: Current service DEFAU
 2024-08-10 15:47:20.244|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.shutdown:136|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
 2024-08-10 15:47:20.244|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.?:?|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Destruction of the end
 2024-08-10 15:47:20.245|Thread-4|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Destruction of the end
+2024-08-10 16:47:22.796|background-preinit|INFO |o.h.v.internal.util.Version.?:21|IGNORE|||||||||||||||||||||||||||||HV000001: Hibernate Validator 6.2.5.Final
+2024-08-10 16:47:22.817|main|INFO |c.z.yun.liteflow.Application.logStarting:55|IGNORE|||||||||||||||||||||||||||||Starting Application using Java 1.8.0_421 on DESKTOP-0D3FQF2 with PID 21428 (C:\Users\25538\source\java\share-liteflow\share-liteflow-web\target\classes started by 25538 in C:\Users\25538\source\java\share-liteflow)
+2024-08-10 16:47:22.818|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||The following 1 profile is active: "local"
+2024-08-10 16:47:22.862|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=redis-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:47:22.862|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=feign-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:47:22.862|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=mysql-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:47:22.862|main|INFO |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Load config[dataId=file-server-local.yml, group=yun-demo-service] success
+2024-08-10 16:47:22.863|main|INFO |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Load config[dataId=user-server-local.yml, group=yun-demo-service] success
+2024-08-10 16:47:23.778|main|INFO |o.s.c.a.ConfigurationClassPostProcessor.enhanceConfigurationClasses:426|IGNORE|||||||||||||||||||||||||||||Cannot enhance @Configuration bean definition 'com.yomahub.liteflow.springboot.config.LiteflowMainAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2024-08-10 16:47:23.835|main|INFO |o.s.c.c.scope.GenericScope.?:?|IGNORE|||||||||||||||||||||||||||||BeanFactory id=263e941b-fefe-3ba8-94f8-f544a25812f1
+2024-08-10 16:47:24.050|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration' of type [com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration$$EnhancerBySpringCGLIB$$77ab0594] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.065|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:376|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.068|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.070|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$494/0x00000007c06bb828] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.075|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.085|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow-com.yomahub.liteflow.springboot.LiteflowProperty' of type [com.yomahub.liteflow.springboot.LiteflowProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.091|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow.monitor-com.yomahub.liteflow.springboot.LiteflowMonitorProperty' of type [com.yomahub.liteflow.springboot.LiteflowMonitorProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.098|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflowConfig' of type [com.yomahub.liteflow.property.LiteflowConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.104|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.spi.spring.SpringAware' of type [com.yomahub.liteflow.spi.spring.SpringAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:47:24.109|main|INFO |c.y.liteflow.util.LOGOPrinter.info:186|IGNORE|||||||||||||||||||||||||||||
+================================================================================================
+		 _     ___ _____ _____      _____ _     _____        __
+		| |   |_ _|_   _| ____|    |  ___| |   / _ \ \      / /
+		| |    | |  | | |  _| _____| |_  | |  | | | \ \ /\ / / 
+		| |___ | |  | | | |__|_____|  _| | |__| |_| |\ V  V /  
+		|_____|___| |_| |_____|    |_|   |_____\___/  \_/\_/   
+
+		Version: 2.12.2
+		Make your code amazing.
+		website：https://liteflow.cc
+		wechat：bryan_31
+================================================================================================
+
+2024-08-10 16:47:24.317|main|INFO |o.s.b.w.e.t.TomcatWebServer.?:?|IGNORE|||||||||||||||||||||||||||||Tomcat initialized with port(s): 8083 (http)
+2024-08-10 16:47:24.326|main|INFO |o.a.c.http11.Http11NioProtocol.log:173|IGNORE|||||||||||||||||||||||||||||Initializing ProtocolHandler ["http-nio-8083"]
+2024-08-10 16:47:24.326|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Starting service [Tomcat]
+2024-08-10 16:47:24.327|main|INFO |o.a.c.core.StandardEngine.log:173|IGNORE|||||||||||||||||||||||||||||Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-08-10 16:47:24.439|main|INFO |o.a.c.c.C.[.[localhost].[/yun].?:?|IGNORE|||||||||||||||||||||||||||||Initializing Spring embedded WebApplicationContext
+2024-08-10 16:47:24.440|main|INFO |o.s.b.w.s.c.ServletWebServerApplicationContext.?:?|IGNORE|||||||||||||||||||||||||||||Root WebApplicationContext: initialization completed in 1574 ms
+2024-08-10 16:47:24.498|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Running with Spring profile(s) :[local] 
+2024-08-10 16:47:25.174|main|INFO |c.a.d.s.b.a.DruidDataSourceAutoConfigure.?:?|IGNORE|||||||||||||||||||||||||||||Init DruidDataSource
+2024-08-10 16:47:25.508|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} inited
+2024-08-10 16:47:25.651|main|WARN |c.b.m.c.i.AbstractMethod.?:?|IGNORE|||||||||||||||||||||||||||||[com.zyhl.yun.liteflow.persistence.mapper.DemoItemMapper.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2024-08-10 16:47:25.660|main|WARN |c.b.m.c.m.TableInfoHelper.?:?|IGNORE|||||||||||||||||||||||||||||Can not find table primary key in Class: "com.zyhl.yun.liteflow.persistence.mapper.DemoMapper".
+2024-08-10 16:47:26.290|main|INFO |o.s.c.o.FeignClientFactoryBean.getTarget:418|IGNORE|||||||||||||||||||||||||||||For 'file-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:47:26.300|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[assetsInfo] has been found
+2024-08-10 16:47:26.302|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[assetsValidate] has been found
+2024-08-10 16:47:26.305|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[benefitValidate] has been found
+2024-08-10 16:47:26.307|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[checkWhiteList] has been found
+2024-08-10 16:47:26.308|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[linkCreate] has been found
+2024-08-10 16:47:26.309|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[linkInfo] has been found
+2024-08-10 16:47:26.311|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[linkPermitCheckNode] has been found
+2024-08-10 16:47:26.312|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[linkUpdateNode] has been found
+2024-08-10 16:47:26.314|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[textSensitive] has been found
+2024-08-10 16:47:26.327|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'user-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:47:26.333|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[userInfo] has been found
+2024-08-10 16:47:26.350|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'link-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:47:26.370|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'whitelist-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:47:27.366|main|INFO |org.redisson.Version.logVersion:43|IGNORE|||||||||||||||||||||||||||||Redisson 3.25.0
+2024-08-10 16:47:27.884|redisson-netty-2-1|INFO |o.r.c.p.MasterConnectionPool.?:?|IGNORE|||||||||||||||||||||||||||||2 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-08-10 16:47:27.884|redisson-netty-2-1|INFO |o.r.c.p.MasterPubSubConnectionPool.lambda$createConnection$0:137|IGNORE|||||||||||||||||||||||||||||2 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-08-10 16:47:27.932|main|INFO |c.z.h.p.redis.HcyRedisTemplate.<init>:39|IGNORE|||||||||||||||||||||||||||||HcyRedisTemplate init succeed
+2024-08-10 16:47:28.256|main|INFO |c.z.h.p.u.i.DefaultUidGenerator.?:?|IGNORE|||||||||||||||||||||||||||||Initialized bits(1, 29, 21, 13) for workerID:501952
+2024-08-10 16:47:28.765|main|WARN |o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.logWarning:82|IGNORE|||||||||||||||||||||||||||||Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-08-10 16:47:28.800|main|INFO |c.y.liteflow.core.FlowExecutor.info:193|IGNORE|||||||||||||||||||||||||||||flow info loaded from local file,path=flow.xml
+2024-08-10 16:47:28.909|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[RpcClientFactory] create a new rpc client of e997b9b0-779c-47dd-b9b6-558f61cfd40b
+2024-08-10 16:47:28.910|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] RpcClient init label, labels = {module=naming, source=sdk}
+2024-08-10 16:47:28.912|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2024-08-10 16:47:28.912|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2024-08-10 16:47:28.912|main|INFO |c.a.nacos.common.remote.client.?:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2024-08-10 16:47:28.912|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Try to connect to server on start up, server: {serverIp = '192.168.71.1', server main port = 8848}
+2024-08-10 16:47:29.024|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Success to connect to server [192.168.71.1:8848] on start up, connectionId = 1723279648917_192.168.71.1_59334
+2024-08-10 16:47:29.024|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2024-08-10 16:47:29.024|com.alibaba.nacos.client.remote.worker|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Notify connected event to listeners.
+2024-08-10 16:47:29.024|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$196/0x00000007c03bb028
+2024-08-10 16:47:29.049|main|INFO |o.a.c.http11.Http11NioProtocol.?:?|IGNORE|||||||||||||||||||||||||||||Starting ProtocolHandler ["http-nio-8083"]
+2024-08-10 16:47:29.058|main|INFO |o.s.b.w.e.t.TomcatWebServer.start:220|IGNORE|||||||||||||||||||||||||||||Tomcat started on port(s): 8083 (http) with context path '/yun'
+2024-08-10 16:47:29.064|main|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||nacos registry, DEFAULT_GROUP file-server 192.168.71.1:8083 register finished
+2024-08-10 16:47:29.484|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Started Application in 9.741 seconds (JVM running for 10.825)
+2024-08-10 16:47:29.488|main|INFO |c.a.c.n.r.NacosContextRefresher.registerNacosListener:129|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=redis-local.yml, group=yun-demo-service
+2024-08-10 16:47:29.489|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=mysql-local.yml, group=yun-demo-service
+2024-08-10 16:47:29.489|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=file-server-local.yml, group=yun-demo-service
+2024-08-10 16:47:29.489|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=feign-local.yml, group=yun-demo-service
+2024-08-10 16:47:29.491|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=user-server-local.yml, group=yun-demo-service
+2024-08-10 16:47:29.492|main|INFO |c.z.yun.liteflow.Application.main:72|IGNORE|||||||||||||||||||||||||||||
+----------------------------------------------------------
+	Application 'file-server' is running! Access URLs:
+	Local: 		http://localhost:8083
+	External: 	http://192.168.45.162:8083
+----------------------------------------------------------
+2024-08-10 16:47:29.506|main-thread-0|INFO |c.y.liteflow.core.FlowExecutor.?:?|IGNORE|||||||||||||||||||||||||||||[ad850d42224a42fe95fb97c0bf399098]:requestId has generated
+2024-08-10 16:47:29.506|main-thread-0|INFO |c.y.liteflow.core.FlowExecutor.info:193|IGNORE|||||||||||||||||||||||||||||[ad850d42224a42fe95fb97c0bf399098]:slot[0] offered
+2024-08-10 16:47:29.506|main-thread-0|INFO |c.y.liteflow.flow.element.Node.info:193|IGNORE|||||||||||||||||||||||||||||[ad850d42224a42fe95fb97c0bf399098]:[O]start component[userInfo] execution
+2024-08-10 16:47:29.513|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||
+===User Info Node===
+2024-08-10 16:47:29.513|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||userContext: UserContext(userInfo=UserDomainEntity(userDomainId=12345, userServiceType=null, phoneNumber=phone, cutoverStatus=null, belongsPlatform=null, bmpUserId=null, siteCode=null, serviceStatus=null, createTime=null, updateTime=null))
+2024-08-10 16:47:29.513|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||userId: 12345
+2024-08-10 16:47:29.515|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.process:35|IGNORE|||||||||||||||||||||||||||||
+0 输入账号
+1 输入手机号
+2024-08-10 16:47:29.598|nacos-grpc-client-executor-6|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Receive server push request, request = NotifySubscriberRequest, requestId = 26
+2024-08-10 16:47:29.601|nacos-grpc-client-executor-6|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Ack server push request, request = NotifySubscriberRequest, requestId = 26
+2024-08-10 16:47:33.356|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||account: 135
+2024-08-10 16:47:33.427|main-thread-0|WARN |o.s.c.l.c.ServiceInstanceListSupplierBuilder.?:?|IGNORE|||||||||||||||||||||||||||||LoadBalancerCacheManager not available, returning delegate without caching.
+2024-08-10 16:47:33.457|main-thread-0|WARN |o.s.c.l.c.RoundRobinLoadBalancer.getInstanceResponse:98|IGNORE|||||||||||||||||||||||||||||No servers available for service: user-server
+2024-08-10 16:47:33.458|main-thread-0|WARN |o.s.c.o.l.RetryableFeignBlockingLoadBalancerClient.lambda$execute$2:145|IGNORE|||||||||||||||||||||||||||||Service instance was not resolved, executing the original request
+2024-08-10 16:47:34.062|nacos-grpc-client-executor-9|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Receive server push request, request = NotifySubscriberRequest, requestId = 27
+2024-08-10 16:47:34.062|nacos-grpc-client-executor-9|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[e997b9b0-779c-47dd-b9b6-558f61cfd40b] Ack server push request, request = NotifySubscriberRequest, requestId = 27
+2024-08-10 16:47:40.743|main-thread-0|INFO |c.z.h.p.l.feign.FeignConfig.invoke:243|HTTP|||||||||||600|1723279653357|1723279660742|7385|||||||||||||||UserRemoteClient.userInfo failed, details: user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:47:40.748|main-thread-0|INFO |c.z.h.p.l.f.PredicatedLoggerResponseHandler.handleStatus:38|IGNORE|||||||||||||||||||||||||||||{"headers":{"Content-Length":["39"],"Content-Type":["application/json"]},"entity":"{\"userDomainId\":135,\"phoneNumber\":null}"}
+2024-08-10 16:47:40.748|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:47:40.749|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||[ad850d42224a42fe95fb97c0bf399098]:component[userInfo] finished in 11237 milliseconds
+2024-08-10 16:47:40.749|main-thread-0|INFO |c.y.liteflow.flow.element.Node.info:193|IGNORE|||||||||||||||||||||||||||||[ad850d42224a42fe95fb97c0bf399098]:[O]start component[assetsInfo] execution
+2024-08-10 16:47:40.749|main-thread-0|INFO |c.z.y.l.a.cmp.AssetsInfoNode.process:26|IGNORE|||||||||||||||||||||||||||||
+===Assets Info Node===
+2024-08-10 16:47:40.761|main-thread-0|WARN |o.s.c.l.c.ServiceInstanceListSupplierBuilder.?:?|IGNORE|||||||||||||||||||||||||||||LoadBalancerCacheManager not available, returning delegate without caching.
+2024-08-10 16:47:40.816|http-nio-8083-exec-2|INFO |o.a.c.c.C.[.[localhost].[/yun].?:?|IGNORE|||||||||||||||||||||||||||||Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-10 16:47:40.816|http-nio-8083-exec-2|INFO |o.s.w.s.DispatcherServlet.initServletBean:525|IGNORE|||||||||||||||||||||||||||||Initializing Servlet 'dispatcherServlet'
+2024-08-10 16:47:40.818|http-nio-8083-exec-2|INFO |o.s.w.s.DispatcherServlet.?:?|IGNORE|||||||||||||||||||||||||||||Completed initialization in 1 ms
+2024-08-10 16:47:41.195|http-nio-8083-exec-2|WARN |o.s.web.servlet.PageNotFound.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da21723279661188100121428||16fb034e31ae406eaeba6e40e4519209|||||||||||||||||||||No mapping for POST /yun/file/get
+2024-08-10 16:47:41.209|http-nio-8083-exec-2|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da21723279661188100121428||16fb034e31ae406eaeba6e40e4519209|||||||||||||||||||||No handler found for POST /yun/file/get
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/file/get
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:47:41.214|http-nio-8083-exec-2|INFO |c.z.h.p.l.l.LogPrinter.?:?|INTERFACE|169.254.125.142||yun|file-server|/file/get|c0a82da21723279661188100121428||16fb034e31ae406eaeba6e40e4519209||||||||||||||||01000005|||||{"output":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:47:41.239|main-thread-0|INFO |c.z.h.p.l.feign.FeignConfig.?:?|HTTP|||||||||||01000005|1723279660750|1723279661239|489|||||||||||||||FileRemoteClient.fileInfo failed, details: {"input":{"fileId":"21235"},"output":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:47:41.240|main-thread-0|INFO |c.z.h.p.l.f.PredicatedLoggerResponseHandler.handleStatus:38|IGNORE|||||||||||||||||||||||||||||{"headers":{"Content-Length":["49"],"Content-Type":["application/json"]},"entity":"{\"userId\":null,\"fileId\":\"21235\",\"expireSec\":null}","response":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:47:41.240|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||null
+2024-08-10 16:47:41.240|main-thread-0|INFO |c.z.y.l.a.cmp.AssetsInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||[ad850d42224a42fe95fb97c0bf399098]:component[assetsInfo] finished in 491 milliseconds
+2024-08-10 16:47:41.240|main-thread-0|INFO |com.yomahub.liteflow.slot.Slot.info:200|IGNORE|||||||||||||||||||||||||||||[ad850d42224a42fe95fb97c0bf399098]:CHAIN_NAME[chain1]
+userInfo<11237>==>assetsInfo<491>
+2024-08-10 16:47:41.240|main-thread-0|INFO |c.y.liteflow.slot.DataBus.?:?|IGNORE|||||||||||||||||||||||||||||[ad850d42224a42fe95fb97c0bf399098]:slot[0] released
+2024-08-10 16:47:44.937|Thread-3|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Start destroying common HttpClient
+2024-08-10 16:47:44.937|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.shutdown:136|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
+2024-08-10 16:47:44.937|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.shutdown:153|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Destruction of the end
+2024-08-10 16:47:44.938|Thread-3|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Destruction of the end
+2024-08-10 16:47:44.939|SpringApplicationShutdownHook|INFO |o.s.b.w.e.t.GracefulShutdown.shutDownGracefully:53|IGNORE|||||||||||||||||||||||||||||Commencing graceful shutdown. Waiting for active requests to complete
+2024-08-10 16:47:45.208|tomcat-shutdown|INFO |o.s.b.w.e.t.GracefulShutdown.doShutdown:78|IGNORE|||||||||||||||||||||||||||||Graceful shutdown complete
+2024-08-10 16:47:45.240|SpringApplicationShutdownHook|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||De-registering from Nacos Server now...
+2024-08-10 16:47:45.243|SpringApplicationShutdownHook|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||De-registration finished.
+2024-08-10 16:47:45.574|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown rpc client, set status to shutdown
+2024-08-10 16:47:45.574|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@4432afd4[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2024-08-10 16:47:45.574|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Close current connection 1723279648917_192.168.71.1_59334
+2024-08-10 16:47:45.575|nacos-grpc-client-executor-17|INFO |c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||[1723279648917_192.168.71.1_59334]Ignore complete event,isRunning:false,isAbandon=false
+2024-08-10 16:47:45.577|SpringApplicationShutdownHook|INFO |c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@695910cb[Running, pool size = 7, active threads = 0, queued tasks = 0, completed tasks = 18]
+2024-08-10 16:47:45.579|SpringApplicationShutdownHook|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closing ...
+2024-08-10 16:47:45.584|SpringApplicationShutdownHook|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closed
+2024-08-10 16:48:06.899|background-preinit|INFO |o.h.v.internal.util.Version.?:?|IGNORE|||||||||||||||||||||||||||||HV000001: Hibernate Validator 6.2.5.Final
+2024-08-10 16:48:06.925|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Starting Application using Java 1.8.0_421 on DESKTOP-0D3FQF2 with PID 9184 (C:\Users\25538\source\java\share-liteflow\share-liteflow-web\target\classes started by 25538 in C:\Users\25538\source\java\share-liteflow)
+2024-08-10 16:48:06.926|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||The following 1 profile is active: "local"
+2024-08-10 16:48:06.999|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=redis-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:48:06.999|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=feign-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:48:06.999|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=mysql-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:48:06.999|main|INFO |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Load config[dataId=file-server-local.yml, group=yun-demo-service] success
+2024-08-10 16:48:06.999|main|INFO |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Load config[dataId=user-server-local.yml, group=yun-demo-service] success
+2024-08-10 16:48:07.892|main|INFO |o.s.c.a.ConfigurationClassPostProcessor.enhanceConfigurationClasses:426|IGNORE|||||||||||||||||||||||||||||Cannot enhance @Configuration bean definition 'com.yomahub.liteflow.springboot.config.LiteflowMainAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2024-08-10 16:48:07.953|main|INFO |o.s.c.c.scope.GenericScope.?:?|IGNORE|||||||||||||||||||||||||||||BeanFactory id=263e941b-fefe-3ba8-94f8-f544a25812f1
+2024-08-10 16:48:08.193|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration' of type [com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration$$EnhancerBySpringCGLIB$$6062f85e] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.206|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:376|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.210|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.211|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$494/0x00000007c06bb828] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.216|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.225|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow-com.yomahub.liteflow.springboot.LiteflowProperty' of type [com.yomahub.liteflow.springboot.LiteflowProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.232|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow.monitor-com.yomahub.liteflow.springboot.LiteflowMonitorProperty' of type [com.yomahub.liteflow.springboot.LiteflowMonitorProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.240|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflowConfig' of type [com.yomahub.liteflow.property.LiteflowConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.245|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.spi.spring.SpringAware' of type [com.yomahub.liteflow.spi.spring.SpringAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:48:08.251|main|INFO |c.y.liteflow.util.LOGOPrinter.?:?|IGNORE|||||||||||||||||||||||||||||
+================================================================================================
+		 _     ___ _____ _____      _____ _     _____        __
+		| |   |_ _|_   _| ____|    |  ___| |   / _ \ \      / /
+		| |    | |  | | |  _| _____| |_  | |  | | | \ \ /\ / / 
+		| |___ | |  | | | |__|_____|  _| | |__| |_| |\ V  V /  
+		|_____|___| |_| |_____|    |_|   |_____\___/  \_/\_/   
+
+		Version: 2.12.2
+		Make your code amazing.
+		website：https://liteflow.cc
+		wechat：bryan_31
+================================================================================================
+
+2024-08-10 16:48:08.454|main|INFO |o.s.b.w.e.t.TomcatWebServer.?:?|IGNORE|||||||||||||||||||||||||||||Tomcat initialized with port(s): 8083 (http)
+2024-08-10 16:48:08.462|main|INFO |o.a.c.http11.Http11NioProtocol.?:?|IGNORE|||||||||||||||||||||||||||||Initializing ProtocolHandler ["http-nio-8083"]
+2024-08-10 16:48:08.463|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Starting service [Tomcat]
+2024-08-10 16:48:08.463|main|INFO |o.a.c.core.StandardEngine.log:173|IGNORE|||||||||||||||||||||||||||||Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-08-10 16:48:08.570|main|INFO |o.a.c.c.C.[.[localhost].[/yun].?:?|IGNORE|||||||||||||||||||||||||||||Initializing Spring embedded WebApplicationContext
+2024-08-10 16:48:08.570|main|INFO |o.s.b.w.s.c.ServletWebServerApplicationContext.?:?|IGNORE|||||||||||||||||||||||||||||Root WebApplicationContext: initialization completed in 1569 ms
+2024-08-10 16:48:08.628|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Running with Spring profile(s) :[local] 
+2024-08-10 16:48:09.309|main|INFO |c.a.d.s.b.a.DruidDataSourceAutoConfigure.?:?|IGNORE|||||||||||||||||||||||||||||Init DruidDataSource
+2024-08-10 16:48:09.655|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} inited
+2024-08-10 16:48:09.804|main|WARN |c.b.m.c.i.AbstractMethod.?:?|IGNORE|||||||||||||||||||||||||||||[com.zyhl.yun.liteflow.persistence.mapper.DemoItemMapper.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2024-08-10 16:48:09.814|main|WARN |c.b.m.c.m.TableInfoHelper.?:?|IGNORE|||||||||||||||||||||||||||||Can not find table primary key in Class: "com.zyhl.yun.liteflow.persistence.mapper.DemoMapper".
+2024-08-10 16:48:10.462|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'file-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:48:10.474|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[assetsInfo] has been found
+2024-08-10 16:48:10.476|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[assetsValidate] has been found
+2024-08-10 16:48:10.478|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[benefitValidate] has been found
+2024-08-10 16:48:10.480|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[checkWhiteList] has been found
+2024-08-10 16:48:10.483|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[linkCreate] has been found
+2024-08-10 16:48:10.484|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[linkInfo] has been found
+2024-08-10 16:48:10.486|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[linkPermitCheckNode] has been found
+2024-08-10 16:48:10.487|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[linkUpdateNode] has been found
+2024-08-10 16:48:10.489|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[textSensitive] has been found
+2024-08-10 16:48:10.501|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'user-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:48:10.508|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[userInfo] has been found
+2024-08-10 16:48:10.523|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'link-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:48:10.541|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'whitelist-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:48:11.601|main|INFO |org.redisson.Version.logVersion:43|IGNORE|||||||||||||||||||||||||||||Redisson 3.25.0
+2024-08-10 16:48:12.114|redisson-netty-2-1|INFO |o.r.c.p.MasterConnectionPool.?:?|IGNORE|||||||||||||||||||||||||||||2 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-08-10 16:48:12.115|redisson-netty-2-1|INFO |o.r.c.p.MasterPubSubConnectionPool.lambda$createConnection$0:137|IGNORE|||||||||||||||||||||||||||||2 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-08-10 16:48:12.172|main|INFO |c.z.h.p.redis.HcyRedisTemplate.<init>:39|IGNORE|||||||||||||||||||||||||||||HcyRedisTemplate init succeed
+2024-08-10 16:48:12.485|main|INFO |c.z.h.p.u.i.DefaultUidGenerator.?:?|IGNORE|||||||||||||||||||||||||||||Initialized bits(1, 29, 21, 13) for workerID:501952
+2024-08-10 16:48:13.038|main|WARN |o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.logWarning:82|IGNORE|||||||||||||||||||||||||||||Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-08-10 16:48:13.072|main|INFO |c.y.liteflow.core.FlowExecutor.info:193|IGNORE|||||||||||||||||||||||||||||flow info loaded from local file,path=flow.xml
+2024-08-10 16:48:13.180|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[RpcClientFactory] create a new rpc client of 8f8aaf93-df19-444b-a172-64170d4f69eb
+2024-08-10 16:48:13.180|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] RpcClient init label, labels = {module=naming, source=sdk}
+2024-08-10 16:48:13.182|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2024-08-10 16:48:13.182|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2024-08-10 16:48:13.183|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2024-08-10 16:48:13.183|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Try to connect to server on start up, server: {serverIp = '192.168.71.1', server main port = 8848}
+2024-08-10 16:48:13.299|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Success to connect to server [192.168.71.1:8848] on start up, connectionId = 1723279693187_192.168.71.1_59466
+2024-08-10 16:48:13.299|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2024-08-10 16:48:13.299|com.alibaba.nacos.client.remote.worker|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Notify connected event to listeners.
+2024-08-10 16:48:13.299|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$196/0x00000007c03bb028
+2024-08-10 16:48:13.324|main|INFO |o.a.c.http11.Http11NioProtocol.?:?|IGNORE|||||||||||||||||||||||||||||Starting ProtocolHandler ["http-nio-8083"]
+2024-08-10 16:48:13.331|main|INFO |o.s.b.w.e.t.TomcatWebServer.start:220|IGNORE|||||||||||||||||||||||||||||Tomcat started on port(s): 8083 (http) with context path '/yun'
+2024-08-10 16:48:13.339|main|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||nacos registry, DEFAULT_GROUP file-server 192.168.71.1:8083 register finished
+2024-08-10 16:48:13.765|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Started Application in 9.97 seconds (JVM running for 11.198)
+2024-08-10 16:48:13.769|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=redis-local.yml, group=yun-demo-service
+2024-08-10 16:48:13.770|main|INFO |c.a.c.n.r.NacosContextRefresher.registerNacosListener:129|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=mysql-local.yml, group=yun-demo-service
+2024-08-10 16:48:13.770|main|INFO |c.a.c.n.r.NacosContextRefresher.registerNacosListener:129|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=file-server-local.yml, group=yun-demo-service
+2024-08-10 16:48:13.770|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=feign-local.yml, group=yun-demo-service
+2024-08-10 16:48:13.771|main|INFO |c.a.c.n.r.NacosContextRefresher.registerNacosListener:129|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=user-server-local.yml, group=yun-demo-service
+2024-08-10 16:48:13.772|main|INFO |c.z.yun.liteflow.Application.main:72|IGNORE|||||||||||||||||||||||||||||
+----------------------------------------------------------
+	Application 'file-server' is running! Access URLs:
+	Local: 		http://localhost:8083
+	External: 	http://192.168.45.162:8083
+----------------------------------------------------------
+2024-08-10 16:48:13.788|main-thread-0|INFO |c.y.liteflow.core.FlowExecutor.info:186|IGNORE|||||||||||||||||||||||||||||[2ec47e303d96413da9fc3b31a069b670]:requestId has generated
+2024-08-10 16:48:13.788|main-thread-0|INFO |c.y.liteflow.core.FlowExecutor.?:?|IGNORE|||||||||||||||||||||||||||||[2ec47e303d96413da9fc3b31a069b670]:slot[0] offered
+2024-08-10 16:48:13.788|main-thread-0|INFO |c.y.liteflow.flow.element.Node.info:193|IGNORE|||||||||||||||||||||||||||||[2ec47e303d96413da9fc3b31a069b670]:[O]start component[userInfo] execution
+2024-08-10 16:48:13.796|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.process:26|IGNORE|||||||||||||||||||||||||||||
+===User Info Node===
+2024-08-10 16:48:13.796|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.process:29|IGNORE|||||||||||||||||||||||||||||userContext: UserContext(userInfo=UserDomainEntity(userDomainId=12345, userServiceType=null, phoneNumber=phone, cutoverStatus=null, belongsPlatform=null, bmpUserId=null, siteCode=null, serviceStatus=null, createTime=null, updateTime=null))
+2024-08-10 16:48:13.796|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||userId: 12345
+2024-08-10 16:48:13.798|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||
+0 输入账号
+1 输入手机号
+2024-08-10 16:48:13.877|nacos-grpc-client-executor-7|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Receive server push request, request = NotifySubscriberRequest, requestId = 28
+2024-08-10 16:48:13.881|nacos-grpc-client-executor-7|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Ack server push request, request = NotifySubscriberRequest, requestId = 28
+2024-08-10 16:48:17.088|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||account: 13313
+2024-08-10 16:48:17.159|main-thread-0|WARN |o.s.c.l.c.ServiceInstanceListSupplierBuilder.?:?|IGNORE|||||||||||||||||||||||||||||LoadBalancerCacheManager not available, returning delegate without caching.
+2024-08-10 16:48:17.195|main-thread-0|WARN |o.s.c.l.c.RoundRobinLoadBalancer.getInstanceResponse:98|IGNORE|||||||||||||||||||||||||||||No servers available for service: user-server
+2024-08-10 16:48:17.197|main-thread-0|WARN |o.s.c.o.l.RetryableFeignBlockingLoadBalancerClient.?:?|IGNORE|||||||||||||||||||||||||||||Service instance was not resolved, executing the original request
+2024-08-10 16:48:17.700|nacos-grpc-client-executor-10|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Receive server push request, request = NotifySubscriberRequest, requestId = 29
+2024-08-10 16:48:17.701|nacos-grpc-client-executor-10|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[8f8aaf93-df19-444b-a172-64170d4f69eb] Ack server push request, request = NotifySubscriberRequest, requestId = 29
+2024-08-10 16:48:24.473|main-thread-0|INFO |c.z.h.p.l.feign.FeignConfig.invoke:243|HTTP|||||||||||600|1723279697090|1723279704473|7383|||||||||||||||UserRemoteClient.userInfo failed, details: user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:48:24.480|main-thread-0|INFO |c.z.h.p.l.f.PredicatedLoggerResponseHandler.?:?|IGNORE|||||||||||||||||||||||||||||{"headers":{"Content-Length":["41"],"Content-Type":["application/json"]},"entity":"{\"userDomainId\":13313,\"phoneNumber\":null}"}
+2024-08-10 16:48:24.480|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.getUserDomainEntity:50|IGNORE|||||||||||||||||||||||||||||user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:48:24.480|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||[2ec47e303d96413da9fc3b31a069b670]:component[userInfo] finished in 10686 milliseconds
+2024-08-10 16:48:24.480|main-thread-0|INFO |c.y.liteflow.flow.element.Node.info:193|IGNORE|||||||||||||||||||||||||||||[2ec47e303d96413da9fc3b31a069b670]:[O]start component[assetsInfo] execution
+2024-08-10 16:48:24.480|main-thread-0|INFO |c.z.y.l.a.cmp.AssetsInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||
+===Assets Info Node===
+2024-08-10 16:48:24.491|main-thread-0|WARN |o.s.c.l.c.ServiceInstanceListSupplierBuilder.?:235|IGNORE|||||||||||||||||||||||||||||LoadBalancerCacheManager not available, returning delegate without caching.
+2024-08-10 16:48:24.545|http-nio-8083-exec-1|INFO |o.a.c.c.C.[.[localhost].[/yun].log:173|IGNORE|||||||||||||||||||||||||||||Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-10 16:48:24.545|http-nio-8083-exec-1|INFO |o.s.w.s.DispatcherServlet.initServletBean:525|IGNORE|||||||||||||||||||||||||||||Initializing Servlet 'dispatcherServlet'
+2024-08-10 16:48:24.547|http-nio-8083-exec-1|INFO |o.s.w.s.DispatcherServlet.?:?|IGNORE|||||||||||||||||||||||||||||Completed initialization in 2 ms
+2024-08-10 16:48:24.845|http-nio-8083-exec-1|WARN |o.s.web.servlet.PageNotFound.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da2172327970483810019184||4d6c6fca956f497dae5b173ddafc7d68|||||||||||||||||||||No mapping for POST /yun/file/get
+2024-08-10 16:48:24.859|http-nio-8083-exec-1|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da2172327970483810019184||4d6c6fca956f497dae5b173ddafc7d68|||||||||||||||||||||No handler found for POST /yun/file/get
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/file/get
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:48:24.864|http-nio-8083-exec-1|INFO |c.z.h.p.l.l.LogPrinter.?:?|INTERFACE|169.254.125.142||yun|file-server|/file/get|c0a82da2172327970483810019184||4d6c6fca956f497dae5b173ddafc7d68||||||||||||||||01000005|||||{"output":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:48:24.890|main-thread-0|INFO |c.z.h.p.l.feign.FeignConfig.?:?|HTTP|||||||||||01000005|1723279704481|1723279704889|408|||||||||||||||FileRemoteClient.fileInfo failed, details: {"input":{"fileId":"21235"},"output":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:48:24.890|main-thread-0|INFO |c.z.h.p.l.f.PredicatedLoggerResponseHandler.?:?|IGNORE|||||||||||||||||||||||||||||{"headers":{"Content-Length":["49"],"Content-Type":["application/json"]},"entity":"{\"userId\":null,\"fileId\":\"21235\",\"expireSec\":null}","response":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:48:24.891|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.?:?|IGNORE|||||||||||||||||||||||||||||null
+2024-08-10 16:48:24.891|main-thread-0|INFO |c.z.y.l.a.cmp.AssetsInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||[2ec47e303d96413da9fc3b31a069b670]:component[assetsInfo] finished in 409 milliseconds
+2024-08-10 16:48:24.891|main-thread-0|INFO |com.yomahub.liteflow.slot.Slot.?:?|IGNORE|||||||||||||||||||||||||||||[2ec47e303d96413da9fc3b31a069b670]:CHAIN_NAME[chain1]
+userInfo<10686>==>assetsInfo<409>
+2024-08-10 16:48:24.891|main-thread-0|INFO |c.y.liteflow.slot.DataBus.?:?|IGNORE|||||||||||||||||||||||||||||[2ec47e303d96413da9fc3b31a069b670]:slot[0] released
+2024-08-10 16:52:36.606|Thread-4|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Start destroying common HttpClient
+2024-08-10 16:52:36.606|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.shutdown:136|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
+2024-08-10 16:52:36.606|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.shutdown:153|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Destruction of the end
+2024-08-10 16:52:36.607|Thread-4|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Destruction of the end
+2024-08-10 16:52:36.609|SpringApplicationShutdownHook|INFO |o.s.b.w.e.t.GracefulShutdown.?:?|IGNORE|||||||||||||||||||||||||||||Commencing graceful shutdown. Waiting for active requests to complete
+2024-08-10 16:52:37.046|tomcat-shutdown|INFO |o.s.b.w.e.t.GracefulShutdown.doShutdown:78|IGNORE|||||||||||||||||||||||||||||Graceful shutdown complete
+2024-08-10 16:52:37.078|SpringApplicationShutdownHook|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||De-registering from Nacos Server now...
+2024-08-10 16:52:37.084|SpringApplicationShutdownHook|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||De-registration finished.
+2024-08-10 16:52:37.414|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown rpc client, set status to shutdown
+2024-08-10 16:52:37.414|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@69df6010[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2024-08-10 16:52:37.414|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Close current connection 1723279693187_192.168.71.1_59466
+2024-08-10 16:52:37.416|nacos-grpc-client-executor-71|INFO |c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||[1723279693187_192.168.71.1_59466]Ignore complete event,isRunning:false,isAbandon=false
+2024-08-10 16:52:37.417|SpringApplicationShutdownHook|INFO |c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@1348fcfd[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 72]
+2024-08-10 16:52:37.421|SpringApplicationShutdownHook|INFO |c.a.druid.pool.DruidDataSource.close:2073|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closing ...
+2024-08-10 16:52:37.430|SpringApplicationShutdownHook|INFO |c.a.druid.pool.DruidDataSource.close:2146|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closed
+2024-08-10 16:52:45.769|background-preinit|INFO |o.h.v.internal.util.Version.?:?|IGNORE|||||||||||||||||||||||||||||HV000001: Hibernate Validator 6.2.5.Final
+2024-08-10 16:52:45.797|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Starting Application using Java 1.8.0_421 on DESKTOP-0D3FQF2 with PID 23580 (C:\Users\25538\source\java\share-liteflow\share-liteflow-web\target\classes started by 25538 in C:\Users\25538\source\java\share-liteflow)
+2024-08-10 16:52:45.798|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||The following 1 profile is active: "local"
+2024-08-10 16:52:45.918|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=redis-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:52:45.918|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=feign-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:52:45.919|main|WARN |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] config[dataId=mysql-local.yml, group=yun-demo-service] is empty
+2024-08-10 16:52:45.919|main|INFO |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Load config[dataId=file-server-local.yml, group=yun-demo-service] success
+2024-08-10 16:52:45.919|main|INFO |c.a.c.n.c.NacosConfigDataLoader.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Load config[dataId=user-server-local.yml, group=yun-demo-service] success
+2024-08-10 16:52:46.901|main|INFO |o.s.c.a.ConfigurationClassPostProcessor.enhanceConfigurationClasses:426|IGNORE|||||||||||||||||||||||||||||Cannot enhance @Configuration bean definition 'com.yomahub.liteflow.springboot.config.LiteflowMainAutoConfiguration' since its singleton instance has been created too early. The typical cause is a non-static @Bean method with a BeanDefinitionRegistryPostProcessor return type: Consider declaring such methods as 'static'.
+2024-08-10 16:52:46.975|main|INFO |o.s.c.c.scope.GenericScope.?:?|IGNORE|||||||||||||||||||||||||||||BeanFactory id=263e941b-fefe-3ba8-94f8-f544a25812f1
+2024-08-10 16:52:47.198|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:376|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration' of type [com.yomahub.liteflow.springboot.config.LiteflowPropertyAutoConfiguration$$EnhancerBySpringCGLIB$$77ab0594] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.209|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:376|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration' of type [org.springframework.cloud.commons.config.CommonsConfigAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.213|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.215|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'loadBalancerClientsDefaultsMappingsProvider' of type [org.springframework.cloud.client.loadbalancer.LoadBalancerDefaultMappingsProviderAutoConfiguration$$Lambda$494/0x00000007c06bb828] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.218|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'defaultsBindHandlerAdvisor' of type [org.springframework.cloud.commons.config.DefaultsBindHandlerAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.227|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.postProcessAfterInitialization:376|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow-com.yomahub.liteflow.springboot.LiteflowProperty' of type [com.yomahub.liteflow.springboot.LiteflowProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.234|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflow.monitor-com.yomahub.liteflow.springboot.LiteflowMonitorProperty' of type [com.yomahub.liteflow.springboot.LiteflowMonitorProperty] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.241|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'liteflowConfig' of type [com.yomahub.liteflow.property.LiteflowConfig] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.246|main|INFO |o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker.?:?|IGNORE|||||||||||||||||||||||||||||Bean 'com.yomahub.liteflow.spi.spring.SpringAware' of type [com.yomahub.liteflow.spi.spring.SpringAware] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2024-08-10 16:52:47.252|main|INFO |c.y.liteflow.util.LOGOPrinter.?:?|IGNORE|||||||||||||||||||||||||||||
+================================================================================================
+		 _     ___ _____ _____      _____ _     _____        __
+		| |   |_ _|_   _| ____|    |  ___| |   / _ \ \      / /
+		| |    | |  | | |  _| _____| |_  | |  | | | \ \ /\ / / 
+		| |___ | |  | | | |__|_____|  _| | |__| |_| |\ V  V /  
+		|_____|___| |_| |_____|    |_|   |_____\___/  \_/\_/   
+
+		Version: 2.12.2
+		Make your code amazing.
+		website：https://liteflow.cc
+		wechat：bryan_31
+================================================================================================
+
+2024-08-10 16:52:47.450|main|INFO |o.s.b.w.e.t.TomcatWebServer.?:?|IGNORE|||||||||||||||||||||||||||||Tomcat initialized with port(s): 8083 (http)
+2024-08-10 16:52:47.459|main|INFO |o.a.c.http11.Http11NioProtocol.?:?|IGNORE|||||||||||||||||||||||||||||Initializing ProtocolHandler ["http-nio-8083"]
+2024-08-10 16:52:47.460|main|INFO |o.a.c.core.StandardService.?:?|IGNORE|||||||||||||||||||||||||||||Starting service [Tomcat]
+2024-08-10 16:52:47.460|main|INFO |o.a.c.core.StandardEngine.log:173|IGNORE|||||||||||||||||||||||||||||Starting Servlet engine: [Apache Tomcat/9.0.75]
+2024-08-10 16:52:47.573|main|INFO |o.a.c.c.C.[.[localhost].[/yun].?:?|IGNORE|||||||||||||||||||||||||||||Initializing Spring embedded WebApplicationContext
+2024-08-10 16:52:47.574|main|INFO |o.s.b.w.s.c.ServletWebServerApplicationContext.?:?|IGNORE|||||||||||||||||||||||||||||Root WebApplicationContext: initialization completed in 1653 ms
+2024-08-10 16:52:47.632|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Running with Spring profile(s) :[local] 
+2024-08-10 16:52:48.300|main|INFO |c.a.d.s.b.a.DruidDataSourceAutoConfigure.?:?|IGNORE|||||||||||||||||||||||||||||Init DruidDataSource
+2024-08-10 16:52:48.622|main|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} inited
+2024-08-10 16:52:48.764|main|WARN |c.b.m.c.i.AbstractMethod.?:?|IGNORE|||||||||||||||||||||||||||||[com.zyhl.yun.liteflow.persistence.mapper.DemoItemMapper.selectList] Has been loaded by XML or SqlProvider or Mybatis's Annotation, so ignoring this injection for [class com.baomidou.mybatisplus.core.injector.methods.SelectList]
+2024-08-10 16:52:48.772|main|WARN |c.b.m.c.m.TableInfoHelper.?:?|IGNORE|||||||||||||||||||||||||||||Can not find table primary key in Class: "com.zyhl.yun.liteflow.persistence.mapper.DemoMapper".
+2024-08-10 16:52:49.407|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'file-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:52:49.419|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[assetsInfo] has been found
+2024-08-10 16:52:49.421|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[assetsValidate] has been found
+2024-08-10 16:52:49.423|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[benefitValidate] has been found
+2024-08-10 16:52:49.424|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[checkWhiteList] has been found
+2024-08-10 16:52:49.427|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[linkCreate] has been found
+2024-08-10 16:52:49.429|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[linkInfo] has been found
+2024-08-10 16:52:49.430|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[linkPermitCheckNode] has been found
+2024-08-10 16:52:49.432|main|INFO |c.y.l.spring.ComponentScanner.postProcessAfterInitialization:96|IGNORE|||||||||||||||||||||||||||||component[linkUpdateNode] has been found
+2024-08-10 16:52:49.434|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[textSensitive] has been found
+2024-08-10 16:52:49.445|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'user-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:52:49.452|main|INFO |c.y.l.spring.ComponentScanner.?:?|IGNORE|||||||||||||||||||||||||||||component[userInfo] has been found
+2024-08-10 16:52:49.466|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'link-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:52:49.484|main|INFO |o.s.c.o.FeignClientFactoryBean.?:?|IGNORE|||||||||||||||||||||||||||||For 'whitelist-server' URL not provided. Will try picking an instance via load-balancing.
+2024-08-10 16:52:50.581|main|INFO |org.redisson.Version.?:?|IGNORE|||||||||||||||||||||||||||||Redisson 3.25.0
+2024-08-10 16:52:51.105|redisson-netty-2-1|INFO |o.r.c.p.MasterConnectionPool.?:?|IGNORE|||||||||||||||||||||||||||||2 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-08-10 16:52:51.105|redisson-netty-2-1|INFO |o.r.c.p.MasterPubSubConnectionPool.lambda$createConnection$0:137|IGNORE|||||||||||||||||||||||||||||2 connections initialized for 127.0.0.1/127.0.0.1:6379
+2024-08-10 16:52:51.161|main|INFO |c.z.h.p.redis.HcyRedisTemplate.?:?|IGNORE|||||||||||||||||||||||||||||HcyRedisTemplate init succeed
+2024-08-10 16:52:51.495|main|INFO |c.z.h.p.u.i.DefaultUidGenerator.?:?|IGNORE|||||||||||||||||||||||||||||Initialized bits(1, 29, 21, 13) for workerID:501952
+2024-08-10 16:52:52.036|main|WARN |o.s.c.l.c.LoadBalancerCacheAutoConfiguration$LoadBalancerCaffeineWarnLogger.logWarning:82|IGNORE|||||||||||||||||||||||||||||Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2024-08-10 16:52:52.069|main|INFO |c.y.liteflow.core.FlowExecutor.info:193|IGNORE|||||||||||||||||||||||||||||flow info loaded from local file,path=flow.xml
+2024-08-10 16:52:52.177|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[RpcClientFactory] create a new rpc client of 3a18a104-3ff6-4adc-8e83-14b8e00e484e
+2024-08-10 16:52:52.178|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] RpcClient init label, labels = {module=naming, source=sdk}
+2024-08-10 16:52:52.179|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] RpcClient init, ServerListFactory = com.alibaba.nacos.client.naming.core.ServerListManager
+2024-08-10 16:52:52.179|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Registry connection listener to current client:com.alibaba.nacos.client.naming.remote.gprc.redo.NamingGrpcRedoService
+2024-08-10 16:52:52.179|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Register server push request handler:com.alibaba.nacos.client.naming.remote.gprc.NamingPushRequestHandler
+2024-08-10 16:52:52.180|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Try to connect to server on start up, server: {serverIp = '192.168.71.1', server main port = 8848}
+2024-08-10 16:52:52.293|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Success to connect to server [192.168.71.1:8848] on start up, connectionId = 1723279972184_192.168.71.1_59843
+2024-08-10 16:52:52.293|main|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$ConnectResetRequestHandler
+2024-08-10 16:52:52.293|com.alibaba.nacos.client.remote.worker|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Notify connected event to listeners.
+2024-08-10 16:52:52.293|main|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Register server push request handler:com.alibaba.nacos.common.remote.client.RpcClient$$Lambda$196/0x00000007c03bb028
+2024-08-10 16:52:52.319|main|INFO |o.a.c.http11.Http11NioProtocol.?:?|IGNORE|||||||||||||||||||||||||||||Starting ProtocolHandler ["http-nio-8083"]
+2024-08-10 16:52:52.326|main|INFO |o.s.b.w.e.t.TomcatWebServer.start:220|IGNORE|||||||||||||||||||||||||||||Tomcat started on port(s): 8083 (http) with context path '/yun'
+2024-08-10 16:52:52.334|main|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||nacos registry, DEFAULT_GROUP file-server 192.168.71.1:8083 register finished
+2024-08-10 16:52:52.769|main|INFO |c.z.yun.liteflow.Application.?:?|IGNORE|||||||||||||||||||||||||||||Started Application in 10.226 seconds (JVM running for 11.302)
+2024-08-10 16:52:52.774|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=redis-local.yml, group=yun-demo-service
+2024-08-10 16:52:52.774|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=mysql-local.yml, group=yun-demo-service
+2024-08-10 16:52:52.775|main|INFO |c.a.c.n.r.NacosContextRefresher.registerNacosListener:129|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=file-server-local.yml, group=yun-demo-service
+2024-08-10 16:52:52.775|main|INFO |c.a.c.n.r.NacosContextRefresher.?:?|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=feign-local.yml, group=yun-demo-service
+2024-08-10 16:52:52.776|main|INFO |c.a.c.n.r.NacosContextRefresher.registerNacosListener:129|IGNORE|||||||||||||||||||||||||||||[Nacos Config] Listening config: dataId=user-server-local.yml, group=yun-demo-service
+2024-08-10 16:52:52.777|main|INFO |c.z.yun.liteflow.Application.main:72|IGNORE|||||||||||||||||||||||||||||
+----------------------------------------------------------
+	Application 'file-server' is running! Access URLs:
+	Local: 		http://localhost:8083
+	External: 	http://192.168.45.162:8083
+----------------------------------------------------------
+2024-08-10 16:52:52.790|main-thread-0|INFO |c.y.liteflow.core.FlowExecutor.?:?|IGNORE|||||||||||||||||||||||||||||[69ccf3f4c2314c6184b1da67c0932c78]:requestId has generated
+2024-08-10 16:52:52.790|main-thread-0|INFO |c.y.liteflow.core.FlowExecutor.?:?|IGNORE|||||||||||||||||||||||||||||[69ccf3f4c2314c6184b1da67c0932c78]:slot[0] offered
+2024-08-10 16:52:52.790|main-thread-0|INFO |c.y.liteflow.flow.element.Node.info:193|IGNORE|||||||||||||||||||||||||||||[69ccf3f4c2314c6184b1da67c0932c78]:[O]start component[userInfo] execution
+2024-08-10 16:52:52.798|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||
+===User Info Node===
+2024-08-10 16:52:52.799|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||userContext: UserContext(userInfo=UserDomainEntity(userDomainId=12345, userServiceType=null, phoneNumber=phone, cutoverStatus=null, belongsPlatform=null, bmpUserId=null, siteCode=null, serviceStatus=null, createTime=null, updateTime=null))
+2024-08-10 16:52:52.799|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||userId: 12345
+2024-08-10 16:52:52.800|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||
+0 输入账号
+1 输入手机号
+2024-08-10 16:52:52.911|nacos-grpc-client-executor-6|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Receive server push request, request = NotifySubscriberRequest, requestId = 30
+2024-08-10 16:52:52.916|nacos-grpc-client-executor-6|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Ack server push request, request = NotifySubscriberRequest, requestId = 30
+2024-08-10 16:53:09.994|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:51|IGNORE|||||||||||||||||||||||||||||account: 454
+2024-08-10 16:53:10.049|main-thread-0|WARN |o.s.c.l.c.ServiceInstanceListSupplierBuilder.?:?|IGNORE|||||||||||||||||||||||||||||LoadBalancerCacheManager not available, returning delegate without caching.
+2024-08-10 16:53:10.076|main-thread-0|WARN |o.s.c.l.c.RoundRobinLoadBalancer.?:?|IGNORE|||||||||||||||||||||||||||||No servers available for service: user-server
+2024-08-10 16:53:10.077|main-thread-0|WARN |o.s.c.o.l.RetryableFeignBlockingLoadBalancerClient.lambda$execute$2:145|IGNORE|||||||||||||||||||||||||||||Service instance was not resolved, executing the original request
+2024-08-10 16:53:10.607|nacos-grpc-client-executor-11|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Receive server push request, request = NotifySubscriberRequest, requestId = 31
+2024-08-10 16:53:10.608|nacos-grpc-client-executor-11|INFO |c.a.nacos.common.remote.client.printIfInfoEnabled:60|IGNORE|||||||||||||||||||||||||||||[3a18a104-3ff6-4adc-8e83-14b8e00e484e] Ack server push request, request = NotifySubscriberRequest, requestId = 31
+2024-08-10 16:53:17.342|main-thread-0|INFO |c.z.h.p.l.feign.FeignConfig.invoke:243|HTTP|||||||||||600|1723279989995|1723279997342|7347|||||||||||||||UserRemoteClient.userInfo failed, details: user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:53:17.348|main-thread-0|INFO |c.z.h.p.l.f.PredicatedLoggerResponseHandler.?:?|IGNORE|||||||||||||||||||||||||||||{"headers":{"Content-Length":["39"],"Content-Type":["application/json"]},"entity":"{\"userDomainId\":454,\"phoneNumber\":null}"}
+2024-08-10 16:53:17.348|main-thread-0|ERROR|c.z.y.l.e.s.i.UserInfoServiceImpl.?:?|IGNORE|||||||||||||||||||||||||||||user-server executing POST http://user-server/yun/user/getUser
+2024-08-10 16:53:17.348|main-thread-0|INFO |c.z.y.l.a.cmp.UserInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||[69ccf3f4c2314c6184b1da67c0932c78]:component[userInfo] finished in 24552 milliseconds
+2024-08-10 16:53:17.349|main-thread-0|INFO |c.y.liteflow.flow.element.Node.info:193|IGNORE|||||||||||||||||||||||||||||[69ccf3f4c2314c6184b1da67c0932c78]:[O]start component[assetsInfo] execution
+2024-08-10 16:53:17.349|main-thread-0|INFO |c.z.y.l.a.cmp.AssetsInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||
+===Assets Info Node===
+2024-08-10 16:53:17.360|main-thread-0|WARN |o.s.c.l.c.ServiceInstanceListSupplierBuilder.?:?|IGNORE|||||||||||||||||||||||||||||LoadBalancerCacheManager not available, returning delegate without caching.
+2024-08-10 16:53:17.415|http-nio-8083-exec-2|INFO |o.a.c.c.C.[.[localhost].[/yun].log:173|IGNORE|||||||||||||||||||||||||||||Initializing Spring DispatcherServlet 'dispatcherServlet'
+2024-08-10 16:53:17.415|http-nio-8083-exec-2|INFO |o.s.w.s.DispatcherServlet.initServletBean:525|IGNORE|||||||||||||||||||||||||||||Initializing Servlet 'dispatcherServlet'
+2024-08-10 16:53:17.416|http-nio-8083-exec-2|INFO |o.s.w.s.DispatcherServlet.initServletBean:547|IGNORE|||||||||||||||||||||||||||||Completed initialization in 1 ms
+2024-08-10 16:53:17.716|http-nio-8083-exec-2|WARN |o.s.web.servlet.PageNotFound.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da21723279997707100123580||314e0070ecd241aaa734bc015a7a5d86|||||||||||||||||||||No mapping for POST /yun/file/get
+2024-08-10 16:53:17.729|http-nio-8083-exec-2|ERROR|c.z.y.l.g.BaseGlobalExceptionHandler.?:?|BUSINESS|169.254.125.142||yun|file-server|/file/get|c0a82da21723279997707100123580||314e0070ecd241aaa734bc015a7a5d86|||||||||||||||||||||No handler found for POST /yun/file/get
+o.s.w.s.NoHandlerFoundException: No handler found for POST /yun/file/get
+	at o.s.w.s.DispatcherServlet.noHandlerFound(DispatcherServlet.java:1287)
+	at o.s.w.s.DispatcherServlet.doDispatch(DispatcherServlet.java:1050)
+	at o.s.w.s.DispatcherServlet.doService(DispatcherServlet.java:965)
+	at o.s.w.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at o.s.w.servlet.FrameworkServlet.doPost(FrameworkServlet.java:909)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:555)
+	at o.s.w.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:623)
+	at o.a.c.c.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:209)
+	at o.a.c.c.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:153)
+	... 34 frames truncated
+2024-08-10 16:53:17.734|http-nio-8083-exec-2|INFO |c.z.h.p.l.l.LogPrinter.?:?|INTERFACE|169.254.125.142||yun|file-server|/file/get|c0a82da21723279997707100123580||314e0070ecd241aaa734bc015a7a5d86||||||||||||||||01000005|||||{"output":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:53:17.758|main-thread-0|INFO |c.z.h.p.l.feign.FeignConfig.?:?|HTTP|||||||||||01000005|1723279997349|1723279997757|408|||||||||||||||FileRemoteClient.fileInfo failed, details: {"input":{"fileId":"21235"},"output":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:53:17.759|main-thread-0|INFO |c.z.h.p.l.f.PredicatedLoggerResponseHandler.?:?|IGNORE|||||||||||||||||||||||||||||{"headers":{"Content-Length":["49"],"Content-Type":["application/json"]},"entity":"{\"userId\":null,\"fileId\":\"21235\",\"expireSec\":null}","response":{"success":false,"code":"01000005","message":"资源不存在"}}
+2024-08-10 16:53:17.759|main-thread-0|ERROR|c.z.y.l.e.s.i.FileInfoServiceImpl.queryFileInfo:41|IGNORE|||||||||||||||||||||||||||||null
+2024-08-10 16:53:17.759|main-thread-0|INFO |c.z.y.l.a.cmp.AssetsInfoNode.?:?|IGNORE|||||||||||||||||||||||||||||[69ccf3f4c2314c6184b1da67c0932c78]:component[assetsInfo] finished in 410 milliseconds
+2024-08-10 16:53:17.759|main-thread-0|INFO |com.yomahub.liteflow.slot.Slot.info:200|IGNORE|||||||||||||||||||||||||||||[69ccf3f4c2314c6184b1da67c0932c78]:CHAIN_NAME[chain1]
+userInfo<24552>==>assetsInfo<410>
+2024-08-10 16:53:17.759|main-thread-0|INFO |c.y.liteflow.slot.DataBus.info:193|IGNORE|||||||||||||||||||||||||||||[69ccf3f4c2314c6184b1da67c0932c78]:slot[0] released
+2024-08-10 16:53:36.936|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.?:?|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Start destroying Publisher
+2024-08-10 16:53:36.936|Thread-3|WARN |c.a.n.c.h.HttpClientBeanHolder.shutdown:108|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Start destroying common HttpClient
+2024-08-10 16:53:36.936|Thread-7|WARN |c.a.n.c.notify.NotifyCenter.?:?|IGNORE|||||||||||||||||||||||||||||[NotifyCenter] Destruction of the end
+2024-08-10 16:53:36.937|Thread-3|WARN |c.a.n.c.h.HttpClientBeanHolder.?:?|IGNORE|||||||||||||||||||||||||||||[HttpClientBeanHolder] Destruction of the end
+2024-08-10 16:53:36.939|SpringApplicationShutdownHook|INFO |o.s.b.w.e.t.GracefulShutdown.?:?|IGNORE|||||||||||||||||||||||||||||Commencing graceful shutdown. Waiting for active requests to complete
+2024-08-10 16:53:37.218|tomcat-shutdown|INFO |o.s.b.w.e.t.GracefulShutdown.doShutdown:78|IGNORE|||||||||||||||||||||||||||||Graceful shutdown complete
+2024-08-10 16:53:37.258|SpringApplicationShutdownHook|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||De-registering from Nacos Server now...
+2024-08-10 16:53:37.261|SpringApplicationShutdownHook|INFO |c.a.c.n.r.NacosServiceRegistry.?:?|IGNORE|||||||||||||||||||||||||||||De-registration finished.
+2024-08-10 16:53:37.587|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown rpc client, set status to shutdown
+2024-08-10 16:53:37.587|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.shutdown:456|IGNORE|||||||||||||||||||||||||||||Shutdown client event executor java.util.concurrent.ScheduledThreadPoolExecutor@7ddcee63[Running, pool size = 2, active threads = 2, queued tasks = 0, completed tasks = 0]
+2024-08-10 16:53:37.587|SpringApplicationShutdownHook|INFO |c.a.nacos.common.remote.client.?:?|IGNORE|||||||||||||||||||||||||||||Close current connection 1723279972184_192.168.71.1_59843
+2024-08-10 16:53:37.589|nacos-grpc-client-executor-22|INFO |c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||[1723279972184_192.168.71.1_59843]Ignore complete event,isRunning:false,isAbandon=false
+2024-08-10 16:53:37.591|SpringApplicationShutdownHook|INFO |c.a.n.c.r.c.grpc.GrpcClient.?:?|IGNORE|||||||||||||||||||||||||||||Shutdown grpc executor java.util.concurrent.ThreadPoolExecutor@50267755[Running, pool size = 4, active threads = 0, queued tasks = 0, completed tasks = 23]
+2024-08-10 16:53:37.593|SpringApplicationShutdownHook|INFO |c.a.druid.pool.DruidDataSource.close:2073|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closing ...
+2024-08-10 16:53:37.599|SpringApplicationShutdownHook|INFO |c.a.druid.pool.DruidDataSource.?:?|IGNORE|||||||||||||||||||||||||||||{dataSource-1} closed
