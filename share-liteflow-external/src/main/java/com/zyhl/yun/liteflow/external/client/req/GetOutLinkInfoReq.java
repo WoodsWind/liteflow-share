@@ -18,10 +18,14 @@ public class GetOutLinkInfoReq {
     private String linkID;
     private String passwd;
     private String pCaID;
-    private Integer caSrt;
-    private Integer coSrt;
-    private Integer srtDr;
-    private Integer bNum;
-    private Integer eNum;
+    private Integer caSrt = 0;
+    private Integer coSrt = 0;
+    private Integer srtDr = 0;
+    //private Integer bNum = -1;
+    //private Integer eNum;
     private String linkCode;
+
+    public GetOutLinkInfoReq(String pCaID) {
+        this.pCaID = pCaID;
+    }
 }

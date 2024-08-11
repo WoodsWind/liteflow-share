@@ -1,7 +1,10 @@
 package com.zyhl.yun.liteflow.external.service.impl;
 
 import com.zyhl.hcy.commons.result.BaseResult;
+import com.zyhl.yun.liteflow.domain.entity.OutLinkCaInfo;
+import com.zyhl.yun.liteflow.domain.entity.OutLinkCoInfo;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkEntity;
+import com.zyhl.yun.liteflow.domain.entity.OutLinkSnapshotInfo;
 import com.zyhl.yun.liteflow.external.client.OutLinkRemoteClient;
 import com.zyhl.yun.liteflow.external.client.req.GetOutLinkReq;
 import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkResOne;
@@ -26,6 +29,22 @@ public class GetOutLinkServiceImpl implements GetOutLinkService {
     OutLinkInfoController outLinkInfoController;
 
     @Override
+    public OutLinkSnapshotInfo getOutLinkInfo(Long userDomainId) {
+        return null;
+    }
+
+    @Override
+    public OutLinkCoInfo[] getOutLinkCoInfo(Long userDomainId) {
+        ;
+        return new OutLinkCoInfo[m];
+    }
+
+    @Override
+    public OutLinkCaInfo[] getOutLinkCaInfo(Long userDomainId) {
+        return new OutLinkCaInfo[m];
+    }
+
+    @Override
     public OutLinkEntity getOutLink(Long account) {
         GetOutLinkReq getOutLinkReq = GetOutLinkReq.builder().userDomainId(account).build();
         BaseResult<GetOutLinkResOne[]> outLinkResult;
@@ -35,7 +54,7 @@ public class GetOutLinkServiceImpl implements GetOutLinkService {
         }catch (Exception e){
             log.error(e.getMessage());
         }
-        OutLinkEntity outLinkEntity = null;
-        return outLinkEntity;
+        OutLinkSnapshotInfo outLinkSnapshotInfo = null;
+        return outLinkSnapshotInfo;
     }
 }

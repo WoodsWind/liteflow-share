@@ -20,18 +20,24 @@ public class GetOutLinkInfoRes {
     private String isCreator;
     private String lkName;
     private String ctTime;
-    private Integer dlTimes;
+    private Integer dlTimes = 0;
     private String desc;
     private String creator;
     private String owner;
-    private Integer brwTimes;
-    private Integer svTimes;
+    private Integer brwTimes = 0;
+    private Integer svTimes = 0;
     private String homeURL;
-    private String openCount;
+    //private String openCount;
     private Integer subLinkType;
     private String expireTime;
-    private Integer isunlimitedTimes;
+    private Integer isunlimitedTimes = 0;
     private Integer belongsPlatform;
     private String nextPageCursor;
     private String resultExplain;
+
+    public GetOutLinkInfoRes(Integer nodNum, String lkName, String ctTime){
+        this.nodNum = nodNum;
+        this.lkName = lkName;
+        this.ctTime = ctTime;
+    }
 }

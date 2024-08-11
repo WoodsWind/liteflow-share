@@ -1,6 +1,7 @@
 package com.zyhl.yun.liteflow.domain.entity;
 
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -11,6 +12,7 @@ import java.util.Map;
  * @author 25538
  */
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class OutLinkCoInfo {
