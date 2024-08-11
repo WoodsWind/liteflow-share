@@ -29,17 +29,19 @@ public class AssetsInfoNode extends NodeComponent {
         FileContext fileContext = getContextBean(FileContext.class);
         FileEntity fileEntity = fileInfoService.queryFileInfo(fileContext.getFileInfo().getFileId());
         fileContext.setFileInfo(fileEntity);
+        // get file info
+        // display
+
 
         /*log.info("\n=== 文件信息: ===" +
                 "\nfile id: " + fileContext.getFileInfo().getFileId() +
                 "\nfile name: " + fileContext.getFileInfo().getName());*/
 
-        // get file info
-        // display
-
-        /*log.info("\n=== 批量获取: ===");
+        /*
+        log.info("\n=== 批量获取: ===");
         String[] fils = {"aa","bb","cc"};
         List<FileEntity> fileEntityList = fileInfoService.queryFileBatchInfo(fils);
+        fileContext.setAllFiles(fileEntityList);
         for (FileEntity f : fileEntityList) {
             log.info("\n"+f.getFileId() + ":" + f.getName());
         }*/

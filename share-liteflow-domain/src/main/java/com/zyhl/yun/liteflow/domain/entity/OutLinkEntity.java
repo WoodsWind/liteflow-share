@@ -17,22 +17,22 @@ public class OutLinkEntity {
     private Integer encrypt;
     private String passwd;
     private String url;
-    private String linkUrlMin;
+    //private String linkUrlMin;
     private String lkName;
     private String ctTime;
-    private String lastUdTime;
-    private String lastAudTime;
-    private Integer fNum;
-    private Long tolSize;
-    private String audRes;
+    //private String lastUdTime;
+    //private String lastAudTime;
+    private Integer fNum = 0;
+    private Long tolSize = 0L;
+    private String audRes = "0";
     private String audDesc;
     private Integer linkType;
     private Integer objType;
     private Integer coType;
     private String coSuffix;
     private String desc;
-    private Integer pubType;
-    private Integer dlTimes;
+    private Integer pubType = 1;
+    private Integer dlTimes = 0;
     private String smallThumbnail;
     private String creator;
     private String owner;
@@ -46,4 +46,11 @@ public class OutLinkEntity {
     private Integer unlimitbrowsetimes;
     private String objectID;
     private String linkCode;
+
+    public OutLinkEntity(String linkID, String url, String lkName, String ctTime) {
+        this.linkID = linkID;
+        this.url = url;
+        this.lkName = lkName;
+        this.ctTime = ctTime;
+    }
 }

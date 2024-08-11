@@ -14,10 +14,17 @@ import lombok.NoArgsConstructor;
 public class OutLinkCaInfo {
     private String caID;
     private String caName;
+    /** 时间格式：YYYYMMDDHHMMSS；是24H */
     private String ctTime;
-    private String udTime;
-    private Integer dlTimes;
+    /**private String udTime;*/
+    private Integer dlTimes = 0;
     private String path;
     private Integer illegalType;
     private Integer illegalResult;
+
+    public OutLinkCaInfo(String caID, String caName, String ctTime) {
+        this.caID = caID;
+        this.caName = caName;
+        this.ctTime = ctTime;
+    }
 }

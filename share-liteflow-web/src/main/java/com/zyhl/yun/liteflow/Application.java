@@ -83,7 +83,7 @@ public class Application {
 		UserContext userContext = UserContext.builder().userInfo(userDomainEntity).build();
 
 		FileEntity fileEntity = FileEntity.builder().fileId("fileA").build();
-		FileContext fileContext = new FileContext(fileEntity);
+		FileContext fileContext = FileContext.builder().fileInfo(fileEntity).build();
 		flowExecutor.execute2Future("chain1","", userContext, fileContext);
 	}
 }

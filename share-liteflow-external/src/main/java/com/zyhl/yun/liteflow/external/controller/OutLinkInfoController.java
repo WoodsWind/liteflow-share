@@ -18,24 +18,31 @@ import org.springframework.web.bind.annotation.*;
 @RequestMapping("/yun/outlink")
 public class OutLinkInfoController {
 
+    /**
+     * 创建外链
+     */
     @PostMapping("/get")
-    public BaseResult<GetOutLinkResOne[]> outLinkGet(@RequestBody GetOutLinkReq req){
+    public BaseResult<GetOutLinkResOne[]> outLinkGet(@RequestBody GetOutLinkReq req) {
         GetOutLinkResOne[] getOutLinkResSet = new GetOutLinkResOne[0];
 
         return BaseResult.success(getOutLinkResSet);
     }
 
-
+    /**
+     * 获取外链概要
+     */
     @PostMapping("/snapshot")
-    public BaseResult<GetOutLinkSnapshotRes> outLinkInfoSnapshot(@RequestBody GetOutLinkSnapshotReq req){
+    public BaseResult<GetOutLinkSnapshotRes> outLinkInfoSnapshot(@RequestBody GetOutLinkSnapshotReq req) {
         GetOutLinkSnapshotRes res = new GetOutLinkSnapshotRes();
 
         return BaseResult.success(res);
     }
 
-
+    /**
+     * 获取外链详情
+     */
     @PostMapping("/info")
-    public BaseResult<GetOutLinkInfoRes> outLinkInfo(@RequestBody GetOutLinkInfoReq req){
+    public BaseResult<GetOutLinkInfoRes> outLinkInfo(@RequestBody GetOutLinkInfoReq req) {
         GetOutLinkInfoRes res = new GetOutLinkInfoRes();
 
         return BaseResult.success(res);
