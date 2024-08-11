@@ -5,6 +5,7 @@ import com.zyhl.yun.liteflow.domain.entity.UserDomainEntity;
 import com.zyhl.yun.liteflow.external.client.UserRemoteClient;
 import com.zyhl.yun.liteflow.external.client.req.UserInfoReq;
 import com.zyhl.yun.liteflow.external.client.resp.UserInfoRsp;
+import com.zyhl.yun.liteflow.external.controller.UserInfoController;
 import com.zyhl.yun.liteflow.external.service.UserInfoService;
 import lombok.extern.slf4j.Slf4j;
 import org.jetbrains.annotations.Nullable;
@@ -21,6 +22,9 @@ public class UserInfoServiceImpl implements UserInfoService {
 
     @Resource
     UserRemoteClient userRemoteClient;
+
+    @Resource
+    UserInfoController userInfoController;
 
     @Override
     public UserDomainEntity queryUserInfo(Long account) {
@@ -44,7 +48,12 @@ public class UserInfoServiceImpl implements UserInfoService {
         BaseResult<UserInfoRsp> userResult;
         UserDomainEntity user = null;
         try {
-            userResult = userRemoteClient.userInfo(userInfoReq);
+            userResult = userResult = userInfoController.userInfo(userInfoReq);
+            //BaseResult<String> result = userInfoController.userInfo("aaa");
+            log.info("~~~~~~~~~~~" + userResult.getData().getData() + "~~~~~~~~~~~~");
+
+            //userResult = userRemoteClient.userInfo(userInfoReq);
+
             user = userResult.getData().getData();
         } catch (Exception e) {
             log.error(e.getMessage());

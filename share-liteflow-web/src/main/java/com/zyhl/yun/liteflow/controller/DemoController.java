@@ -68,4 +68,5 @@ public class DemoController {
         rsp.setDesc("success");
         return BaseResult.success(rsp);
     }
+
 }
