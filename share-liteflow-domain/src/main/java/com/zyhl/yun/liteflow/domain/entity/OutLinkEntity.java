@@ -17,11 +17,8 @@ public class OutLinkEntity {
     private Integer encrypt;
     private String passwd;
     private String url;
-    //private String linkUrlMin;
     private String lkName;
     private String ctTime;
-    //private String lastUdTime;
-    //private String lastAudTime;
     private Integer fNum = 0;
     private Long tolSize = 0L;
     private String audRes = "0";
@@ -53,4 +50,8 @@ public class OutLinkEntity {
         this.lkName = lkName;
         this.ctTime = ctTime;
     }
+
+    /**private String linkUrlMin;
+     private String lastUdTime;
+     private String lastAudTime;*/
 }

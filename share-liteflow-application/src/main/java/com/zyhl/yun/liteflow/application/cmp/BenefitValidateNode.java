@@ -1,7 +1,6 @@
 package com.zyhl.yun.liteflow.application.cmp;
 
 import com.yomahub.liteflow.core.NodeSwitchComponent;
-import com.zyhl.yun.liteflow.application.context.OprContext;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 

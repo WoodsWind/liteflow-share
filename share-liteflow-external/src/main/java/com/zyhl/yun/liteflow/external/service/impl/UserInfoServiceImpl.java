@@ -49,7 +49,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         UserDomainEntity user = null;
         try {
             userResult = userInfoController.userInfo(userInfoReq);
-            log.info("~~~~~~~~~~~" + userResult.getData().getData() + "~~~~~~~~~~~~");
+            log.info("~~~~~~~~~~~{}~~~~~~~~~~~~", userResult.getData().getData());
             user = userResult.getData().getData();
         } catch (Exception e) {
             log.error(e.getMessage());

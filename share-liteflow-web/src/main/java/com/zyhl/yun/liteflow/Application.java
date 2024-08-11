@@ -20,6 +20,7 @@ import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
 import javax.annotation.PostConstruct;
+import javax.annotation.Resource;
 import java.net.InetAddress;
 import java.nio.channels.FileChannel;
 import java.util.Arrays;
@@ -36,7 +37,7 @@ public class Application {
 
 	private static final Logger log = LoggerFactory.getLogger(Application.class);
 
-	@Autowired
+	@Resource
 	private Environment env;
 
 	@PostConstruct

@@ -40,11 +40,11 @@ public class FileInfoController {
 
         FileInfoRsp rsp = new FileInfoRsp();
 
-        if (fileId == "fileA") {
+        if (fileId.equals("fileA")) {
             rsp = new FileInfoRsp(demoFileEntityA);
-        } else if (fileId == "folderB") {
+        } else if (fileId.equals("fileB")) {
             rsp = new FileInfoRsp(demoFileEntityB);
-        } else if (fileId == "fileC") {
+        } else if (fileId.equals("fileC")) {
             rsp = new FileInfoRsp(demoFileEntityC);
         } else {
             log.error("目前仅支持获得三个文件的信息");
@@ -80,19 +80,19 @@ public class FileInfoController {
     public BaseResult<FileListRsp> fileList(@RequestBody FileListReq req) {
 
         String parentId = req.getParentFileId();
-        log.info("\n展示文件夹" + parentId + "下的文件：");
+        log.info("\n展示文件夹{}下的文件：", parentId);
 
         List<SimpleFileInfo> simpleFiles = new ArrayList<>();
 
-        if (parentId == "/") {
+        if (parentId.equals("/")) {
             for (FileEntity demoFile : demoFileEntityList) {
-                if(demoFile.getParentFileId()=="/"){
+                if(demoFile.getParentFileId().equals("/")){
                     simpleFiles.add(fileEntityConvertor.toSimpleFileEntity(demoFile));
                 }
             }
-        } else if (parentId == "folderB") {
+        } else if (parentId.equals("folderB")) {
             for (FileEntity demoFile : demoFileEntityList) {
-                if(demoFile.getParentFileId()=="folderB"){
+                if(demoFile.getParentFileId().equals("folderB")){
                     simpleFiles.add(fileEntityConvertor.toSimpleFileEntity(demoFile));
                 }
             }
