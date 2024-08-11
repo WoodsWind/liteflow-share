@@ -16,5 +16,4 @@ import lombok.NoArgsConstructor;
 public class FileDirReq {
     private String userId;
     private String fileId;
-
 }

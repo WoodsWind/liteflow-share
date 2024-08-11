@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * @author 25538
  */
@@ -12,8 +14,5 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FileBatchInfoRsp {
-    private FileEntity[] data;
-    public FileEntity[] getBatchFileResults() {
-        return data;
-    }
+    private List<FileEntity> data;
 }

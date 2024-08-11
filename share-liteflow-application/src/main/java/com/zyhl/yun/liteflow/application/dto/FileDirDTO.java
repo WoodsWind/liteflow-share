@@ -7,7 +7,7 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 
 /**
- * @user 25538
+ * @author 25538
  * 一个目录下的全部文件概览
  */
 @Data

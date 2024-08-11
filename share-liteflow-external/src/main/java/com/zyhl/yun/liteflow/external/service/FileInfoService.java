@@ -4,6 +4,8 @@ import com.zyhl.yun.liteflow.domain.entity.FileEntity;
 import com.zyhl.yun.liteflow.domain.entity.SimpleFileInfo;
 import com.zyhl.yun.liteflow.domain.entity.FileDirEntity;
 
+import java.util.List;
+
 /**
  * @author 25538
  */
@@ -21,14 +23,14 @@ public interface FileInfoService {
      * @param fileIds
      * @return
      */
-    FileEntity[] queryFileBatchInfo(String[] fileIds);
+    List<FileEntity> queryFileBatchInfo(String[] fileIds);
 
     /**
      * 列举文件
      * @param parentFileId
      * @return
      */
-    SimpleFileInfo[] querySimpleFileInfo(String parentFileId);
+    List<SimpleFileInfo> querySimpleFileInfo(String parentFileId);
 
     /**
      * 统计目录

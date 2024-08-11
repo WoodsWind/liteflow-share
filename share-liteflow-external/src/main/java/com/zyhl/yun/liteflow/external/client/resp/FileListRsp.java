@@ -5,6 +5,8 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
+import java.util.List;
+
 /**
  * @author 25538
  */
@@ -12,6 +14,6 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 public class FileListRsp {
-    private SimpleFileInfo[] items;
+    private List<SimpleFileInfo> items;
     /** private String nextPageCursor;*/
 }

@@ -20,5 +20,9 @@ public class FileListReq {
     private String[] imageThumbnailStyleList;
     private String type;
     private String category;
+
+    public FileListReq(String parentFileId) {
+        this.parentFileId = parentFileId;
+    }
     /**private PageInfo pageInfo; // 分页信息*/
 }

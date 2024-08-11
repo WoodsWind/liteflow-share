@@ -49,11 +49,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         UserDomainEntity user = null;
         try {
             userResult = userResult = userInfoController.userInfo(userInfoReq);
-            //BaseResult<String> result = userInfoController.userInfo("aaa");
             log.info("~~~~~~~~~~~" + userResult.getData().getData() + "~~~~~~~~~~~~");
-
-            //userResult = userRemoteClient.userInfo(userInfoReq);
-
             user = userResult.getData().getData();
         } catch (Exception e) {
             log.error(e.getMessage());
