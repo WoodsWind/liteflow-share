@@ -48,7 +48,7 @@ public class UserInfoServiceImpl implements UserInfoService {
         BaseResult<UserInfoRsp> userResult;
         UserDomainEntity user = null;
         try {
-            userResult = userResult = userInfoController.userInfo(userInfoReq);
+            userResult = userInfoController.userInfo(userInfoReq);
             log.info("~~~~~~~~~~~" + userResult.getData().getData() + "~~~~~~~~~~~~");
             user = userResult.getData().getData();
         } catch (Exception e) {

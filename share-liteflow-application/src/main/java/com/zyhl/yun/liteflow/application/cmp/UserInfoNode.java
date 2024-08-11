@@ -48,7 +48,6 @@ public class UserInfoNode extends NodeComponent {
                         log.error("需要输入一个Long值", e);
                     }
                     userContext.setAccount(userId);
-                    log.info("account: {}", userContext.getUserInfo().getUserDomainId());
                     // 获得用户信息
                     UserDomainEntity userInfo = userInfoService.queryUserInfo(userId);
                     userContext.setUserInfo(userInfo);
@@ -61,13 +60,13 @@ public class UserInfoNode extends NodeComponent {
                         log.error("输入电话的格式错误", e);
                     }
                     userContext.setPhoneNumber(userPhoneNumber);
-                    log.info("phone: {}", userContext.getUserInfo().getPhoneNumber());
                     // 获得用户信息
                     UserDomainEntity userInfo = userInfoService.queryUserInfo(userPhoneNumber);
                     userContext.setUserInfo(userInfo);
                 } else {
                     log.error("只能二选一");
                 }
+                log.info("\n==== 用户信息: ===="+"\nuser account: " + userContext.getUserInfo().getUserDomainId() + "\nuser phone number: " + userContext.getUserInfo().getPhoneNumber());
             }
         }
     }

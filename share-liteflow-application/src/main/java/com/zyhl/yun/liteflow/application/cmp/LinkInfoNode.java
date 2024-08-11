@@ -12,6 +12,7 @@ public class LinkInfoNode extends NodeComponent {
     @Override
     public void process() throws Exception {
         log.info("===Link Info Node===");
-
+        // get link info
+        // display
     }
 }

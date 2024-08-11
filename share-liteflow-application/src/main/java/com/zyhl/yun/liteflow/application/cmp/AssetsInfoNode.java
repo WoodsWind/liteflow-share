@@ -27,5 +27,9 @@ public class AssetsInfoNode extends NodeComponent {
         FileContext fileContext = getContextBean(FileContext.class);
         FileEntity fileEntity = fileInfoService.queryFileInfo(fileContext.getFileInfo().getFileId());
         fileContext.setFileInfo(fileEntity);
+        log.info("\n=== 文件信息: ===\nfile id: "+ fileContext.getFileInfo().getFileId() + "\nfile name: "+ fileContext.getFileInfo().getName());
+        // get file info
+        // display
+
     }
 }

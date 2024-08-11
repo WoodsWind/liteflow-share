@@ -13,5 +13,7 @@ public class LinkCreateNode extends NodeComponent {
     @Override
     public void process() throws Exception {
         log.info("===Link Create Node===");
+        // get files to be shared
+        // create
     }
 }
