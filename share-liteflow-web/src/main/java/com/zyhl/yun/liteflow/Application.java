@@ -79,7 +79,7 @@ public class Application {
 				env.getProperty("server.port"));
 
 		//LiteFlowChainELBuilder.createChain().setEL("THEN(userInfo)").setChainId("chain1").build();
-		UserDomainEntity userDomainEntity = new UserDomainEntity();
+		UserDomainEntity userDomainEntity = new UserDomainEntity(12345L,"phone");
 		UserContext userContext = UserContext.builder().userInfo(userDomainEntity).build();
 
 		FileEntity fileEntity = FileEntity.builder().fileId("fileA").build();

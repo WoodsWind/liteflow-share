@@ -26,8 +26,9 @@ public class UserInfoNode extends NodeComponent {
         log.info("\n===User Info Node===");
         // ForkUserContext context = null;
         UserContext userContext = getContextBean(UserContext.class);
-        log.info("userContext: {}", userContext);
-        log.info("userId: {}", userContext.getUserInfo().getUserDomainId());
+        log.info("\nuserContext: {}", userContext);
+        log.info("\nuserId: {}", userContext.getUserInfo().getUserDomainId());
+        /*
         try (Scanner scanner = new Scanner(System.in)) {
             Integer choice = null;
             Long userId = null;
@@ -56,7 +57,7 @@ public class UserInfoNode extends NodeComponent {
                     try {
                         userPhoneNumber = scanner.next();
                     } catch (InputMismatchException e) {
-                        /* 格式判断待补充 */
+                        // 格式判断待补充
                         log.error("输入电话的格式错误", e);
                     }
                     userContext.setPhoneNumber(userPhoneNumber);
@@ -68,6 +69,6 @@ public class UserInfoNode extends NodeComponent {
                 }
                 log.info("\n==== 用户信息: ===="+"\nuser account: " + userContext.getUserInfo().getUserDomainId() + "\nuser phone number: " + userContext.getUserInfo().getPhoneNumber());
             }
-        }
+        }*/
     }
 }

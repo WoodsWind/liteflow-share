@@ -13,6 +13,7 @@ import javax.annotation.Resource;
 import java.time.ZoneOffset;
 import java.time.ZonedDateTime;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 /**
@@ -59,7 +60,7 @@ public class FileInfoController {
     public BaseResult<FileBatchInfoRsp> batchGet(@RequestBody FileBatchInfoReq req) {
 
         String[] fileIds = req.getFileIds();
-        log.info("\n批量获取文件：{}", fileIds.toString());
+        log.info("\n批量获取文件：{}", Arrays.toString(fileIds));
         log.info("\n目前就批量展示AB两个demo文件");
 
         FileBatchInfoRsp rsp = new FileBatchInfoRsp();
@@ -79,9 +80,8 @@ public class FileInfoController {
     public BaseResult<FileListRsp> fileList(@RequestBody FileListReq req) {
 
         String parentId = req.getParentFileId();
-        log.info("\n展示文件夹{}" + parentId + "下的文件");
+        log.info("\n展示文件夹" + parentId + "下的文件：");
 
-        FileListRsp rsp = new FileListRsp();
         List<SimpleFileInfo> simpleFiles = new ArrayList<>();
 
         if (parentId == "/") {
@@ -100,6 +100,7 @@ public class FileInfoController {
             log.info("\n目前仅支持根目录'/'和文件夹'folderB'");
         }
 
+        FileListRsp rsp = new FileListRsp(simpleFiles);
         return BaseResult.success(rsp);
     }
 
