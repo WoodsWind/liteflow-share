@@ -2,6 +2,7 @@ package com.zyhl.yun.liteflow.external.client.resp;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCaInfo;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCoInfo;
 import lombok.AllArgsConstructor;
+import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
@@ -9,6 +10,7 @@ import lombok.NoArgsConstructor;
  * @author 25538
  */
 @Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 public class GetOutLinkInfoRes {

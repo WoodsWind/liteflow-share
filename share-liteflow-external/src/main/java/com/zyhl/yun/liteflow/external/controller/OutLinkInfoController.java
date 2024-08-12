@@ -12,6 +12,9 @@ import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkResOne;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
+
 /**
  * @author 25538
  */
@@ -36,15 +39,15 @@ public class OutLinkInfoController {
         OutLinkCoInfo[] outLinkCoInfo = new OutLinkCoInfo[1];
         outLinkCoInfo[0] = coInfo;
 
-        OutLinkSnapshotInfo outLinkSnapshotInfo = OutLinkSnapshotInfo.builder().linkID(req.getUserDomainId()+"-link").lkName("linkName").url("linkUrl").build();
+        OutLinkSnapshotInfo outLinkSnapshotInfo = OutLinkSnapshotInfo.builder().linkID(req.getUserDomainId()+"-link").lkName("linkName").url("linkUrl").ctTime(currentDateTime()).build();
 
         OutLinkEntity outLinkEntity = new OutLinkEntity(outLinkSnapshotInfo, outLinkCaInfo, outLinkCoInfo);
-        log.info("\n创建外链：\n{}", outLinkEntity.toString());
+        /**log.info("\n创建外链：\n{}", outLinkEntity.toString());
         log.info("\n基本：\n{}", outLinkSnapshotInfo.toString());
         log.info("\n目录：\n{}", outLinkCaInfo[0].toString());
         log.info("\n文件：\n{}", outLinkCoInfo[0].toString());
+         log.info("\n\n\noutLinkGet req:{}", req);*/
 
-        log.info("\n\n\noutLinkGet req:{}", req);
         GetOutLinkResOne res = GetOutLinkResOne.builder()
                 .objID("obID")
                 .passwd("password")
@@ -63,14 +66,28 @@ public class OutLinkInfoController {
     @PostMapping("/info")
     public BaseResult<GetOutLinkInfoRes> outLinkInfo(@RequestBody GetOutLinkInfoReq req) {
 
-        OutLinkCaInfo[] outLinkCaInfo = new OutLinkCaInfo[1];
-        OutLinkCoInfo[] outLinkCoInfo = new OutLinkCoInfo[1];
+        OutLinkCaInfo[] caInfos = new OutLinkCaInfo[1];
+        OutLinkCoInfo[] coInfos = new OutLinkCoInfo[1];
 
-        GetOutLinkInfoRes res = new GetOutLinkInfoRes(outLinkCaInfo.length + outLinkCaInfo.length, "linkName", "ctTime");
+        GetOutLinkInfoRes res = GetOutLinkInfoRes.builder()
+                .coLst(coInfos)
+                .caLst(caInfos)
+                .ctTime(currentDateTime())
+                .creator(req.getUserDomainId().toString())
+                .lkName("linkName")
+                .build();
 
         return BaseResult.success(res);
-
     }
+
+    /**
+     * 获得当前时间
+     * @return
+     */
+    private static String currentDateTime() {
+        return ZonedDateTime.now(ZoneOffset.UTC).toString();
+    }
+
 
     private GetOutLinkResOne outLink1 = GetOutLinkResOne.builder()
             .objID("obj001")

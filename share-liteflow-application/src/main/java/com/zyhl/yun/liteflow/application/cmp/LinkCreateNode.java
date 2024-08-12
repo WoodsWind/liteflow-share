@@ -29,14 +29,14 @@ public class LinkCreateNode extends NodeComponent {
         OutLinkContext linkContext = this.getContextBean(OutLinkContext.class);
         UserContext userContext = this.getContextBean(UserContext.class);
         AssetsContext assetsContext = this.getContextBean(AssetsContext.class);
-        log.info("\n外链初始化：\n{}", linkContext.toString());
+        //log.info("\n外链初始化：\n{}", linkContext.toString());
 
         UserDomainEntity userDomainEntity = userContext.getUserInfo();
         String[] caIDLst = assetsContext.getCaIDLst();
         String[] coIDLst = assetsContext.getCoIDLst();
 
-        OutLinkEntity outLinkEntity = getOutLinkService.getOutLink(userDomainEntity.getPhoneNumber(), userDomainEntity.getUserDomainId(), caIDLst, coIDLst);
-        log.info("外链创建：\n{}", outLinkEntity.toString());
+        OutLinkEntity outLinkEntity = getOutLinkService.getOutLink(userDomainEntity.getPhoneNumber(), userDomainEntity.getUserDomainId(), coIDLst, caIDLst);
+        log.info("\n" + outLinkEntity.toString());
         // get files to be shared
         // create
     }

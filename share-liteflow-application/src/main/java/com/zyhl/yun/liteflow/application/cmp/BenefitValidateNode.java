@@ -1,5 +1,6 @@
 package com.zyhl.yun.liteflow.application.cmp;
 
+import com.yomahub.liteflow.core.NodeComponent;
 import com.yomahub.liteflow.core.NodeSwitchComponent;
 import com.zyhl.yun.liteflow.application.context.BenefitContext;
 import com.zyhl.yun.liteflow.application.context.OprContext;
@@ -12,16 +13,14 @@ import org.springframework.stereotype.Component;
  */
 @Slf4j
 @Component("benefitValidate")
-public class BenefitValidateNode extends NodeSwitchComponent {
+public class BenefitValidateNode extends NodeComponent {
     @Override
-    public String processSwitch() throws Exception {
+    public void process() throws Exception {
         log.info("===Benefit Validate Node===");
         /** OprContext 通过行为，对应映射用户的权益项，基于权益项查询会员中心，获取相关权益*/
         UserContext userContext = this.getContextBean(UserContext.class);
         OprContext opContext = this.getContextBean(OprContext.class);
         BenefitContext benefitContext = this.getContextBean(BenefitContext.class);
 
-
-        return null;
     }
 }

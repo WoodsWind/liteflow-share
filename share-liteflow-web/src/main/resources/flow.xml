@@ -1,9 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flow>
-    <chain name="chain1">
-        THEN(userInfo, assetsInfo, assetsValidate, benefitValidate, textSensitive, linkCreate);
+    <chain name="create-link">
+        THEN(userInfo, assetsInfo,
+            IF(assetsValidate,
+                THEN(benefitValidate,
+                    IF(textSensitive,
+                        linkCreate,
+                        failInfo
+                        )
+                    ),
+                failInfo
+                )
+            );
     </chain>
-    <chain name="chain2">
+
+    <chain name="open-chain">
         THEN(userInfo, linkInfo, benefitValidate, checkWhiteList, linkPermitCheckNode, assetsInfo, linkUpdateNode);
     </chain>
+
 </flow>

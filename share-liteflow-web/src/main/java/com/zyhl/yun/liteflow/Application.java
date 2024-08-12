@@ -96,6 +96,6 @@ public class Application {
 		OutLinkEntity outLinkEntity = new OutLinkEntity();
 		OutLinkContext outLinkContext = new OutLinkContext(outLinkEntity);
 
-		flowExecutor.execute2Future("chain1","", userContext, oprContext, benefitContext, fileContext, assetsContext, outLinkContext);
+		flowExecutor.execute2Future("create-link","", userContext, oprContext, benefitContext, fileContext, assetsContext, outLinkContext);
 	}
 }
