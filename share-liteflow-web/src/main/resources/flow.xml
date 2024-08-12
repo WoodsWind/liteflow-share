@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <flow>
     <chain name="chain1">
-        THEN(userInfo, assetsInfo);
+        THEN(userInfo, assetsInfo, assetsValidate, benefitValidate, textSensitive, linkCreate);
+    </chain>
+    <chain name="chain2">
+        THEN(userInfo, linkInfo, benefitValidate, checkWhiteList, linkPermitCheckNode, assetsInfo, linkUpdateNode);
     </chain>
 </flow>

@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 
 /**
  * @author 25538
- * 不确定是DTO还是Entity。但标准里这些层是Entity
+ * 不确定是DTO还是Entity。标准里这些层是Entity
  */
 @Data
 @AllArgsConstructor

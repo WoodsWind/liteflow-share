@@ -28,6 +28,7 @@ public class UserInfoNode extends NodeComponent {
         UserContext userContext = getContextBean(UserContext.class);
         log.info("\nuserContext: {}", userContext);
         log.info("\nuserId: {}", userContext.getUserInfo().getUserDomainId());
+        log.info("\nuserPhone: {}", userContext.getUserInfo().getPhoneNumber());
         /*
         try (Scanner scanner = new Scanner(System.in)) {
             Integer choice = null;

@@ -2,9 +2,9 @@ package com.zyhl.yun.liteflow;
 
 import com.yomahub.liteflow.builder.el.LiteFlowChainELBuilder;
 import com.yomahub.liteflow.core.FlowExecutor;
-import com.zyhl.yun.liteflow.application.context.FileContext;
-import com.zyhl.yun.liteflow.application.context.UserContext;
+import com.zyhl.yun.liteflow.application.context.*;
 import com.zyhl.yun.liteflow.domain.entity.FileEntity;
+import com.zyhl.yun.liteflow.domain.entity.OutLinkEntity;
 import com.zyhl.yun.liteflow.domain.entity.UserDomainEntity;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -80,11 +80,22 @@ public class Application {
 				env.getProperty("server.port"));
 
 		//LiteFlowChainELBuilder.createChain().setEL("THEN(userInfo)").setChainId("chain1").build();
+		// 用户
 		UserDomainEntity userDomainEntity = new UserDomainEntity(12345L,"phone");
 		UserContext userContext = UserContext.builder().userInfo(userDomainEntity).build();
-
+		// 操作
+		OprContext oprContext = new OprContext();
+		// 权益
+		BenefitContext benefitContext = new BenefitContext();
+		// 文件
 		FileEntity fileEntity = FileEntity.builder().fileId("fileA").build();
 		FileContext fileContext = FileContext.builder().fileInfo(fileEntity).build();
-		flowExecutor.execute2Future("chain1","", userContext, fileContext);
+		// 分享的文件
+		AssetsContext assetsContext = new AssetsContext();
+		// 外链
+		OutLinkEntity outLinkEntity = new OutLinkEntity();
+		OutLinkContext outLinkContext = new OutLinkContext(outLinkEntity);
+
+		flowExecutor.execute2Future("chain1","", userContext, oprContext, benefitContext, fileContext, assetsContext, outLinkContext);
 	}
 }

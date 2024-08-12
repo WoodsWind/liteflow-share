@@ -97,7 +97,7 @@ public class FileInfoController {
                 }
             }
         } else{
-            log.info("\n目前仅支持根目录'/'和文件夹'folderB'");
+            log.warn("\n目前仅支持根目录'/'和文件夹'folderB'");
         }
 
         FileListRsp rsp = new FileListRsp(simpleFiles);

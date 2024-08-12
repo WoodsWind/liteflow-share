@@ -1,11 +1,14 @@
 package com.zyhl.yun.liteflow.external.service.impl;
 
 import com.zyhl.hcy.commons.result.BaseResult;
+import com.zyhl.yun.liteflow.conventor.CaIDLstConventor;
+import com.zyhl.yun.liteflow.conventor.CoIDLstConvertor;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCaInfo;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCoInfo;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkEntity;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkSnapshotInfo;
 import com.zyhl.yun.liteflow.external.client.OutLinkRemoteClient;
+import com.zyhl.yun.liteflow.external.client.req.GetOutLinkInfoReq;
 import com.zyhl.yun.liteflow.external.client.req.GetOutLinkReq;
 import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkResOne;
 import com.zyhl.yun.liteflow.external.controller.OutLinkInfoController;
@@ -28,33 +31,45 @@ public class GetOutLinkServiceImpl implements GetOutLinkService {
     @Resource
     OutLinkInfoController outLinkInfoController;
 
-    @Override
-    public OutLinkSnapshotInfo getOutLinkInfo(Long userDomainId) {
-        return null;
-    }
+    @Resource
+    CoIDLstConvertor coConvertor;
 
-    @Override
-    public OutLinkCoInfo[] getOutLinkCoInfo(Long userDomainId) {
-        ;
-        return new OutLinkCoInfo[m];
-    }
+    @Resource
+    CaIDLstConventor caConvertor;
 
+    /** 创建外链 */
     @Override
-    public OutLinkCaInfo[] getOutLinkCaInfo(Long userDomainId) {
-        return new OutLinkCaInfo[m];
-    }
+    public OutLinkEntity getOutLink(String account, Long userDomainId, String [] coIDLst, String [] caIDLst) {
 
-    @Override
-    public OutLinkEntity getOutLink(Long account) {
-        GetOutLinkReq getOutLinkReq = GetOutLinkReq.builder().userDomainId(account).build();
+        GetOutLinkReq getOutLinkReq = new GetOutLinkReq(account, userDomainId, coIDLst, caIDLst);
+
         BaseResult<GetOutLinkResOne[]> outLinkResult;
+        OutLinkEntity outLinkEntity = null;
         try {
-            outLinkResult = outLinkInfoController.outLinkGet(getOutLinkReq);
-            //outLinkResult = linkRemoteClient.outLink(getOutLinkReq);
+            GetOutLinkResOne[] res = outLinkInfoController.outLinkGet(getOutLinkReq).getData();
+            GetOutLinkResOne outLinkResOne = res[0];
+
+            OutLinkSnapshotInfo snapshotInfo = OutLinkSnapshotInfo.builder().linkID(outLinkResOne.getLinkID()).url(outLinkResOne.getLinkUrl()).build();
+            OutLinkCaInfo[] caInfos = caConvertor.convertToEntity(caIDLst);
+            OutLinkCoInfo[] caoInfos = coConvertor.convertToEntity(coIDLst);
+
+            outLinkEntity = OutLinkEntity.builder().outLinkSnapshotInfo(snapshotInfo).outLinkCaInfo(caInfos).outLinkCoInfo(caoInfos).build();
         }catch (Exception e){
             log.error(e.getMessage());
         }
-        OutLinkSnapshotInfo outLinkSnapshotInfo = null;
-        return outLinkSnapshotInfo;
+
+        return outLinkEntity;
+    }
+
+    @Override
+    public OutLinkEntity getOutLinkInfo(Long userDomainId, String outLinkId) {
+        GetOutLinkInfoReq getOutLinkInfoReq = GetOutLinkInfoReq.builder().userDomainId(userDomainId).linkID(outLinkId).build();
+        BaseResult<GetOutLinkResOne[]> outLinkResult;
+        try{
+
+        } catch (Exception e){
+            log.error(e.getMessage());
+        }
+        return null;
     }
 }

@@ -36,23 +36,20 @@ public class OutLinkInfoController {
         OutLinkCoInfo[] outLinkCoInfo = new OutLinkCoInfo[1];
         outLinkCoInfo[0] = coInfo;
 
-        OutLinkSnapshotInfo outLinkSnapshotInfo = OutLinkSnapshotInfo.builder().linkID("linkID").lkName("linkName").url("linkUrl").build();
+        OutLinkSnapshotInfo outLinkSnapshotInfo = OutLinkSnapshotInfo.builder().linkID(req.getUserDomainId()+"-link").lkName("linkName").url("linkUrl").build();
 
         OutLinkEntity outLinkEntity = new OutLinkEntity(outLinkSnapshotInfo, outLinkCaInfo, outLinkCoInfo);
-        log.info("\n创建外链：{}", outLinkEntity.toString());
-        log.info("\n基本：{}", outLinkSnapshotInfo.toString());
-        log.info("\n目录：{}", outLinkCaInfo.toString());
-        log.info("\n文件：{}", outLinkCoInfo.toString());
+        log.info("\n创建外链：\n{}", outLinkEntity.toString());
+        log.info("\n基本：\n{}", outLinkSnapshotInfo.toString());
+        log.info("\n目录：\n{}", outLinkCaInfo[0].toString());
+        log.info("\n文件：\n{}", outLinkCoInfo[0].toString());
 
         log.info("\n\n\noutLinkGet req:{}", req);
-        log.info("目前link的返回写死是OutLink2");
         GetOutLinkResOne res = GetOutLinkResOne.builder()
-                .objID("obj002")
-                .passwd("password2")
-                .linkID("OutLink002")
-                .linkUrl("http://example.com/demo/demo2")
-                .linkUrlMin("http://example.com/min/min2")
-                .linkCode("code2")
+                .objID("obID")
+                .passwd("password")
+                .linkID(outLinkEntity.getOutLinkSnapshotInfo().getLinkID())
+                .linkUrl(outLinkEntity.getOutLinkSnapshotInfo().getUrl())
                 .build();
         GetOutLinkResOne[] getOutLinkResSet = new GetOutLinkResOne[1];
         getOutLinkResSet[0] = res;

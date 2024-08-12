@@ -4,36 +4,28 @@ import com.zyhl.yun.liteflow.domain.entity.OutLinkCaInfo;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkCoInfo;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkEntity;
 import com.zyhl.yun.liteflow.domain.entity.OutLinkSnapshotInfo;
+import com.zyhl.yun.liteflow.external.client.resp.GetOutLinkResOne;
 
 /**
  * @author 25538
  */
 public interface GetOutLinkService {
-    /**
-     * 确定外链基本信息
-     * @param userDomainId
-     * @return
-     */
-    OutLinkSnapshotInfo getOutLinkInfo(Long userDomainId);
-
-    /**
-     * 确定外链的内容信息
-     * @param userDomainId
-     * @return
-     */
-    OutLinkCoInfo[] getOutLinkCoInfo(Long userDomainId);
-
-    /**
-     * 确定外链的文件夹信息
-     * @param userDomainId
-     * @return
-     */
-    OutLinkCaInfo[] getOutLinkCaInfo(Long userDomainId);
 
     /**
      * 创建外链
+     * @param account
      * @param userDomainId
+     * @param coIDLst
+     * @param caIDLst
      * @return
      */
-    OutLinkEntity getOutLink(Long userDomainId);
+    OutLinkEntity getOutLink(String account, Long userDomainId, String [] coIDLst, String [] caIDLst);
+
+    /**
+     * 访问外链
+     * @param userDomainId
+     * @param outLinkId
+     * @return
+     */
+    OutLinkEntity getOutLinkInfo(Long userDomainId, String outLinkId);
 }
